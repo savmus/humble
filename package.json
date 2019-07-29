@@ -7,8 +7,13 @@
     "lib": "lib",
     "test": "test"
   },
+  "engines": {
+    "node": "10.13.0",
+    "npm": "6.10.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "webpack",
     "webpack": "webpack --mode=development --watch"
   },
   "keywords": [],
@@ -28,7 +33,9 @@
     "redux-thunk": "^2.3.0",
     "webpack": "^4.36.1",
     "webpack-cli": "^3.3.6",
-    "redux-logger": "^3.0.6",
     "react-router-dom": "^5.0.1"
+  },
+  "devDependencies": {
+    "redux-logger": "^3.0.6"
   }
 }
