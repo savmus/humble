@@ -11,8 +11,17 @@ class SessionForm extends React.Component {
             password: ""
         };
 
+        this.clicked = false;
+
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleClick = this.handleClick.bind(this);
         this.update = this.update.bind(this);
+    }
+
+    handleClick(e) {
+        e.preventDefault();
+
+        this.clicked = true;
     }
 
     handleSubmit(e) {
@@ -39,56 +48,95 @@ class SessionForm extends React.Component {
 
     render() {
         let header = this.props.formType;
-        let link = <Link to='/' />;
+        let type = header.toLowerCase().split(' ').join('');
 
         if (header === 'Sign Up') {
-            link = <Link to='/login' />
+            return (
+                <div className={type}>
+                    <Link to='/login'>Log In</Link>
+
+                    <p>Come for pizza.</p>
+                    <p>Stay for brownies.</p>
+
+                    <button 
+                        onClick={this.handleClick} 
+                        className={this.clicked ? "hide" : "reveal"}>Get Started</button>
+
+                    <form 
+                        onSubmit={this.handleSubmit} 
+                        className={this.clicked ? "reveal" : "hide"}>
+                        <label htmlFor='user-username'>
+                        <input
+                                type='text'
+                                id='user-username'
+                                onChange={this.update('username')}
+                                placeholder='Username'
+                            />
+                        </label>
+
+                        <label htmlFor='user-email'>
+                        <input
+                                type='text'
+                                id='user-email'
+                                onChange={this.update('email')}
+                                placeholder='Email'
+                            />
+                        </label>
+
+                        <label htmlFor='user-password'>
+                        <input
+                                type='password'
+                                id='user-password'
+                                onChange={this.update('password')}
+                                placeholder='Password'
+                            />
+                        </label>
+
+                        <ul>
+                            {this.props.errors.map((error, idx) => (
+                                <li key={idx}>{error}</li>
+                            ))}
+                        </ul>
+
+                        <button>{header}</button>
+                    </form>
+                </div>
+            )
         } else {
-            link = <Link to='/signup' />
+            return (
+                <div className={type}>
+                    <Link to='/signup'>Sign Up</Link>
+
+                    <form onSubmit={this.handleSubmit}>
+                        <label htmlFor='user-email'>
+                        <input
+                                type='text'
+                                id='user-email'
+                                onChange={this.update('email')}
+                                placeholder='Email'
+                            />
+                        </label>
+
+                        <label htmlFor='user-password'>
+                        <input
+                                type='password'
+                                id='user-password'
+                                onChange={this.update('password')}
+                                placeholder='Password'
+                            />
+                        </label>
+
+                        <ul>
+                            {this.props.errors.map((error, idx) => (
+                                <li key={idx}>{error}</li>
+                            ))}
+                        </ul>
+
+                        <button>{header}</button>
+                    </form>
+                </div>
+            )
         }
-
-        return (
-            <div>
-                <h2>{header}</h2>
-                {link}
-                <ul>
-                    {this.props.errors.map((error, idx) => (
-                        <li key={idx}>{error}</li>
-                    ))}
-                </ul>
-
-                <form onSubmit={this.handleSubmit}>
-                    <label htmlFor='user-username'>Username
-                        <input
-                            type='text'
-                            id='user-username'
-                            onChange={this.update('username')}
-                            value={this.state.username}
-                        />
-                    </label>
-
-                    <label htmlFor='user-email'>Email
-                        <input
-                            type='text'
-                            id='user-email'
-                            onChange={this.update('email')}
-                            value={this.state.email}
-                        />
-                    </label>
-
-                    <label htmlFor='user-password'>Password
-                        <input
-                            type='password'
-                            id='user-password'
-                            onChange={this.update('password')}
-                            value={this.state.password}
-                        />
-                    </label>
-
-                    <button>{header}</button>
-                </form>
-            </div>
-        )
     }
 }
 

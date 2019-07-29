@@ -8,8 +8,7 @@ const App = () => (
     <div>
         <header>
             <h1>humble</h1>
-            {/* Greeting is temporary and only for testing purposes */}
-            <GreetingContainer /> 
+            <GreetingContainer />
         </header>
 
         <AuthRoute path="/login" component={LoginFormContainer} />

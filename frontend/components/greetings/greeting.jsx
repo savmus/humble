@@ -1,27 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 class Greeting extends React.Component {
-    constructor(props) {
+    constructor (props) {
         super(props);
     }
 
-    render() {
+    render () {
         if (this.props.currentUser) {
             return (
                 <div>
-                    <p>Hello, {this.props.currentUser.username}</p>
                     <button onClick={this.props.logout}>Logout</button>
                 </div>
-            )
-        } else {
+        )} else {
             return (
                 <div>
-                    <Link to="/signup">Sign Up</Link>
-                    <Link to="/login">Log In</Link>
+                    <Redirect to='/signup' />
                 </div>
-            )
-        };
+        )};
     }
 }
 
