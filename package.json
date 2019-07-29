@@ -25,6 +25,7 @@
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.0",
     "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0",
     "webpack": "^4.36.1",
     "webpack-cli": "^3.3.6",
     "redux-logger": "^3.0.6",
