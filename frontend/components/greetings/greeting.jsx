@@ -10,7 +10,7 @@ class Greeting extends React.Component {
         if (this.props.currentUser) {
             return (
                 <div>
-                    <button onClick={this.props.logout}>Logout</button>
+                    <button onClick={this.props.logout} className='logout-btn'>Logout</button>
                 </div>
         )} else {
             return (

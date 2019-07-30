@@ -13,3 +13,98 @@
  *= require_tree .
  *= require_self
  */
+
+ .logout-btn {
+    border: none;
+    background-color: white;
+    color: gray;
+    position: absolute;
+    top: 0;
+    right: 0;
+ }
+
+ .logout-btn:hover {
+    cursor: pointer;
+ }
+
+ .signup a {
+    color: white;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(0, 0, 0, .0941176);
+    margin: 10px;
+    text-decoration: none;
+    padding: 4px 8px 4px 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+ }
+
+ .signup p {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+ }
+
+ .slogan {
+    margin-bottom: 15px;
+ }
+
+ html {
+    background-color: rgb(2, 10, 46);
+ }
+
+ .hide {
+    visibility: hidden;
+ }
+
+ .reveal {
+    visibility: visible;
+ }
+
+ .signup button {
+    background-color: deepskyblue;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 5px;
+    border: none;
+    padding: 10px 65px 10px 65px;
+    border-radius: 3px;
+ }
+
+ .signup button:hover {
+    cursor: pointer;
+ }
+
+ .signup {
+    text-align: center;
+ }
+
+ .signup input {
+    width: 190px;
+    height: 35px;
+    padding: 5px;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin: 0 auto;
+ }
+
+ .logout {
+
+ }
+
+ .errors {
+
+ }
+
+ .form-btn {
+
+ }
+
+ .title {
+
+ }

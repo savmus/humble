@@ -22,6 +22,12 @@ class SessionForm extends React.Component {
         e.preventDefault();
 
         this.clicked = true;
+
+        this.setState({
+            username: "",
+            email: "",
+            password: ""
+        });
     }
 
     handleSubmit(e) {
@@ -55,8 +61,10 @@ class SessionForm extends React.Component {
                 <div className={type}>
                     <Link to='/login'>Log In</Link>
 
-                    <p>Come for pizza.</p>
-                    <p>Stay for brownies.</p>
+                    <div className='slogan'>
+                        <p>Come for stuff.</p>
+                        <p>Stay for stuff.</p>
+                    </div>
 
                     <button 
                         onClick={this.handleClick} 
@@ -92,13 +100,13 @@ class SessionForm extends React.Component {
                             />
                         </label>
 
-                        <ul>
+                        <ul className='errors'>
                             {this.props.errors.map((error, idx) => (
                                 <li key={idx}>{error}</li>
                             ))}
                         </ul>
 
-                        <button>{header}</button>
+                        <button className='form-btn'>{header}</button>
                     </form>
                 </div>
             )
@@ -126,13 +134,13 @@ class SessionForm extends React.Component {
                             />
                         </label>
 
-                        <ul>
+                        <ul className='errors'>
                             {this.props.errors.map((error, idx) => (
                                 <li key={idx}>{error}</li>
                             ))}
                         </ul>
 
-                        <button>{header}</button>
+                        <button className='form-btn'>{header}</button>
                     </form>
                 </div>
             )
