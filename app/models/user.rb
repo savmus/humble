@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :bigint           not null, primary key
+#  username        :string           not null
+#  email           :string           not null
+#  session_token   :string           not null
+#  password_digest :string           not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
+
 class User < ApplicationRecord
     attr_reader :password
 
@@ -6,6 +19,14 @@ class User < ApplicationRecord
     validates :password, length: { minimum: 8, allow_nil: true }
 
     after_initialize :ensure_session_token
+
+    has_many :blogs,
+      class_name: "Blog",
+      foreign_key: :user_id
+
+    has_many :posts,
+      class_name: "Post",
+      foreign_key: :author_id
 
     def self.find_by_credentials(email, password)
       user = User.find_by(email: email)
