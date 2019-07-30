@@ -50,7 +50,7 @@ class SessionForm extends React.Component {
 
         this.props.processForm({
             username: "",
-            email: "savmusladin@gmail.com",
+            email: "demo@demo.com",
             password: "12345678"
         });
 
@@ -125,7 +125,7 @@ class SessionForm extends React.Component {
                             ))}
                         </ul>
 
-                        <button className='form-btn'>{header}</button>
+                        <button>{header}</button>
                     </form>
                 </div>
             )
@@ -159,9 +159,12 @@ class SessionForm extends React.Component {
                             ))}
                         </ul>
 
-                        <button className='form-btn'>{header}</button>
+                        <button>{header}</button>
                     </form>
-                    <button onClick={this.handleDemo}>Demo Login</button>
+                    <button 
+                        onClick={this.handleDemo}
+                        className='demo'
+                    >Demo Login</button>
                 </div>
             )
         }

@@ -16,15 +16,11 @@
 
  .logout-btn {
     border: none;
-    background-color: white;
+    background: none;
     color: gray;
     position: absolute;
     top: 0;
     right: 0;
- }
-
- .logout-btn:hover {
-    cursor: pointer;
  }
 
  .signup a {
@@ -74,7 +70,7 @@
     border-radius: 3px;
  }
 
- .signup button:hover {
+ button:hover {
     cursor: pointer;
  }
 
@@ -93,18 +89,82 @@
     margin: 0 auto;
  }
 
+ .errors {
+    color: white;
+    list-style: none;
+    padding: 0;
+    display: block;
+    width: 190px;
+    margin: 0 auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+ }
+
+ .login a {
+    color: rgb(70, 70, 70);
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background-color: white;
+    margin-top: 10px;
+    margin-right: 20px;
+    text-decoration: none;
+    padding: 8px 12px 8px 12px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 3px;
+ }
+
+ .login form button {
+    background-color: deepskyblue;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 5px;
+    border: none;
+    padding: 10px 65px 10px 65px;
+    border-radius: 3px;
+    width: 190px;
+ }
+
+ .demo {
+    background-color: deepskyblue;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 5px;
+    border: none;
+    padding: 10px 48px 10px 48px;
+    border-radius: 3px;
+ }
+
+ .login {
+    text-align: center;
+ }
+
+ .login input {
+    width: 190px;
+    height: 35px;
+    padding: 5px;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin: 0 auto;
+ }
+
  .logout {
 
  }
 
- .errors {
-
- }
-
- .form-btn {
-
- }
-
  .title {
-
+    text-align: center;
+    margin: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 1000;
+    font-size: 60px;
+    color: white;
  }
