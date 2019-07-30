@@ -15,6 +15,7 @@ class SessionForm extends React.Component {
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleClick = this.handleClick.bind(this);
+        this.handleDemo = this.handleDemo.bind(this);
         this.update = this.update.bind(this);
     }
 
@@ -34,6 +35,24 @@ class SessionForm extends React.Component {
         e.preventDefault();
 
         this.props.processForm(this.state);
+
+        this.setState({
+            username: "",
+            email: "",
+            password: ""
+        });
+
+        <Redirect to='/' />
+    }
+
+    handleDemo(e) {
+        e.preventDefault();
+
+        this.props.processForm({
+            username: "",
+            email: "savmusladin@gmail.com",
+            password: "12345678"
+        });
 
         this.setState({
             username: "",
@@ -142,6 +161,7 @@ class SessionForm extends React.Component {
 
                         <button className='form-btn'>{header}</button>
                     </form>
+                    <button onClick={this.handleDemo}>Demo Login</button>
                 </div>
             )
         }
