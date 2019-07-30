@@ -1,0 +1,1 @@
+json.extract! post, :id, :blog_id, :author_id, :title, :url, :caption, :summary, :description, :post_status, :post_type, :publish_date
