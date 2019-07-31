@@ -12,9 +12,4 @@ const mapStateToProps = ({ entities }) => {
     })
 };
 
-// const mapDispatchToProps = dispatch => ({
-//     processForm: (user) => dispatch(login(user))
-// });
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(Search);
+export default connect(mapStateToProps)(Search);

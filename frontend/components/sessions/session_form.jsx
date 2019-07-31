@@ -60,7 +60,7 @@ class SessionForm extends React.Component {
             password: ""
         });
 
-        <Redirect to='/' />
+        <Redirect to='/signup' />
     }
 
     update(field) {

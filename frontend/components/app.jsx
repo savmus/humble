@@ -2,11 +2,13 @@ import React from 'react';
 import GreetingContainer from './greetings/greeting_container';
 import LoginFormContainer from './sessions/login_form_container';
 import SignupFormContainer from './sessions/signup_form_container';
+import NavBarContainer from './nav_bar/nav_bar_container';
 import { AuthRoute } from '../util/route_util';
 
 const App = () => (
     <div>
         <header>
+            {/* <NavBarContainer /> */}
             <h1 className='title'>humble</h1>
             <GreetingContainer />
         </header>
