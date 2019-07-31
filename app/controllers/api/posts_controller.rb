@@ -23,7 +23,7 @@ class Api::PostsController < ApplicationController
     end
 
     def update
-        @post = Post.find_by(params[:id])
+        @post = Post.find(params[:id])
         if @post && @post.update_attributes(post_params)
           render 'api/posts/index'
         elsif !@post
@@ -34,7 +34,7 @@ class Api::PostsController < ApplicationController
     end
 
     def destroy
-        @post = Post.find_by(params[:id])
+        @post = Post.find(params[:id])
         if @post
           @post.destroy
           render 'api/posts/index'

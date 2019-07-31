@@ -6,7 +6,6 @@ class PostIndexItem extends React.Component {
     }
 
     render() {
-        debugger;
         return (
             <div>
                 {this.props.posts.map((post, idx) => {

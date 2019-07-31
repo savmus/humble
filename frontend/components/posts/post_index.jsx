@@ -8,11 +8,14 @@ class Post extends React.Component {
 
     componentDidMount() {
         if (this.props.blog) {
-            this.props.fetchPosts(this.props.blog);
-        };
+            this.props.fetchBlogPosts(this.props.blog);
+        } else {
+            this.props.fetchPosts(); // temporary
+        }
     }
 
     render() {
+        debugger;
         let posts;
 
         if (!this.props.posts) {

@@ -18,7 +18,7 @@ const App = () => (
         <AuthRoute path="/login" component={LoginFormContainer} />
         <AuthRoute path="/signup" component={SignupFormContainer} />
         <ProtectedRoute path="/dashboard" component={PostIndexContainer} />
-        <ProtectedRoute path="/:blogId" component={BlogContainer} />
+        <ProtectedRoute path="/blogs/:blogId" component={BlogContainer} />
         {/* <ProtectedRoute path="/new/:type" component={PostFormContainer} /> */}
         {/* <ProtectedRoute path="/edit/:postId" component={PostFormContainer} /> */}
     </div>

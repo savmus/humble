@@ -28,7 +28,10 @@ const receiveErrors = (errors) => ({
 export const createPost = (post) => dispatch => APIUtil.createPost(post)
     .then(post => dispatch(receivePost(post)), (error) => dispatch(receiveErrors(error)));
 
-export const fetchPosts = (blog) => dispatch => APIUtil.fetchPosts(blog)
+export const fetchBlogPosts = (blog) => dispatch => APIUtil.fetchBlogPosts(blog)
+    .then(posts => dispatch(receivePosts(posts)));
+
+export const fetchPosts = () => dispatch => APIUtil.fetchPosts()
     .then(posts => dispatch(receivePosts(posts)));
 
 export const updatePost = (post) => dispatch => APIUtil.updatePost(post)

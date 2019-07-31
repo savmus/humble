@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Post from './post_index';
-import { fetchPosts, deletePost } from '../../actions/post_actions';
+import { fetchPosts, fetchBlogPosts, deletePost } from '../../actions/post_actions';
 
 const mapStateToProps = ({ entities }) => {
     let postsArr = Object.values(entities.posts);
@@ -10,7 +10,8 @@ const mapStateToProps = ({ entities }) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-    fetchPosts: (blog) => dispatch(fetchPosts(blog)),
+    fetchBlogPosts: (blog) => dispatch(fetchBlogPosts(blog)),
+    fetchPosts: () => dispatch(fetchPosts()),
     deletePost: (id) => dispatch(deletePost(id))
 });
 

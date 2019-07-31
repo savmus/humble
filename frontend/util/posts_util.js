@@ -6,12 +6,19 @@ export const createPost = post => (
     })
 );
 
-export const fetchPosts = blog => (
+export const fetchBlogPosts = blog => (
     $.ajax({
         url: `/api/blogs/${blog.id}/posts`,
         method: 'GET'
     })
 );
+
+export const fetchPosts = () => (
+    $.ajax({
+        url: '/api/posts',
+        method: 'GET'
+    })
+)
 
 export const updatePost = post => (
     $.ajax({
