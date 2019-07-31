@@ -34,5 +34,5 @@ export const fetchPosts = (blog) => dispatch => APIUtil.fetchPosts(blog)
 export const updatePost = (post) => dispatch => APIUtil.updatePost(post)
     .then(post => dispatch(receivePost(post)), (error) => dispatch(receiveErrors(error)));
 
-export const deletePost = (post) => dispatch => APIUtil.deletePost(post)
+export const deletePost = (id) => dispatch => APIUtil.deletePost(id)
     .then(post => dispatch(removePost(post)));
