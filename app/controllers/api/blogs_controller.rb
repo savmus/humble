@@ -1,4 +1,6 @@
 class Api::BlogsController < ApplicationController
+    skip_before_action :verify_authenticity_token
+
     def create
         @blog = Blog.new(blog_params)
         if @blog.save
@@ -14,12 +16,13 @@ class Api::BlogsController < ApplicationController
     end
 
     def show
-        @blog = Blog.find_by(params[:id])
+        @blog = Blog.find(params[:id])
+        @posts = @blog.posts
         render 'api/blogs/show'
     end
 
     def update
-        @blog = Blog.find_by(params[:id])
+        @blog = Blog.find(params[:id])
         if @blog && @blog.update_attributes(blog_params)
           render 'api/blogs/show'
         elsif !@blog
@@ -30,7 +33,7 @@ class Api::BlogsController < ApplicationController
     end
 
     def destroy
-        @blog = Blog.find_by(params[:id])
+        @blog = Blog.find(params[:id])
         if @blog
           @blog.destroy
           render 'api/blogs/index' # change later

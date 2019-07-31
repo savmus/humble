@@ -13,13 +13,13 @@ class Search extends React.Component {
 
     componentDidMount() {
         this.setState({
-            filtered: this.props.blogs
+            filtered: this.props.titles
         });
     }
 
     componentWillReceiveProps(nextProps) {
         this.setState({
-            filtered: nextProps.blogs
+            filtered: nextProps.titles
         });
     }
 
@@ -28,15 +28,15 @@ class Search extends React.Component {
         let newSearch = [];
 
         if (e.target.value !== "") {
-            currentSearch = this.props.blogs;
+            currentSearch = this.props.titles;
 
-            newSearch = currentSearch.filter(blog => {
-                const lower = blog.toLowerCase();
+            newSearch = currentSearch.filter(title => {
+                const lower = title.toLowerCase();
                 const filter = e.target.value.toLowerCase();
                 return lower.includes(filter);
             });
         } else {
-            newSearch = this.props.blogs;
+            newSearch = this.props.titles;
         }
 
         this.setState({
@@ -54,8 +54,8 @@ class Search extends React.Component {
                 />
 
                 <ul>
-                    {this.props.blogs.map(blog => (
-                        <li key={blog}>{blog} &nbsp;</li>
+                    {this.props.titles.map(title => (
+                        <li key={title}>{title} &nbsp;</li>
                     ))}
                 </ul>
             </div>

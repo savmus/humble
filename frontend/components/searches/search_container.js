@@ -12,4 +12,8 @@ const mapStateToProps = ({ entities }) => {
     })
 };
 
-export default connect(mapStateToProps)(Search);
+const mapDispatchToProps = dispatch => {
+    return null
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Search);
