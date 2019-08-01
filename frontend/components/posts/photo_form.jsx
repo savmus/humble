@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter, Redirect } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 class PhotoForm extends React.Component {
     constructor(props) {
@@ -21,6 +21,7 @@ class PhotoForm extends React.Component {
         e.preventDefault();
 
         this.props.action(this.state);
+        this.props.history.push('/dashboard');
     }
 
     handleClick(e) {

@@ -2,10 +2,12 @@ import { connect } from 'react-redux';
 import Post from './post_index';
 import { fetchPosts, fetchBlogPosts, deletePost } from '../../actions/post_actions';
 
-const mapStateToProps = ({ entities }) => {
-    let postsArr = Object.values(entities.posts);
+const mapStateToProps = (state, ownProps) => {
+    let postsArr = Object.values(state.entities.posts);
+    let blog = state.entities.blogs[ownProps.match.params.blogId]
     return ({
-        allPosts: postsArr
+        allPosts: postsArr,
+        blog: blog
     })
 };
 

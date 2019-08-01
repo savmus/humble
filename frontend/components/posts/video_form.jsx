@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter, Redirect } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 class VideoForm extends React.Component {
     constructor(props) {
@@ -21,6 +21,7 @@ class VideoForm extends React.Component {
         e.preventDefault();
 
         this.props.action(this.state);
+        this.props.history.push('/dashboard');
     }
 
     handleClick(e) {
