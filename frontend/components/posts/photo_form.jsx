@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Redirect } from 'react-router-dom';
 
 class PhotoForm extends React.Component {
     constructor(props) {
@@ -8,6 +8,7 @@ class PhotoForm extends React.Component {
         this.state = this.props.post;
         this.update = this.update.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
 
     update(field) {
@@ -20,6 +21,12 @@ class PhotoForm extends React.Component {
         e.preventDefault();
 
         this.props.action(this.state);
+    }
+
+    handleClick(e) {
+        e.preventDefault();
+
+        this.props.history.push('/dashboard');
     }
 
     render() {
@@ -36,6 +43,7 @@ class PhotoForm extends React.Component {
 
                     <button>Post</button>
                 </form>
+                <button onClick={this.handleClick}>Close</button>
             </div>
         );
     }

@@ -50,7 +50,7 @@ class Api::PostsController < ApplicationController
 
     private
 
-    def post_params
-        params.require(:post).permit(:title, :url, :caption, :summary, :description, :post_type)
+    def post_params # change later
+        params.require(:post).permit(:blog_id, :author_id, :title, :url, :caption, :summary, :description, :post_status, :post_type, :publish_date)
     end
 end
