@@ -5,7 +5,9 @@ import SignupFormContainer from './sessions/signup_form_container';
 import PostIndexContainer from './posts/post_index_container';
 import NavBarContainer from './nav_bar/nav_bar_container';
 import BlogContainer from './blogs/blog_show_container';
+import HomeContainer from './home/home_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import { Route } from 'react-router-dom';
 
 const App = () => (
     <div>
@@ -15,6 +17,7 @@ const App = () => (
             <GreetingContainer />
         </header>
 
+        <Route exact path="/" component={HomeContainer} />
         <AuthRoute path="/login" component={LoginFormContainer} />
         <AuthRoute path="/signup" component={SignupFormContainer} />
         <ProtectedRoute path="/dashboard" component={PostIndexContainer} />

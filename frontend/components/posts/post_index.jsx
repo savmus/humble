@@ -15,7 +15,6 @@ class Post extends React.Component {
     }
 
     render() {
-        debugger;
         let posts;
 
         if (!this.props.posts) {
