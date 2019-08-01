@@ -8,6 +8,6 @@ Rails.application.routes.draw do
     resources :blogs, only: [:create, :index, :show, :update, :destroy] do
       resources :posts, only: [:create, :index]
     end
-    resources :posts, only: [:index, :update, :destroy]
+    resources :posts, only: [:index, :show, :update, :destroy]
   end
 end

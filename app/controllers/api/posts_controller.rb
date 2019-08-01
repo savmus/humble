@@ -22,6 +22,11 @@ class Api::PostsController < ApplicationController
         render 'api/posts/index'
     end
 
+    def show
+      @post = Post.find(params[:id])
+      render 'api/posts/index'
+    end
+
     def update
         @post = Post.find(params[:id])
         if @post && @post.update_attributes(post_params)

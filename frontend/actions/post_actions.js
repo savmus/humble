@@ -39,3 +39,6 @@ export const updatePost = (post) => dispatch => APIUtil.updatePost(post)
 
 export const deletePost = (id) => dispatch => APIUtil.deletePost(id)
     .then(post => dispatch(removePost(post)));
+
+export const fetchPost = (id) => dispatch => APIUtil.fetchPost(id)
+    .then(post => dispatch(receivePost(post)));
