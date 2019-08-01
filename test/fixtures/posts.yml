@@ -3,7 +3,6 @@
 # Table name: posts
 #
 #  id           :bigint           not null, primary key
-#  blog_id      :integer          not null
 #  author_id    :integer          not null
 #  title        :string
 #  url          :string

@@ -10,7 +10,7 @@ class TextForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleClick = this.handleClick.bind(this);
     }
-
+    
     update(field) {
         return (e) => this.setState({
             [field]: e.target.value

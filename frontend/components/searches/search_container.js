@@ -2,13 +2,13 @@ import { connect } from 'react-redux';
 import Search from './search';
 
 const mapStateToProps = ({ entities }) => {
-    let blogArr = Object.values(entities.blogs);
-    let titles = blogArr.map(blog => {
-        return blog.title
+    let userArr = Object.values(entities.users);
+    let usernames = userArr.map(user => {
+        return user.username
     });
 
     return ({
-        blogs: titles
+        users: usernames
     })
 };
 

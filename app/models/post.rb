@@ -3,7 +3,6 @@
 # Table name: posts
 #
 #  id           :bigint           not null, primary key
-#  blog_id      :integer          not null
 #  author_id    :integer          not null
 #  title        :string
 #  url          :string
@@ -18,11 +17,7 @@
 #
 
 class Post < ApplicationRecord
-    validates :blog_id, :author_id, :post_status, :post_type, presence: true
-
-    belongs_to :blog,
-        class_name: "Blog",
-        foreign_key: :blog_id
+    validates :author_id, :post_status, :post_type, presence: true
 
     belongs_to :author,
         class_name: "User",

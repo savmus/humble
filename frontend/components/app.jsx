@@ -4,7 +4,6 @@ import LoginFormContainer from './sessions/login_form_container';
 import SignupFormContainer from './sessions/signup_form_container';
 import PostIndexContainer from './posts/post_index_container';
 import NavBarContainer from './nav_bar/nav_bar_container';
-import BlogContainer from './blogs/blog_show_container';
 import HomeContainer from './home/home_container';
 import NewTextFormContainer from './posts/new_text_container';
 import EditTextFormContainer from './posts/edit_text_container';
@@ -35,7 +34,6 @@ const App = () => (
         <AuthRoute path="/login" component={LoginFormContainer} />
         <AuthRoute path="/signup" component={SignupFormContainer} />
         <ProtectedRoute path="/dashboard" component={PostIndexContainer} />
-        <ProtectedRoute path="/blogs/:blogId" component={BlogContainer} />
         <ProtectedRoute path="/new/text" component={NewTextFormContainer} />
         <ProtectedRoute path="/edit/text/:postId" component={EditTextFormContainer} />
         <ProtectedRoute path="/new/photo" component={NewPhotoFormContainer} />

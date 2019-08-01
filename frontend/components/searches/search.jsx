@@ -13,13 +13,13 @@ class Search extends React.Component {
 
     componentDidMount() {
         this.setState({
-            filtered: this.props.titles
+            filtered: this.props.usernames
         });
     }
 
     componentWillReceiveProps(nextProps) {
         this.setState({
-            filtered: nextProps.titles
+            filtered: nextProps.usernames
         });
     }
 
@@ -28,15 +28,15 @@ class Search extends React.Component {
         let newSearch = [];
 
         if (e.target.value !== "") {
-            currentSearch = this.props.titles;
+            currentSearch = this.props.usernames;
 
-            newSearch = currentSearch.filter(title => {
-                const lower = title.toLowerCase();
+            newSearch = currentSearch.filter(username => {
+                const lower = username.toLowerCase();
                 const filter = e.target.value.toLowerCase();
                 return lower.includes(filter);
             });
         } else {
-            newSearch = this.props.titles;
+            newSearch = this.props.usernames;
         }
 
         this.setState({
@@ -54,8 +54,8 @@ class Search extends React.Component {
                 />
 
                 <ul>
-                    {this.props.titles.map(title => (
-                        <li key={title}>{title} &nbsp;</li>
+                    {this.props.usernames.map(username => (
+                        <li key={username}>{username} &nbsp;</li>
                     ))}
                 </ul>
             </div>

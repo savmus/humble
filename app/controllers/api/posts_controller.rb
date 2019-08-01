@@ -4,7 +4,6 @@ class Api::PostsController < ApplicationController
     def create
         @post = Post.new(post_params)
         @post.author_id = current_user.id
-        @post.blog_id = params[:blog_id]
 
         if @post.save
             render 'api/posts/index'
@@ -14,8 +13,8 @@ class Api::PostsController < ApplicationController
     end
 
     def index
-        @posts = if params[:blog_id]
-                  Post.where(blog_id: params[:blog_id])
+        @posts = if params[:user_id]
+                  Post.where(author_id: params[:user_id])
                 else
                   Post.all
                 end

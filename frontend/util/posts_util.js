@@ -1,6 +1,6 @@
 export const createPost = post => (
     $.ajax({
-        url: `/api/blogs/${post.blog_id}/posts`,
+        url: `/api/users/${post.user_id}/posts`,
         method: 'POST',
         data: { post }
     })
@@ -13,9 +13,9 @@ export const fetchPost = id => (
     })
 );
 
-export const fetchBlogPosts = blog => (
+export const fetchUserPosts = user => (
     $.ajax({
-        url: `/api/blogs/${blog.id}/posts`,
+        url: `/api/users/${user.id}/posts`,
         method: 'GET'
     })
 );

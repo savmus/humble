@@ -7,7 +7,6 @@ const mapStateToProps = ({ session }) => {
     let date = new Date();
     return ({
         post: {
-            blog_id: 1, // temporary
             author_id: userId,
             summary: "",
             caption: "",

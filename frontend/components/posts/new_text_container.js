@@ -2,13 +2,13 @@ import { connect } from 'react-redux';
 import { createPost } from '../../actions/post_actions';
 import TextForm from './text_form';
 
-const mapStateToProps = ({ session }) => {
+const mapStateToProps = ({ session, entities }) => {
     let userId = session.currentUser.id;
     let date = new Date();
+
     return ({
         post: {
-            blog_id: 1, // temporary
-            author_id: userId,
+            authorId: userId,
             title: "",
             description: "",
             post_status: "Posted", // change later
