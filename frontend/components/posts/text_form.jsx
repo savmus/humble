@@ -6,11 +6,12 @@ class TextForm extends React.Component {
         super(props);
 
         this.state = this.props.post;
+
         this.update = this.update.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleClick = this.handleClick.bind(this);
     }
-    
+
     update(field) {
         return (e) => this.setState({
             [field]: e.target.value
@@ -20,7 +21,14 @@ class TextForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
 
-        this.props.action(this.state);
+        let post = Object.assign({}, this.state);
+        this.props.action(post);
+
+        this.setState({
+            title: "",
+            description: ""
+        })
+
         this.props.history.push('/dashboard');
     }
 
@@ -34,18 +42,22 @@ class TextForm extends React.Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <label>
+                    <label htmlFor='text-title'>
                         <input
                             type="text"
+                            id='text-title'
                             onChange={this.update("title")}
                             placeholder="Title"
+                            value={this.state.title || ""}
                         />
                     </label>
 
-                    <label>
+                    <label htmlFor='text-description'>
                         <textarea
+                            id='text-description'
                             onChange={this.update("description")}
                             placeholder="Text goes here"
+                            value={this.state.description || ""}
                         />
                     </label>
 

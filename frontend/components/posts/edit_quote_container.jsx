@@ -14,7 +14,7 @@ class EditQuoteForm extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        if (prevProps.post !== this.props.post) {
+        if (prevProps.match.params.postId !== this.props.match.params.postId) {
             this.props.fetchPost(this.props.post.id);
         }
     }
@@ -22,6 +22,7 @@ class EditQuoteForm extends React.Component {
     render() {
         const { post, formType, action } = this.props;
 
+        if (!post) return null;
         return (
             <QuoteForm
                 post={post}

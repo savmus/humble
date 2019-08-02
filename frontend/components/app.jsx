@@ -13,12 +13,6 @@ import NewQuoteFormContainer from './posts/new_quote_container';
 import EditQuoteFormContainer from './posts/edit_quote_container';
 import NewLinkFormContainer from './posts/new_link_container';
 import EditLinkFormContainer from './posts/edit_link_container';
-import NewChatFormContainer from './posts/new_chat_container';
-import EditChatFormContainer from './posts/edit_chat_container';
-import NewAudioFormContainer from './posts/new_audio_container';
-import EditAudioFormContainer from './posts/edit_audio_container';
-import NewVideoFormContainer from './posts/new_video_container';
-import EditVideoFormContainer from './posts/edit_video_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import { Route } from 'react-router-dom';
 
@@ -42,12 +36,6 @@ const App = () => (
         <ProtectedRoute path="/edit/quote/:postId" component={EditQuoteFormContainer} />
         <ProtectedRoute path="/new/link" component={NewLinkFormContainer} />
         <ProtectedRoute path="/edit/link/:postId" component={EditLinkFormContainer} />
-        <ProtectedRoute path="/new/chat" component={NewChatFormContainer} />
-        <ProtectedRoute path="/edit/chat/:postId" component={EditChatFormContainer} />
-        <ProtectedRoute path="/new/audio" component={NewAudioFormContainer} />
-        <ProtectedRoute path="/edit/audio/:postId" component={EditAudioFormContainer} />
-        <ProtectedRoute path="/new/video" component={NewVideoFormContainer} />
-        <ProtectedRoute path="/edit/video/:postId" component={EditVideoFormContainer} />
     </div>
 );
 

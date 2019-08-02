@@ -10,17 +10,19 @@ class EditPhotoForm extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchPost(this.props.post.id);
+        this.props.fetchPost(this.props.match.params.postId);
     }
 
     componentDidUpdate(prevProps) {
-        if (prevProps.post !== this.props.post) {
+        if (prevProps.match.params.postId !== this.props.match.params.postId) {
             this.props.fetchPost(this.props.post.id);
         }
     }
 
     render() {
         const { post, formType, action } = this.props;
+
+        if (!post) return null;
         return (
             <PhotoForm
                 post={post}
@@ -31,7 +33,7 @@ class EditPhotoForm extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-    let post = state.posts[ownProps.match.params.postId];
+    let post = state.entities.posts[ownProps.match.params.postId];
     return ({
         post: post,
         formType: "Edit Post"

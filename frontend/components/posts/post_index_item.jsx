@@ -22,7 +22,8 @@ class PostIndexItem extends React.Component {
                         <div key={idx}>
                             <li>
                                 <h2>{post.title}</h2>
-                                <p>{post.url}</p>
+                                <img src={post.image_url} />
+                                <a href={post.url}>{post.url}</a>
                                 <p>{post.caption}</p>
                                 <p>{post.summary}</p>
                                 <p>{post.description}</p>

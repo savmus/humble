@@ -6,6 +6,7 @@ class QuoteForm extends React.Component {
         super(props);
 
         this.state = this.props.post;
+
         this.update = this.update.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleClick = this.handleClick.bind(this);
@@ -20,7 +21,14 @@ class QuoteForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
 
-        this.props.action(this.state);
+        let post = Object.assign({}, this.state);
+        this.props.action(post);
+
+        this.setState({
+            summary: "",
+            caption: ""
+        });
+
         this.props.history.push('/dashboard');
     }
 
@@ -31,26 +39,25 @@ class QuoteForm extends React.Component {
     }
 
     render() {
-        debugger;
-        // if (!this.props.post) {
-        //     return null;
-        // }
-
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <label>
-                        <input
-                            type="text"
-                            onChange={this.update("summary")}
+                    <label htmlFor='quote-caption'>
+                        <textarea
+                            id='quote-caption'
+                            onChange={this.update("caption")}
                             placeholder="Quote"
+                            value={this.state.caption || ""}
                         />
                     </label>
 
-                    <label>
-                        <textarea
-                            onChange={this.update("caption")}
+                    <label htmlFor='quote-summary'>--
+                        <input
+                            type="text"
+                            id='quote-summary'
+                            onChange={this.update("summary")}
                             placeholder="Source"
+                            value={this.state.summary || ""}
                         />
                     </label>
 

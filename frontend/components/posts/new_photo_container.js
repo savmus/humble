@@ -8,7 +8,7 @@ const mapStateToProps = ({ session }) => {
     return ({
         post: {
             author_id: userId,
-            url: "",
+            image_url: "",
             post_status: "Posted", // change later
             post_type: "photo",
             publish_date: date

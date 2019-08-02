@@ -6,6 +6,7 @@ class PhotoForm extends React.Component {
         super(props);
 
         this.state = this.props.post;
+
         this.update = this.update.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleClick = this.handleClick.bind(this);
@@ -20,7 +21,13 @@ class PhotoForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
 
-        this.props.action(this.state);
+        let post = Object.assign({}, this.state);
+        this.props.action(post);
+
+        this.setState({
+            image_url: ""
+        });
+
         this.props.history.push('/dashboard');
     }
 
@@ -34,11 +41,13 @@ class PhotoForm extends React.Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <label>Add photo URL
+                    <label htmlFor='photo-url'>Add photo URL
                         <input
                             type="url"
-                            onChange={this.update("url")}
+                            id='photo-url'
+                            onChange={this.update("image_url")}
                             placeholder="URL goes here"
+                            value={this.state.image_url || ""}
                         />
                     </label>
 

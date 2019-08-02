@@ -24,9 +24,6 @@ class Post extends React.Component {
                     <Link to='/new/photo'>Photo</Link>
                     <Link to='/new/quote'>Quote</Link>
                     <Link to='/new/link'>Link</Link>
-                    <Link to='/new/chat'>Chat</Link>
-                    <Link to='/new/audio'>Audio</Link>
-                    <Link to='/new/video'>Video</Link>
                     
                     <ul>
                         <PostIndexItem posts={this.props.allPosts} deletePost={this.props.deletePost} />

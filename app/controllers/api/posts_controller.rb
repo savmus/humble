@@ -23,13 +23,13 @@ class Api::PostsController < ApplicationController
 
     def show
       @post = Post.find(params[:id])
-      render 'api/posts/index'
+      render 'api/posts/show'
     end
 
     def update
         @post = Post.find(params[:id])
         if @post && @post.update_attributes(post_params)
-          render 'api/posts/index'
+          render 'api/posts/show'
         elsif !@post
           render json: ['Post does not exist :('], status: 400
         else
@@ -50,6 +50,6 @@ class Api::PostsController < ApplicationController
     private
 
     def post_params # change later
-        params.require(:post).permit(:author_id, :title, :url, :caption, :summary, :description, :post_status, :post_type, :publish_date)
+        params.require(:post).permit(:author_id, :title, :url, :image_url, :caption, :summary, :description, :post_status, :post_type, :publish_date)
     end
 end
