@@ -42,7 +42,7 @@ class SessionForm extends React.Component {
             password: ""
         });
 
-        <Redirect to='/' />
+        <Redirect to='/dashboard' />
     }
 
     handleDemo(e) {

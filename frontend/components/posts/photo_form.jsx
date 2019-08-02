@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 class PhotoForm extends React.Component {
     constructor(props) {
@@ -39,9 +39,9 @@ class PhotoForm extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='post-form'>
                 <form onSubmit={this.handleSubmit}>
-                    <label htmlFor='photo-url'>Add photo URL
+                    <label htmlFor='photo-url'>
                         <input
                             type="url"
                             id='photo-url'
@@ -51,9 +51,9 @@ class PhotoForm extends React.Component {
                         />
                     </label>
 
+                    <Link to='/dashboard'>Close</Link>
                     <button>Post</button>
                 </form>
-                <button onClick={this.handleClick}>Close</button>
             </div>
         );
     }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 class TextForm extends React.Component {
     constructor(props) {
@@ -40,8 +40,10 @@ class TextForm extends React.Component {
 
     render() {
         return (
-            <div>
-                <form onSubmit={this.handleSubmit}>
+            <div className='post-form'>
+                <form 
+                    onSubmit={this.handleSubmit}
+                >
                     <label htmlFor='text-title'>
                         <input
                             type="text"
@@ -61,9 +63,9 @@ class TextForm extends React.Component {
                         />
                     </label>
 
+                    <Link to='/dashboard'>Close</Link>
                     <button>Post</button>
                 </form>
-                <button onClick={this.handleClick}>Close</button>
             </div>
         );
     }

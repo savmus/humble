@@ -14,6 +14,113 @@
  *= require_self
  */
 
+ .post-form {
+    background: white;
+    width: 500px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    overflow: hidden;
+ }
+
+ #text-title {
+    display: block;
+    border: none;
+    width: 460px;
+    height: 40px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+ }
+
+ #text-description {
+    display: block;
+    border: none;
+    width: 460px;
+    height: 50px;
+    padding-left: 20px;
+    resize: none;
+ }
+
+ #photo-url {
+    display: block;
+    border-left: none;
+    border-right: none;
+    border-top: 3px dashed lightgray;
+    border-bottom: 3px dashed lightgray;
+    width: 480px;
+    height: 200px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+ }
+
+ #quote-caption {
+    display: block;
+    border: none;
+    width: 460px;
+    height: 40px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    resize: none;
+ }
+
+ #quote-summary {
+    display: block;
+    border: none;
+    width: 460px;
+    margin-left: 20px;
+ }
+
+ #link-url {
+    display: block;
+    border-left: none;
+    border-right: none;
+    border-top: 3px dashed lightgray;
+    border-bottom: 3px dashed lightgray;
+    width: 480px;
+    height: 125px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+ }
+
+ .post-form form button {
+   border: none;
+   background: deepskyblue;
+   color: white;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 700;
+   display: inline-block;
+   margin-right: 20px;
+   margin-left: 335px;
+   padding-right: 10px;
+   padding-left: 10px;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   border-top-left-radius: 3px;
+   border-bottom-left-radius: 3px;
+   border-top-right-radius: 3px;
+   border-bottom-right-radius: 3px;
+ }
+
+ .post-form form a {
+   display: inline-block;
+   text-decoration: none;
+   background: rgb(197, 196, 196);
+   color: white;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 600;
+   font-size: 13px;
+   padding-right: 10px;
+   padding-left: 10px;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   margin: 20px;
+   border-top-left-radius: 3px;
+   border-bottom-left-radius: 3px;
+   border-top-right-radius: 3px;
+   border-bottom-right-radius: 3px;
+ }
+
  .post-links {
     background: white;
     padding: 10px;

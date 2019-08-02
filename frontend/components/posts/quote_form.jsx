@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 class QuoteForm extends React.Component {
     constructor(props) {
@@ -40,7 +40,7 @@ class QuoteForm extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='post-form'>
                 <form onSubmit={this.handleSubmit}>
                     <label htmlFor='quote-caption'>
                         <textarea
@@ -51,7 +51,7 @@ class QuoteForm extends React.Component {
                         />
                     </label>
 
-                    <label htmlFor='quote-summary'>--
+                    <label htmlFor='quote-summary'>
                         <input
                             type="text"
                             id='quote-summary'
@@ -61,9 +61,9 @@ class QuoteForm extends React.Component {
                         />
                     </label>
 
+                    <Link to='/dashboard'>Close</Link>
                     <button>Post</button>
                 </form>
-                <button onClick={this.handleClick}>Close</button>
             </div>
         );
     }
