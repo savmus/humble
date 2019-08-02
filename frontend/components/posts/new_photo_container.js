@@ -10,7 +10,7 @@ const mapStateToProps = ({ session }) => {
             author_id: userId,
             url: "",
             post_status: "Posted", // change later
-            post_type: "Photo",
+            post_type: "photo",
             publish_date: date
         },
         formType: "Create Post"

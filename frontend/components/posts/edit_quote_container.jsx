@@ -10,7 +10,7 @@ class EditQuoteForm extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchPost(this.props.post.id);
+        this.props.fetchPost(this.props.match.params.postId);
     }
 
     componentDidUpdate(prevProps) {
@@ -21,6 +21,7 @@ class EditQuoteForm extends React.Component {
 
     render() {
         const { post, formType, action } = this.props;
+
         return (
             <QuoteForm
                 post={post}
@@ -31,7 +32,7 @@ class EditQuoteForm extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-    let post = state.posts[ownProps.match.params.postId];
+    let post = state.entities.posts[ownProps.match.params.postId];
     return ({
         post: post,
         formType: "Edit Post"

@@ -8,11 +8,11 @@ const mapStateToProps = ({ session, entities }) => {
 
     return ({
         post: {
-            authorId: userId,
+            author_id: userId,
             title: "",
             description: "",
             post_status: "Posted", // change later
-            post_type: "Text",
+            post_type: "text",
             publish_date: date
         },
         formType: "Create Post"

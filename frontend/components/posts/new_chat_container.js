@@ -11,7 +11,7 @@ const mapStateToProps = ({ session }) => {
             title: "",
             description: "",
             post_status: "Posted", // change later
-            post_type: "Chat",
+            post_type: "chat",
             publish_date: date
         },
         formType: "Create Post"

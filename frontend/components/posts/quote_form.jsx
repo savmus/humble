@@ -31,6 +31,11 @@ class QuoteForm extends React.Component {
     }
 
     render() {
+        debugger;
+        // if (!this.props.post) {
+        //     return null;
+        // }
+
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>

@@ -16,12 +16,8 @@ class Post extends React.Component {
     }
 
     render() {
-        let posts;
-
         if (!this.props.posts) {
             // dashboard
-            posts = this.props.allPosts;
-
             return (
                 <div>
                     <Link to='/new/text'>Text</Link>
@@ -33,17 +29,15 @@ class Post extends React.Component {
                     <Link to='/new/video'>Video</Link>
                     
                     <ul>
-                        <PostIndexItem posts={posts} />
+                        <PostIndexItem posts={this.props.allPosts} deletePost={this.props.deletePost} />
                     </ul>
                 </div>
             )
         } else {
-            posts = this.props.posts;
-
             return (
                 <div>
                     <ul>
-                        <PostIndexItem posts={posts} />
+                        <PostIndexItem posts={this.props.posts} deletePost={this.props.deletePost} />
                     </ul>
                 </div>
             )
