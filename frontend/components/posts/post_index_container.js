@@ -4,10 +4,11 @@ import { fetchPosts, fetchUserPosts, deletePost } from '../../actions/post_actio
 
 const mapStateToProps = (state, ownProps) => {
     let postsArr = Object.values(state.entities.posts);
-    let user = state.entities.users[ownProps.match.params.userId]
+    let user = state.entities.users[ownProps.match.params.userId];
     return ({
         allPosts: postsArr,
-        user: user
+        user: user,
+        currentUser: state.session.currentUser
     })
 };
 

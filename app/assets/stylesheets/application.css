@@ -14,6 +14,106 @@
  *= require_self
  */
 
+ .post-links {
+    background: white;
+    padding: 10px;
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+    width: 500px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    overflow: hidden;
+ }
+
+ .post-links li {
+    list-style: none;
+    padding-right: 38px;
+    padding-left: 38px;
+    display: inline-block;
+    border-right: 1px solid lightgray;
+ }
+
+ .post-links li:last-child {
+    border: none;
+ }
+
+ .text-link {
+    text-decoration: none;
+    display: block;
+    color: grey;
+    text-align: center;
+ }
+
+ .material-icons {
+    display: block;
+    font-size: 48px !important;
+ }
+
+ .text {
+    color: black;
+ }
+
+ .photo {
+    color: red;
+ }
+
+ .quote {
+    color: orange;
+ }
+
+ .link {
+    color: green;
+ }
+
+ .post {
+    background: white;
+    width: 520px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    margin: 0 auto;
+ }
+
+ .posts {
+    padding: 0;
+ }
+
+ .post img {
+    width: 520px;
+ }
+
+ .post li {
+    list-style: none;
+ }
+
+ #delete-post {
+    border: none;
+    background: white;
+    color: rgb(75, 75, 75);
+    display: block;
+    padding: 0;
+    margin-right: 0;
+    margin-left: 476px;
+    font-size: 14px;
+ }
+
+ #edit-post {
+   text-decoration: none;
+   color: rgb(75, 75, 75);
+   display: block;
+   text-align: end;
+   font-size: 14px;
+   margin-right: 3px;
+ }
+
+ .post-options {
+    font-family: Arial, Helvetica, sans-serif;
+ }
+
  .logout-btn {
     border: none;
     background: none;

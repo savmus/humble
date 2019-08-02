@@ -78,6 +78,7 @@ class SessionForm extends React.Component {
         if (header === 'Sign Up') {
             return (
                 <div className={type}>
+                    <h1 className='title'>humble</h1>
                     <Link to='/login'>Log In</Link>
 
                     <div className='slogan'>
@@ -132,6 +133,7 @@ class SessionForm extends React.Component {
         } else {
             return (
                 <div className={type}>
+                    <h1 className='title'>humble</h1>
                     <Link to='/signup'>Sign Up</Link>
 
                     <form onSubmit={this.handleSubmit}>

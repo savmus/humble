@@ -20,7 +20,6 @@ const App = () => (
     <div>
         <header>
             {/* <NavBarContainer /> */}
-            <h1 className='title'>humble</h1>
             <GreetingContainer />
         </header>
 

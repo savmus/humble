@@ -19,7 +19,7 @@ class PostIndexItem extends React.Component {
             <div>
                 {this.props.posts.map((post, idx) => {
                     return (
-                        <div key={idx}>
+                        <div key={idx} className='post'>
                             <li>
                                 <h2>{post.title}</h2>
                                 <img src={post.image_url} />
@@ -27,10 +27,19 @@ class PostIndexItem extends React.Component {
                                 <p>{post.caption}</p>
                                 <p>{post.summary}</p>
                                 <p>{post.description}</p>
-                                <p>{post.publish_date}</p>
                             </li>
-                            <button onClick={this.handleClick.bind(this, post.id)}>Delete Post</button>
-                            <Link to={`/edit/${post.post_type}/${post.id}`}>Edit Post</Link>
+                            <div className='post-options'>
+                                <Link
+                                    to={`/edit/${post.post_type}/${post.id}`}
+                                    id='edit-post'
+                                    className={post.author_id === currentUser.id ? "reveal" : "hide"}
+                                >Edit</Link>
+                                <button 
+                                    onClick={this.handleClick.bind(this, post.id)} 
+                                    id='delete-post' 
+                                    className={post.author_id === currentUser.id ? "reveal" : "hide"}
+                                >Delete</button>
+                            </div>
                         </div>
                     );
                 })}

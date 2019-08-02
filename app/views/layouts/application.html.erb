@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="<%= logged_in? ? "" : "homepage" %>">
   <head>
     <title>humble</title>
     <%= csrf_meta_tags %>
@@ -7,6 +7,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <% if current_user %>
       <script>
         window.currentUser = {
@@ -19,7 +20,7 @@
 
   </head>
 
-  <body>
+  <body class="<%= logged_in? ? "" : "homepage" %>">
     <%= yield %>
   </body>
 </html>
