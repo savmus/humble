@@ -23,6 +23,10 @@ class EditTextForm extends React.Component {
         const { post, formType, action } = this.props;
 
         if (!post) return null;
+
+        if (post.author_id !== this.props.currentUser.id) {
+            return null;
+        }
         
         if (window.localStorage) {
             if (!localStorage.getItem('firstLoad')) {
@@ -44,8 +48,10 @@ class EditTextForm extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
     let post = state.entities.posts[ownProps.match.params.postId];
+    let currentUser = state.session.currentUser;
     return ({
         post: post,
+        currentUser: currentUser,
         formType: "Edit Post"
     })
 };

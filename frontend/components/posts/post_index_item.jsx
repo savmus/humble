@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class PostIndexItem extends React.Component {
     constructor(props) {
@@ -52,8 +52,11 @@ class PostIndexItem extends React.Component {
         } else {
             return (
                 <div>
+                    <Link to='/dashboard'>t</Link>
+                    <Link to={`/blogs/${this.props.blog.id}/edit`}>Edit</Link>
                     <img src={this.props.blog.avatar} />
-                    <span>{this.props.blog.username}</span>
+                    <h1>{this.props.blog.blog_title}</h1>
+                    <span>{this.props.blog.blog_description}</span>
 
                     {this.props.posts.map((post, idx) => {
                         return (

@@ -14,6 +14,7 @@ import EditQuoteFormContainer from './posts/edit_quote_container';
 import NewLinkFormContainer from './posts/new_link_container';
 import EditLinkFormContainer from './posts/edit_link_container';
 import BlogContainer from './users/blog_container';
+import BlogFormContainer from './users/blog_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import { Route } from 'react-router-dom';
 
@@ -36,7 +37,8 @@ const App = () => (
         <ProtectedRoute path="/edit/quote/:postId" component={EditQuoteFormContainer} />
         <ProtectedRoute path="/new/link" component={NewLinkFormContainer} />
         <ProtectedRoute path="/edit/link/:postId" component={EditLinkFormContainer} />
-        <Route path="/blogs/:userId" component={BlogContainer} />
+        <Route exact path="/blogs/:userId" component={BlogContainer} />
+        <ProtectedRoute exact path="/blogs/:userId/edit" component={BlogFormContainer} />
     </div>
 );
 
