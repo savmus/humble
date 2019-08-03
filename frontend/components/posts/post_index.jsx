@@ -9,6 +9,7 @@ class Post extends React.Component {
 
     componentDidMount() {
         if (!this.props.posts) {
+            this.props.fetchUsers();
             this.props.fetchPosts(); // temporary
         }
     }
@@ -42,6 +43,7 @@ class Post extends React.Component {
                             posts={this.props.allPosts} 
                             deletePost={this.props.deletePost} 
                             currentUser={this.props.currentUser} 
+                            users={this.props.allUsers} 
                         />
                     </ul>
                 </div>
@@ -53,6 +55,7 @@ class Post extends React.Component {
                     <ul>
                         <PostIndexItem 
                             posts={this.props.posts} 
+                            blog={this.props.blog} 
                             deletePost={this.props.deletePost} 
                             currentUser={this.props.currentUser} 
                         />

@@ -8,7 +8,8 @@ class SessionForm extends React.Component {
         this.state = {
             username: "",
             email: "",
-            password: ""
+            password: "",
+            avatar: "https://66.media.tumblr.com/2060fe62b7ed3b46e5789356942a305e/tumblr_o51oavbMDx1ugpbmuo2_250.png"
         };
 
         this.clicked = false;
