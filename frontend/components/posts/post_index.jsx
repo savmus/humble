@@ -8,9 +8,7 @@ class Post extends React.Component {
     }
 
     componentDidMount() {
-        if (this.props.user) {
-            this.props.fetchUserPosts(this.props.user);
-        } else {
+        if (!this.props.posts) {
             this.props.fetchPosts(); // temporary
         }
     }
@@ -49,10 +47,15 @@ class Post extends React.Component {
                 </div>
             )
         } else {
+            // blog
             return (
                 <div>
                     <ul>
-                        <PostIndexItem posts={this.props.posts} deletePost={this.props.deletePost} />
+                        <PostIndexItem 
+                            posts={this.props.posts} 
+                            deletePost={this.props.deletePost} 
+                            currentUser={this.props.currentUser} 
+                        />
                     </ul>
                 </div>
             )
