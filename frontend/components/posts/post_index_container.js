@@ -15,7 +15,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => ({
     fetchUserPosts: (user) => dispatch(fetchUserPosts(user)),
     fetchPosts: () => dispatch(fetchPosts()),
-    deletePost: (id) => dispatch(deletePost(id))
+    deletePost: (id) => dispatch(deletePost(id)),
 });
 
 

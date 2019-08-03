@@ -23,6 +23,16 @@ class EditPhotoForm extends React.Component {
         const { post, formType, action } = this.props;
 
         if (!post) return null;
+
+        if (window.localStorage) {
+            if (!localStorage.getItem('firstLoad')) {
+                localStorage['firstLoad'] = true;
+                window.location.reload();
+            }
+            else
+                localStorage.removeItem('firstLoad');
+        }
+        
         return (
             <PhotoForm
                 post={post}

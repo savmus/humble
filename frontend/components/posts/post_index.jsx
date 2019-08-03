@@ -40,7 +40,11 @@ class Post extends React.Component {
                     </ul>
                     
                     <ul className='posts'>
-                        <PostIndexItem posts={this.props.allPosts} deletePost={this.props.deletePost} currentUser={this.props.currentUser} />
+                        <PostIndexItem 
+                            posts={this.props.allPosts} 
+                            deletePost={this.props.deletePost} 
+                            currentUser={this.props.currentUser} 
+                        />
                     </ul>
                 </div>
             )

@@ -2,7 +2,10 @@ export const createPost = post => (
     $.ajax({
         url: `/api/users/${post.user_id}/posts`,
         method: 'POST',
-        data: { post }
+        data: { post },
+        success: (data) => {
+            location.reload();
+        }
     })
 );
 
@@ -31,13 +34,19 @@ export const updatePost = post => (
     $.ajax({
         url: `/api/posts/${post.id}`,
         method: 'PATCH',
-        data: { post }
+        data: { post },
+        success: (data) => {
+            location.reload();
+        }
     })
 );
 
 export const deletePost = id => (
     $.ajax({
         url: `/api/posts/${id}`,
-        method: 'DELETE'
+        method: 'DELETE',
+        success: (data) => {
+            location.reload();
+        }
     })
 );
