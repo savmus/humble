@@ -16,15 +16,14 @@ class PostIndexItem extends React.Component {
 
     render() {
         if (!this.props.blog) {
-            let that = this;
             return (
                 <div>
                     {this.props.posts.map((post, idx) => {
                         return (
                             <div key={idx} className='post'>
                                 <li>
-                                    <img src={that.props.users[post.author_id - 1].avatar} />
-                                    <a href={`#/blogs/${post.author_id}`}>{that.props.users[post.author_id - 1].username}</a>
+                                    <img src={post.user.avatar} />
+                                    <a href={`#/blogs/${post.author_id}`}>{post.user.username}</a>
                                     <h2>{post.title}</h2>
                                     <img src={post.image_url} />
                                     <a href={post.url}>{post.url}</a>
