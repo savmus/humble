@@ -53,7 +53,10 @@ class SessionForm extends React.Component {
         this.props.processForm({
             username: "demo",
             email: "demo@demo.com",
-            password: "12345678"
+            password: "12345678",
+            avatar: "https://avatarfiles.alphacoders.com/865/86518.png",
+            blog_title: "Untitled",
+            blog_description: "Demo blogger."
         });
 
         this.setState({
