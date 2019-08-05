@@ -25,7 +25,8 @@ class PhotoForm extends React.Component {
         this.props.action(post);
 
         this.setState({
-            image_url: ""
+            image_url: "",
+            caption: ""
         });
 
         this.props.history.push('/dashboard');
@@ -48,6 +49,15 @@ class PhotoForm extends React.Component {
                             onChange={this.update("image_url")}
                             placeholder="URL goes here"
                             value={this.state.image_url || ""}
+                        />
+                    </label>
+
+                    <label htmlFor='photo-caption'>
+                        <textarea
+                            id='photo-caption'
+                            onChange={this.update("caption")}
+                            placeholder="Add a caption, if you want"
+                            value={this.state.caption || ""}
                         />
                     </label>
 

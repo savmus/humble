@@ -25,7 +25,8 @@ class LinkForm extends React.Component {
         this.props.action(post);
 
         this.setState({
-            url: ""
+            url: "",
+            description: ""
         });
 
         this.props.history.push('/dashboard');
@@ -48,6 +49,15 @@ class LinkForm extends React.Component {
                             onChange={this.update("url")}
                             placeholder="URL goes here"
                             value={this.state.url || ""}
+                        />
+                    </label>
+
+                    <label htmlFor='link-description'>
+                        <textarea
+                            id='link-description'
+                            onChange={this.update("description")}
+                            placeholder="Add a descripton, if you want"
+                            value={this.state.description || ""}
                         />
                     </label>
 

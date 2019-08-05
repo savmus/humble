@@ -14,6 +14,125 @@
  *= require_self
  */
 
+ .to-dash {
+    text-decoration: none;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 1000;
+    font-size: 55px;
+    margin-left: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+ }
+
+ .blog-edit {
+    text-decoration: none;
+    color: rgb(70, 70, 70);
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    background-color: white;
+    margin-top: 10px;
+    margin-right: 55px;
+    text-decoration: none;
+    padding: 8px 12px 8px 12px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 3px;
+ }
+
+ .blog-avatar {
+    width: 90px;
+    height: 90px;
+    margin-left: 575px;
+    border-top-left-radius: 45px;
+    border-bottom-left-radius: 45px;
+    border-top-right-radius: 45px;
+    border-bottom-right-radius: 45px;
+    overflow: hidden;
+ }
+
+ .blog-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: 925;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+ }
+
+ .blog-description {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+ }
+
+ .dash-avatar {
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-left: 285px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    overflow: hidden;
+ }
+
+ .username {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    color: black;
+ }
+
+ .post h2 {
+    margin-bottom: 0px;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+
+ .post-description {
+    margin-top: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+ }
+
+ .post-caption {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-bottom: 0px;
+ }
+
+ .post-quote {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 24px;
+    margin: 0px;
+ }
+
+ .post-quote:before {
+    content: open-quote;
+ }
+
+ .post-quote:after {
+    content: close-quote;
+ }
+
+ .post-source:before {
+    content: "— ";
+ }
+
+ .post-source {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+ }
+
  .post-form {
     background: white;
     width: 500px;
@@ -54,6 +173,15 @@
     margin-bottom: 10px;
  }
 
+ #photo-caption {
+    display: block;
+    width: 480px;
+    height: 100px;
+    margin-left: 20px;
+    border: none;
+    resize: none;
+ }
+
  #quote-caption {
     display: block;
     border: none;
@@ -81,6 +209,15 @@
     height: 125px;
     padding-left: 20px;
     margin-bottom: 10px;
+ }
+
+ #link-description {
+    display: block;
+    width: 480px;
+    height: 100px;
+    margin-left: 20px;
+    border: none;
+    resize: none;
  }
 
  .post-form form button {
@@ -177,20 +314,24 @@
 
  .post {
     background: white;
-    width: 520px;
+    width: 480px;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
     margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 20px;
  }
 
  .posts {
     padding: 0;
  }
 
- .post img {
+ .pictures {
     width: 520px;
+    position: relative;
+    right: 20px;
  }
 
  .post li {
@@ -204,7 +345,7 @@
     display: block;
     padding: 0;
     margin-right: 0;
-    margin-left: 476px;
+    margin-left: 438px;
     font-size: 14px;
  }
 
