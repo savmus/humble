@@ -50,8 +50,7 @@ class PostIndexItem extends React.Component {
                                         <button
                                             onClick={this.handleClick.bind(this, post.id)}
                                             id='delete-post'
-                                            className='reveal' 
-                                            // {post.author_id === currentUser.id ? "reveal" : "hide"}
+                                            className={post.author_id === currentUser.id ? "reveal" : "hide"} 
                                         >Delete</button>
                                     </div>
                                 </div>
