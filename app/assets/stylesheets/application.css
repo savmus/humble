@@ -143,6 +143,16 @@
     overflow: hidden;
  }
 
+ .blog-form {
+    background: white;
+    width: 500px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    overflow: hidden;
+ }
+
  #text-title {
     display: block;
     border: none;
@@ -218,6 +228,75 @@
     margin-left: 20px;
     border: none;
     resize: none;
+ }
+
+ #user-avatar {
+    display: block;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 3px dashed lightgray;
+    width: 480px;
+    height: 40px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+ }
+
+ #blog-title {
+    display: block;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 3px dashed lightgray;
+    width: 480px;
+    height: 40px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+ }
+
+ #blog-description {
+    display: block;
+    width: 480px;
+    height: 40px;
+    margin-left: 20px;
+    border: none;
+    resize: none;
+ }
+
+ .blog-form form button {
+   border: none;
+   background: deepskyblue;
+   color: white;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 700;
+   margin-left: 330px;
+   padding-right: 10px;
+   padding-left: 10px;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   border-top-left-radius: 3px;
+   border-bottom-left-radius: 3px;
+   border-top-right-radius: 3px;
+   border-bottom-right-radius: 3px;
+ }
+
+ .blog-form form a {
+   display: inline-block;
+   text-decoration: none;
+   background: rgb(197, 196, 196);
+   color: white;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 600;
+   font-size: 13px;
+   padding-right: 10px;
+   padding-left: 10px;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   margin: 20px;
+   border-top-left-radius: 3px;
+   border-bottom-left-radius: 3px;
+   border-top-right-radius: 3px;
+   border-bottom-right-radius: 3px;
  }
 
  .post-form form button {

@@ -41,7 +41,7 @@ class BlogForm extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='blog-form'>
                 <form onSubmit={this.handleSubmit}>
                     <label htmlFor='user-avatar'>
                         <input
@@ -74,7 +74,7 @@ class BlogForm extends React.Component {
                     </label>
 
                     <Link to={`/blogs/${this.props.blog.id}`}>Close</Link>
-                    <button>Update</button>
+                    <button>Save</button>
                 </form>
             </div>
         );
