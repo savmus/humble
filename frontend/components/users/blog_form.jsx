@@ -40,6 +40,10 @@ class BlogForm extends React.Component {
     }
 
     render() {
+        if (this.props.blog.id !== this.props.currentUser.id) {
+            return null;
+        }
+
         return (
             <div className='blog-form'>
                 <form onSubmit={this.handleSubmit}>

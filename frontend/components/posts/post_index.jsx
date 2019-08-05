@@ -5,6 +5,15 @@ import { Link } from 'react-router-dom';
 class Post extends React.Component {
     constructor(props) {
         super(props);
+
+        if (window.localStorage) {
+            if (!localStorage.getItem('firstLoad')) {
+                localStorage['firstLoad'] = true;
+                window.location.reload();
+            }
+            else
+                localStorage.removeItem('firstLoad');
+        }
     }
 
     componentDidMount() {

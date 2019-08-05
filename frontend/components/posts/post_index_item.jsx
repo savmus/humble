@@ -68,7 +68,7 @@ class PostIndexItem extends React.Component {
                     >h</Link>
                     <Link 
                         to={`/blogs/${this.props.blog.id}/edit`} 
-                        className='blog-edit' 
+                        className={`blog-edit ${this.props.blog.id === currentUser.id ? "reveal" : "hide"}`} 
                     >Edit appearance</Link>
                     <img 
                         src={this.props.blog.avatar} 
