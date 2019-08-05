@@ -65,7 +65,7 @@ class PostIndexItem extends React.Component {
                     <Link 
                         to='/dashboard' 
                         className='to-dash' 
-                    >t</Link>
+                    >h</Link>
                     <Link 
                         to={`/blogs/${this.props.blog.id}/edit`} 
                         className='blog-edit' 
