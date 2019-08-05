@@ -2,13 +2,16 @@
 #
 # Table name: users
 #
-#  id              :bigint           not null, primary key
-#  username        :string           not null
-#  email           :string           not null
-#  session_token   :string           not null
-#  password_digest :string           not null
-#  created_at      :datetime         not null
-#  updated_at      :datetime         not null
+#  id               :bigint           not null, primary key
+#  username         :string           not null
+#  email            :string           not null
+#  session_token    :string           not null
+#  password_digest  :string           not null
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
+#  avatar           :string
+#  blog_title       :string
+#  blog_description :string
 #
 
 class User < ApplicationRecord
@@ -23,6 +26,22 @@ class User < ApplicationRecord
     has_many :posts,
       class_name: "Post",
       foreign_key: :author_id
+
+    has_many :followships,
+      class_name: "Follow",
+      foreign_key: :user_id
+
+    has_many :fanships,
+      class_name: "Follow",
+      foreign_key: :followee_id
+
+    has_many :followers,
+      through: :fanships,
+      source: :follower
+
+    has_many :follows,
+      through: :followships,
+      source: :followee
 
     def self.find_by_credentials(email, password)
       user = User.find_by(email: email)

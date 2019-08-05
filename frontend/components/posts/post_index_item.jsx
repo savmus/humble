@@ -91,18 +91,6 @@ class PostIndexItem extends React.Component {
                                     <p className={post.summary ? 'post-source' : 'post-summary'}>{post.summary}</p>
                                     <p className='post-description'>{post.description}</p>
                                 </li>
-                                <div className='post-options'>
-                                    <Link
-                                        to={`/edit/${post.post_type}/${post.id}`}
-                                        id='edit-post'
-                                        className={post.author_id === currentUser.id ? "reveal" : "hide"}
-                                    >Edit</Link>
-                                    <button
-                                        onClick={this.handleClick.bind(this, post.id)}
-                                        id='delete-post'
-                                        className={post.author_id === currentUser.id ? "reveal" : "hide"}
-                                    >Delete</button>
-                                </div>
                             </div>
                         );
                     })}
