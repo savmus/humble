@@ -45,7 +45,6 @@ class PostIndexItem extends React.Component {
     }
 
     render() {
-        debugger;
         if (!this.props.blog) {
             if (!this.props.currentUser || this.props.posts.length === 0) {
                 return null

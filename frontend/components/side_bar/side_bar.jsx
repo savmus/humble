@@ -21,8 +21,6 @@ class SideBar extends React.Component {
             return null
         }
 
-        debugger;
-
         return (
             <div>
                 <h2>Recommended Blogs</h2>

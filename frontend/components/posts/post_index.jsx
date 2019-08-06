@@ -68,7 +68,6 @@ class Post extends React.Component {
             )
         } else {
             // blog
-            // debugger;
             return (
                 <div>
                     <ul>

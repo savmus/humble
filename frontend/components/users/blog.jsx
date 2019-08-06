@@ -17,8 +17,6 @@ class Blog extends React.Component {
             return null;
         }
 
-        // debugger;
-
         return (
             <PostIndex 
                 posts={this.props.blog.posts} 
