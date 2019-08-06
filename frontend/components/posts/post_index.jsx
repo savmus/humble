@@ -6,14 +6,14 @@ class Post extends React.Component {
     constructor(props) {
         super(props);
 
-        // if (window.localStorage) {
-        //     if (!localStorage.getItem('firstLoad')) {
-        //         localStorage['firstLoad'] = true;
-        //         window.location.reload();
-        //     }
-        //     else
-        //         localStorage.removeItem('firstLoad');
-        // }
+        if (window.localStorage) {
+            if (!localStorage.getItem('firstLoad')) {
+                localStorage['firstLoad'] = true;
+                window.location.reload();
+            }
+            else
+                localStorage.removeItem('firstLoad');
+        }
     }
 
     componentDidMount() {
@@ -36,7 +36,6 @@ class Post extends React.Component {
     render() {
         if (!this.props.posts) {
             // dashboard
-            // debugger;
             return (
                 <div>
                     <ul className='post-links'>

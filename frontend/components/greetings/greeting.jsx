@@ -7,17 +7,15 @@ class Greeting extends React.Component {
     }
 
     render () {
-        if (this.props.currentUser) {
-            return (
-                <div>
-                    <button onClick={this.props.logout} className='logout-btn'>Logout</button>
-                </div>
-        )} else {
+        if (!this.props.currentUser) {
             return (
                 <div>
                     <Redirect to='/signup' />
                 </div>
-        )};
+            )
+        } else {
+            return null;
+        }
     }
 }
 

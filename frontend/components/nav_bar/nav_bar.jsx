@@ -1,10 +1,42 @@
 import React from 'react';
-import Search from '../searches/search';
+import { Link } from 'react-router-dom';
 
-export default (props) => {
-    return (
-        <div>
-            <Search />
-        </div>
-    );
+class NavBar extends React.Component {
+    constructor (props) {
+        super(props);
+    }
+
+    render() {
+        if (this.props.currentUser) {
+            return (
+                <nav>
+                    <Link
+                        to='/dashboard'
+                        className='to-dash'
+                    >h</Link>
+                    <input
+                        type='text'
+                        placeholder='Search'
+                    />
+
+                    <button onClick={this.props.logout} className='logout-btn'>Logout</button>
+                </nav>
+            )
+        } else {
+            return (
+                <nav>
+                    <Link
+                        to='/signup'
+                        className='to-dash'
+                    >h</Link>
+                    <input 
+                        type='text' 
+                        placeholder='Search' 
+                    />
+                </nav>
+            )
+        };
+    }
 };
+
+export default NavBar;

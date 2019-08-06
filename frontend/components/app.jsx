@@ -15,13 +15,14 @@ import NewLinkFormContainer from './posts/new_link_container';
 import EditLinkFormContainer from './posts/edit_link_container';
 import BlogContainer from './users/blog_container';
 import BlogFormContainer from './users/blog_form_container';
+import SideBarContainer from './side_bar/side_bar_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import { Route } from 'react-router-dom';
 
 const App = () => (
     <div>
         <header>
-            {/* <NavBarContainer /> */}
+            <NavBarContainer />
             <GreetingContainer />
         </header>
 
@@ -29,6 +30,7 @@ const App = () => (
         <AuthRoute path="/login" component={LoginFormContainer} />
         <AuthRoute path="/signup" component={SignupFormContainer} />
         <ProtectedRoute path="/dashboard" component={PostIndexContainer} />
+        <ProtectedRoute path="/dashboard" component={SideBarContainer} />
         <ProtectedRoute path="/new/text" component={NewTextFormContainer} />
         <ProtectedRoute path="/edit/text/:postId" component={EditTextFormContainer} />
         <ProtectedRoute path="/new/photo" component={NewPhotoFormContainer} />

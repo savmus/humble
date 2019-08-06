@@ -28,11 +28,32 @@ class PostIndexItem extends React.Component {
         this.props.deleteFollow(id);
     }
 
+    shouldComponentUpdate(nextProps, nextState) {
+        if (!this.props.post) {
+            if (this.props.currentUser) {
+                if (this.props.currentUser.follows && !nextProps.currentUser.follows) {
+                    return false
+                } else {
+                    return true
+                };
+            } else {
+                return true;
+            }
+        } else {
+            return true
+        };
+    }
+
     render() {
+        debugger;
         if (!this.props.blog) {
             if (!this.props.currentUser || this.props.posts.length === 0) {
                 return null
             };
+
+            if (!this.props.currentUser.follows) {
+                return null;
+            }
 
             let follows = this.props.currentUser.follows.map((follow) => {
                 return follow.followee_id
@@ -96,10 +117,6 @@ class PostIndexItem extends React.Component {
 
             return (
                 <div>
-                    <Link 
-                        to='/dashboard' 
-                        className='to-dash' 
-                    >h</Link>
                     <Link 
                         to={`/blogs/${this.props.blog.id}/edit`} 
                         className={`blog-edit ${this.props.blog.id === currentUser.id ? "reveal" : "hide"}`} 
