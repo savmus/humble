@@ -30,7 +30,7 @@ const App = () => (
         <AuthRoute path="/login" component={LoginFormContainer} />
         <AuthRoute path="/signup" component={SignupFormContainer} />
         <ProtectedRoute path="/dashboard" component={PostIndexContainer} />
-        <ProtectedRoute path="/dashboard" component={SideBarContainer} />
+        {/* <ProtectedRoute path="/dashboard" component={SideBarContainer} /> */}
         <ProtectedRoute path="/new/text" component={NewTextFormContainer} />
         <ProtectedRoute path="/edit/text/:postId" component={EditTextFormContainer} />
         <ProtectedRoute path="/new/photo" component={NewPhotoFormContainer} />

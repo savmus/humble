@@ -25,6 +25,7 @@ class Blog extends React.Component {
                 currentUser={this.props.currentUser} 
                 createFollow={this.props.createFollow} 
                 deleteFollow={this.props.deleteFollow} 
+                deleteUser={this.props.deleteUser} 
             />
         )
     }

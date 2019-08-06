@@ -43,7 +43,7 @@ class Api::UsersController < ApplicationController
         @user = User.find(params[:id])
         if @user
           @user.destroy
-          render 'api/users/index'
+          render nothing: true, status: :ok
         else
           render json: ['We could not find that user.'], status: 400
         end
