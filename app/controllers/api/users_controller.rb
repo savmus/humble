@@ -5,6 +5,7 @@ class Api::UsersController < ApplicationController
         @user = User.new(user_params)
 
         if @user.save
+            Follow.create(user_id: @user.id, followee_id: @user.id)
             login(@user)
             render 'api/users/show'
         else

@@ -30,9 +30,25 @@ class PostIndexItem extends React.Component {
 
     render() {
         if (!this.props.blog) {
+            if (!this.props.currentUser || this.props.posts.length === 0) {
+                return null
+            };
+
+            let follows = this.props.currentUser.follows.map((follow) => {
+                return follow.followee_id
+            });
+
+            let allPosts = [];
+
+            for (let i = 0; i < this.props.posts.length; i++) {
+                if (follows.includes(this.props.posts[i].author_id)) {
+                    allPosts.push(this.props.posts[i]);
+                };
+            };
+
             return (
                 <div>
-                    {this.props.posts.map((post, idx) => {
+                    {allPosts.map((post, idx) => {
                         return (
                             <div key={idx}>
                                 <img
@@ -77,7 +93,7 @@ class PostIndexItem extends React.Component {
             let follows = this.props.currentUser.follows.map((follow) => {
                 return follow.followee_id
             });
-            debugger;
+
             return (
                 <div>
                     <Link 
@@ -97,7 +113,7 @@ class PostIndexItem extends React.Component {
                     >Follow</button>
                     <button
                         onClick={this.handleUnfollow.bind(this, this.props.blog.id)}
-                        className={`blog-follow ${follows.includes(this.props.blog.id) ? "reveal" : "hide"}`}
+                        className={`blog-follow ${follows.includes(this.props.blog.id) && this.props.blog.id !== currentUser.id ? "reveal" : "hide"}`}
                     >Unfollow</button>
                     <img 
                         src={this.props.blog.avatar} 

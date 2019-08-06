@@ -6,20 +6,20 @@ class Post extends React.Component {
     constructor(props) {
         super(props);
 
-        if (window.localStorage) {
-            if (!localStorage.getItem('firstLoad')) {
-                localStorage['firstLoad'] = true;
-                window.location.reload();
-            }
-            else
-                localStorage.removeItem('firstLoad');
-        }
+        // if (window.localStorage) {
+        //     if (!localStorage.getItem('firstLoad')) {
+        //         localStorage['firstLoad'] = true;
+        //         window.location.reload();
+        //     }
+        //     else
+        //         localStorage.removeItem('firstLoad');
+        // }
     }
 
     componentDidMount() {
         if (!this.props.posts) {
-            this.props.fetchUsers();
-            this.props.fetchPosts(); // temporary
+            this.props.fetchPosts();
+            this.props.fetchUser(currentUser.id);
         }
     }
 
@@ -36,6 +36,7 @@ class Post extends React.Component {
     render() {
         if (!this.props.posts) {
             // dashboard
+            // debugger;
             return (
                 <div>
                     <ul className='post-links'>
@@ -62,7 +63,6 @@ class Post extends React.Component {
                             posts={this.props.allPosts} 
                             deletePost={this.props.deletePost} 
                             currentUser={this.props.currentUser} 
-                            users={this.props.allUsers} 
                         />
                     </ul>
                 </div>
