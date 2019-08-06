@@ -74,8 +74,10 @@ class PostIndexItem extends React.Component {
                 </div>
             );
         } else {
+            let follows = this.props.currentUser.follows.map((follow) => {
+                return follow.followee_id
+            });
             debugger;
-            let follows = Object.values(this.props.currentUser.follows);
             return (
                 <div>
                     <Link 

@@ -23,8 +23,17 @@ class Post extends React.Component {
         }
     }
 
+    shouldComponentUpdate(nextProps, nextState) {
+        if (this.props.blog) {
+            if (this.props.posts !== nextProps.posts) {
+                return false
+            };
+        } else {
+            return true
+        };
+    }
+
     render() {
-        // debugger;
         if (!this.props.posts) {
             // dashboard
             return (
@@ -60,6 +69,7 @@ class Post extends React.Component {
             )
         } else {
             // blog
+            // debugger;
             return (
                 <div>
                     <ul>

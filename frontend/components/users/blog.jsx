@@ -7,7 +7,8 @@ class Blog extends React.Component {
     }
 
     componentDidMount () {
-        this.props.fetchUsers();
+        this.props.fetchUserPosts(this.props.match.params.userId);
+        this.props.fetchUser(this.props.user.id);
         this.props.fetchUser(this.props.match.params.userId);
     }
 
@@ -16,7 +17,7 @@ class Blog extends React.Component {
             return null;
         }
 
-        debugger;
+        // debugger;
 
         return (
             <PostIndex 
