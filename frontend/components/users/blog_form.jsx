@@ -40,7 +40,11 @@ class BlogForm extends React.Component {
     }
 
     render() {
-        if (this.props.blog.id !== this.props.currentUser.id) {
+        if (!this.props.blog) {
+            return null
+        };
+
+        if (this.props.match.params.userId !== currentUser.id.toString()) {
             return null;
         }
 
