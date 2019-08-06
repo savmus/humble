@@ -7,6 +7,7 @@ class Blog extends React.Component {
     }
 
     componentDidMount () {
+        this.props.fetchUsers();
         this.props.fetchUser(this.props.match.params.userId);
     }
 
@@ -15,11 +16,16 @@ class Blog extends React.Component {
             return null;
         }
 
+        debugger;
+
         return (
             <PostIndex 
                 posts={this.props.blog.posts} 
                 blog={this.props.blog} 
                 fetchUserPosts={this.props.fetchUserPosts} 
+                currentUser={this.props.currentUser} 
+                createFollow={this.props.createFollow} 
+                deleteFollow={this.props.deleteFollow} 
             />
         )
     }

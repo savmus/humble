@@ -24,6 +24,7 @@ class Post extends React.Component {
     }
 
     render() {
+        // debugger;
         if (!this.props.posts) {
             // dashboard
             return (
@@ -65,8 +66,9 @@ class Post extends React.Component {
                         <PostIndexItem 
                             posts={this.props.posts} 
                             blog={this.props.blog} 
-                            deletePost={this.props.deletePost} 
                             currentUser={this.props.currentUser} 
+                            createFollow={this.props.createFollow} 
+                            deleteFollow={this.props.deleteFollow} 
                         />
                     </ul>
                 </div>

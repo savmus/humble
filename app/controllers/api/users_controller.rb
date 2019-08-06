@@ -21,8 +21,8 @@ class Api::UsersController < ApplicationController
     def show
         @user = User.find(params[:id])
         @posts = @user.posts
-        @follows = @user.follows
-        @followers = @user.followers
+        @follows = @user.followships
+        @followers = @user.fanships
 
         render 'api/users/show'
     end

@@ -1,4 +1,6 @@
 class Api::FollowsController < ApplicationController
+    skip_before_action :verify_authenticity_token
+
     def create
         @follow = Follow.new
         @follow.followee_id = params[:id]

@@ -6,12 +6,26 @@ class PostIndexItem extends React.Component {
         super(props);
 
         this.handleClick = this.handleClick.bind(this);
+        this.handleFollow = this.handleFollow.bind(this);
+        this.handleUnfollow = this.handleUnfollow.bind(this);
     }
 
     handleClick (id, e) {
         e.preventDefault();
 
         this.props.deletePost(id);
+    }
+
+    handleFollow (follow, e) {
+        e.preventDefault();
+
+        this.props.createFollow(follow);
+    }
+
+    handleUnfollow (id, e) {
+        e.preventDefault();
+
+        this.props.deleteFollow(id);
     }
 
     render() {
@@ -60,6 +74,8 @@ class PostIndexItem extends React.Component {
                 </div>
             );
         } else {
+            debugger;
+            let follows = Object.values(this.props.currentUser.follows);
             return (
                 <div>
                     <Link 
@@ -70,6 +86,17 @@ class PostIndexItem extends React.Component {
                         to={`/blogs/${this.props.blog.id}/edit`} 
                         className={`blog-edit ${this.props.blog.id === currentUser.id ? "reveal" : "hide"}`} 
                     >Edit appearance</Link>
+                    <button 
+                        onClick={this.handleFollow.bind(this, {
+                            user_id: currentUser.id,
+                            followee_id: this.props.blog.id
+                        })} 
+                        className={`blog-follow ${follows.includes(this.props.blog.id) ? "hide" : "reveal"}`}
+                    >Follow</button>
+                    <button
+                        onClick={this.handleUnfollow.bind(this, this.props.blog.id)}
+                        className={`blog-follow ${follows.includes(this.props.blog.id) ? "reveal" : "hide"}`}
+                    >Unfollow</button>
                     <img 
                         src={this.props.blog.avatar} 
                         className='blog-avatar' 

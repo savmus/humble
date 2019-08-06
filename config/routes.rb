@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       resources :posts, only: [:create, :index]
     end
     resources :posts, only: [:index, :show, :update, :destroy]
-    resources :follows, only: [:create, :destroy]
+    post "blogs/:id", to: "follows#create"
+    delete "blogs/:id", to: "follows#destroy"
   end
 end

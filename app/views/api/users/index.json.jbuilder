@@ -1,15 +1,11 @@
-json.array! @users do |user|
-  json.partial! 'api/users/user', user: user
-
-  json.follows do
-    json.array! user.follows do |follow|
-      json.extract! follow, :followee_id
-    end
+@users.each do |user|
+  json.set! user.id do
+    json.partial! 'api/users/user', user: user
   end
 
-  json.followers do
-    json.array! user.followers do |follower|
-      json.extract! follower, :user_id
+  json.posts do
+    json.array! user.posts do |post|
+      json.partial! 'api/posts/post', post: post
     end
   end
 end
