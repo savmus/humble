@@ -15,7 +15,7 @@ class SideBar extends React.Component {
             return null
         };
 
-        let usersArr = Object.values(this.props.allUsers).slice(0, -1);
+        let usersArr = Object.values(this.props.allUsers).slice(0, 4); // change later
 
         if (usersArr.length < 1) {
             return null
