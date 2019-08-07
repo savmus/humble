@@ -106,8 +106,6 @@ class PostIndexItem extends React.Component {
                                         <p className='post-description'>{post.description}</p>
                                     </li>
                                     <div className='post-options'>
-                                        <p><strong>Likes: {post.likes}</strong></p>
-                                        <button onClick={post.liked_by_current_user ? this.handleUnlike.bind(this, post.id) : this.handleLike.bind(this, post.id)}>{post.liked_by_current_user ? "Unlike" : "Like"}</button>
                                         <Link
                                             to={`/edit/${post.post_type}/${post.id}`}
                                             id='edit-post'
@@ -118,6 +116,11 @@ class PostIndexItem extends React.Component {
                                             id='delete-post'
                                             className={post.author_id === currentUser.id ? "reveal" : "hide"} 
                                         >Delete</button>
+                                        <button 
+                                            onClick={post.liked_by_current_user ? this.handleUnlike.bind(this, post.id) : this.handleLike.bind(this, post.id)} 
+                                            className={`like-btn ${post.author_id === currentUser.id ? "like-hide" : "reveal"}`} 
+                                        >{post.liked_by_current_user ? <i className="fa fa-heart"></i> : <i className="fa fa-heart-o"></i>}</button>
+                                        <strong>{post.likes} notes</strong>
                                     </div>
                                 </div>
                             </div>
@@ -168,6 +171,13 @@ class PostIndexItem extends React.Component {
                                     <p className={post.summary ? 'post-source' : 'post-summary'}>{post.summary}</p>
                                     <p className='post-description'>{post.description}</p>
                                 </li>
+                                <div className='post-options'>
+                                    <button 
+                                        onClick={post.liked_by_current_user ? this.handleUnlike.bind(this, post.id) : this.handleLike.bind(this, post.id)} 
+                                        className={`like-btn ${post.author_id === currentUser.id ? "hide" : "reveal"}`} 
+                                    >{post.liked_by_current_user ? <i className="fa fa-heart"></i> : <i className="fa fa-heart-o"></i>}</button>
+                                    <strong>{post.likes} notes</strong>
+                                </div>
                             </div>
                         );
                     })}
