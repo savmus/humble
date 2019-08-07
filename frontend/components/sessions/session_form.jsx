@@ -50,7 +50,7 @@ class SessionForm extends React.Component {
     handleDemo(e) {
         e.preventDefault();
 
-        this.props.processForm({
+        this.props.demo({
             username: "DemoUser",
             email: "demouser@demo.com",
             password: "12345678",
@@ -93,19 +93,11 @@ class SessionForm extends React.Component {
 
                     <button 
                         onClick={this.handleClick} 
-                        className={this.clicked ? "hide" : "reveal"}>Get Started</button>
+                        className={`signup-btn ${this.clicked ? "hide-signup" : "reveal"}`}>Get Started</button>
 
                     <form 
                         onSubmit={this.handleSubmit} 
                         className={this.clicked ? "reveal" : "hide"}>
-                        <label htmlFor='user-username'>
-                        <input
-                                type='text'
-                                id='user-username'
-                                onChange={this.update('username')}
-                                placeholder='Username'
-                            />
-                        </label>
 
                         <label htmlFor='user-email'>
                         <input
@@ -125,14 +117,27 @@ class SessionForm extends React.Component {
                             />
                         </label>
 
+                        <label htmlFor='user-username'>
+                        <input
+                                type='text'
+                                id='user-username'
+                                onChange={this.update('username')}
+                                placeholder='Username'
+                            />
+                        </label>
+
                         <ul className='errors'>
                             {this.props.errors.map((error, idx) => (
                                 <li key={idx}>{error}</li>
                             ))}
                         </ul>
 
-                        <button>{header}</button>
+                        <button className='signup-btn'>{header}</button>
                     </form>
+                    <button
+                        onClick={this.handleDemo}
+                        className={`demo ${this.clicked ? "reveal" : "hide"}`}  
+                    >Demo Login</button>
                 </div>
             )
         } else {

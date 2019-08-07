@@ -3,12 +3,13 @@ import SessionForm from './session_form';
 import { login } from '../../actions/session_actions';
 
 const mapStateToProps = ({ errors }) => ({
-    errors: errors.session,
+    errors: errors.login,
     formType: 'Log In'
 });
 
 const mapDispatchToProps = dispatch => ({
-    processForm: (user) => dispatch(login(user))
+    processForm: (user) => dispatch(login(user)),
+    demo: (user) => dispatch(login(user))
 });
 
 

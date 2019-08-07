@@ -469,6 +469,8 @@
     display: block;
     color: grey;
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
  }
 
  .material-icons {
@@ -586,7 +588,7 @@
     visibility: visible;
  }
 
- .signup button {
+ .signup-btn {
     background-color: deepskyblue;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
@@ -594,7 +596,7 @@
     font-size: 16px;
     margin-top: 5px;
     border: none;
-    padding: 10px 65px 10px 65px;
+    padding: 11px 105px 11px 105px;
     border-radius: 3px;
  }
 
@@ -606,9 +608,15 @@
     text-align: center;
  }
 
+ .hide-signup {
+    visibility: hidden;
+    position: absolute;
+    left: 5px;
+ }
+
  .signup input {
-    width: 190px;
-    height: 35px;
+    width: 270px;
+    height: 37px;
     padding: 5px;
     display: block;
     border: 1px solid #ccc;
@@ -652,9 +660,9 @@
     font-size: 16px;
     margin-top: 5px;
     border: none;
-    padding: 10px 65px 10px 65px;
+    padding: 11px 105px 11px 105px;
     border-radius: 3px;
-    width: 190px;
+    width: 270px;
  }
 
  .demo {
@@ -665,7 +673,7 @@
     font-size: 16px;
     margin-top: 5px;
     border: none;
-    padding: 10px 48px 10px 48px;
+    padding: 11px 89px 11px 89px;
     border-radius: 3px;
  }
 
@@ -674,8 +682,8 @@
  }
 
  .login input {
-    width: 190px;
-    height: 35px;
+    width: 270px;
+    height: 37px;
     padding: 5px;
     display: block;
     border: 1px solid #ccc;
@@ -691,4 +699,5 @@
     font-weight: 1000;
     font-size: 60px;
     color: white;
+    margin-top: 115px;
  }
