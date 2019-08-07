@@ -62,6 +62,8 @@ class Post extends React.Component {
                             posts={this.props.allPosts} 
                             deletePost={this.props.deletePost} 
                             currentUser={this.props.currentUser} 
+                            createLike={this.props.createLike} 
+                            deleteLike={this.props.deleteLike} 
                         />
                     </ul>
                 </div>
@@ -78,6 +80,8 @@ class Post extends React.Component {
                             createFollow={this.props.createFollow} 
                             deleteFollow={this.props.deleteFollow} 
                             deleteUser={this.props.deleteUser} 
+                            createLike={this.props.createLike}
+                            deleteLike={this.props.deleteLike} 
                         />
                     </ul>
                 </div>

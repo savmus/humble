@@ -8,6 +8,8 @@ class PostIndexItem extends React.Component {
         this.handleClick = this.handleClick.bind(this);
         this.handleFollow = this.handleFollow.bind(this);
         this.handleUnfollow = this.handleUnfollow.bind(this);
+        this.handleLike = this.handleLike.bind(this);
+        this.handleUnlike = this.handleUnlike.bind(this);
     }
 
     handleClick (id, e) {
@@ -26,6 +28,18 @@ class PostIndexItem extends React.Component {
         e.preventDefault();
 
         this.props.deleteFollow(id);
+    }
+
+    handleLike (id, e) {
+        e.preventDefault();
+
+        this.props.createLike(id);
+    }
+
+    handleUnlike(id, e) {
+        e.preventDefault();
+
+        this.props.deleteLike(id);
     }
 
     shouldComponentUpdate(nextProps, nextState) {
@@ -92,6 +106,8 @@ class PostIndexItem extends React.Component {
                                         <p className='post-description'>{post.description}</p>
                                     </li>
                                     <div className='post-options'>
+                                        <p><strong>Likes: {post.likes}</strong></p>
+                                        <button onClick={post.liked_by_current_user ? this.handleUnlike.bind(this, post.id) : this.handleLike.bind(this, post.id)}>{post.liked_by_current_user ? "Unlike" : "Like"}</button>
                                         <Link
                                             to={`/edit/${post.post_type}/${post.id}`}
                                             id='edit-post'
