@@ -9,14 +9,15 @@ class NavBar extends React.Component {
     render() {
         if (this.props.currentUser) {
             return (
-                <nav>
+                <nav className='nav-bar-in'>
                     <Link
                         to='/dashboard'
                         className='to-dash'
                     >h</Link>
                     <input
                         type='text'
-                        placeholder='Search'
+                        placeholder='Search Humble' 
+                        className='search-bar' 
                     />
 
                     <button onClick={this.props.logout} className='logout-btn'>Logout</button>
@@ -24,14 +25,15 @@ class NavBar extends React.Component {
             )
         } else {
             return (
-                <nav>
+                <nav className='nav-bar-out'>
                     <Link
                         to='/signup'
                         className='to-dash'
                     >h</Link>
                     <input 
                         type='text' 
-                        placeholder='Search' 
+                        placeholder='Search Humble' 
+                        className='search-bar' 
                     />
                 </nav>
             )

@@ -14,12 +14,112 @@
  *= require_self
  */
 
+ .nav-bar-in {
+    border-bottom: 1px solid gray;
+    padding-bottom: 15px;
+ }
+
+ .nav-bar-out {
+    padding-bottom: 15px;
+ }
+
+ .search-bar {
+    margin-left: 60px;
+    height: 25px;
+    padding: 5px;
+    width: 470px;
+    color: white;
+    background: hsla(0, 0%, 100%, .25);
+    border: none;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    overflow: hidden;
+ }
+
+ .sidebar {
+   float: right;
+   margin-top: 60px;
+   font-family: Arial, Helvetica, sans-serif;
+ }
+
+ .sidebar h2 {
+   margin-top: 0px;
+   color: white;
+   font-size: 16px;
+   margin-left: 10px;
+   margin-bottom: 0px;
+ }
+
+ .sidebar ul {
+    list-style: none;
+    margin-right: 160px;
+    padding: 0px;
+    width: 300px;
+ }
+
+ .sidebar li {
+   padding: 10px;
+   max-width: 300px;
+   border-top: 1px solid gray;
+   margin-bottom: 10px;
+ }
+
+ .side-avatar {
+   width: 40px;
+   height: 40px;
+   display: flex;
+   float: left;
+   margin-right: 10px;
+ }
+
+ .side-username {
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 1px;
+ }
+
+ .side-title {
+    text-decoration: none;
+    color: gray;
+    display: block;
+    font-size: 13px;
+ }
+
+ .post-index {
+    margin-left: 250px;
+    margin-top: 60px;
+    display: inline-block;
+ }
+
+ .blog-follow {
+    text-decoration: none;
+    color: rgb(70, 70, 70);
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    background-color: white;
+    margin-top: 30px;
+    margin-right: 55px;
+    text-decoration: none;
+    padding: 6px 12px 6px 12px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 3px;
+    border: none;
+ }
+
  .to-dash {
     text-decoration: none;
     color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 1000;
-    font-size: 55px;
+    font-size: 45px;
     margin-left: 15px;
     position: absolute;
     top: 0;
@@ -75,8 +175,9 @@
  .dash-avatar {
     width: 70px;
     height: 70px;
-    float: left;
-    margin-left: 285px;
+    display: inline;
+    position: absolute;
+    left: 170px;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
     border-top-right-radius: 3px;

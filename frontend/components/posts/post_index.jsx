@@ -37,7 +37,7 @@ class Post extends React.Component {
         if (!this.props.posts) {
             // dashboard
             return (
-                <div>
+                <div className='post-index'>
                     <ul className='post-links'>
                         <li>
                             <a href='#/new/text'><i className="material-icons text">text_fields</i></a>

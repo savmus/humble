@@ -22,20 +22,29 @@ class SideBar extends React.Component {
         }
 
         return (
-            <div>
+            <aside className='sidebar'>
                 <h2>Recommended Blogs</h2>
                 <ul>
                     {usersArr.map((user, idx) => {
                         return (
                             <li key={idx}>
-                                <img src={user.avatar} />
-                                <Link to={`/blogs/${user.id}`}>{user.username}</Link>
-                                <Link to={`/blogs/${user.id}`}>{user.blog_title}</Link>
+                                <img 
+                                    src={user.avatar} 
+                                    className='side-avatar' 
+                                />
+                                <Link 
+                                    to={`/blogs/${user.id}`} 
+                                    className='side-username'
+                                >{user.username}</Link>
+                                <Link 
+                                    to={`/blogs/${user.id}`} 
+                                    className='side-title'
+                                >{user.blog_title}</Link>
                             </li>
                         );
                     })}
                 </ul>
-            </div>
+            </aside>
         )
     }
 };
