@@ -36,13 +36,9 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
 
-        this.props.processForm(this.state);
+        debugger;
 
-        this.setState({
-            username: "",
-            email: "",
-            password: ""
-        });
+        this.props.processForm(this.state);
 
         <Redirect to='/dashboard' />
     }

@@ -4,6 +4,26 @@ import { Link } from 'react-router-dom';
 class NavBar extends React.Component {
     constructor (props) {
         super(props);
+
+        this.state = {
+            clicked: false
+        };
+
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick (e) {
+        e.preventDefault();
+
+        if (!this.state.clicked) {
+            this.setState({
+                clicked: true
+            });
+        } else {
+            this.setState({
+                clicked: false
+            });
+        };
     }
 
     render() {
@@ -20,7 +40,17 @@ class NavBar extends React.Component {
                         className='search-bar' 
                     />
 
-                    <button onClick={this.props.logout} className='logout-btn'>Logout</button>
+                    <div className="dropdown">
+                        <button 
+                            className="dropbtn" 
+                            onClick={this.handleClick} 
+                        ><i className="fa fa-user"></i></button>
+                        <div className={`dropdown-content ${this.state.clicked ? "reveal" : "hide"}`}>
+                            <div className='dropdown-head'>ACCOUNT
+                                <button onClick={this.props.logout} className='logout-btn'>Logout</button>
+                            </div>
+                        </div>
+                    </div>
                 </nav>
             )
         } else {
