@@ -42,33 +42,19 @@ class PostIndexItem extends React.Component {
         this.props.deleteLike(id);
     }
 
-    shouldComponentUpdate(nextProps, nextState) {
-        if (!this.props.post) {
-            if (this.props.currentUser) {
-                if (this.props.currentUser.follows && !nextProps.currentUser.follows) {
-                    return false
-                } else {
-                    return true
-                };
-            } else {
-                return true;
-            }
-        } else {
-            return true
-        };
-    }
-
     render() {
         if (!this.props.blog) {
-            if (!this.props.currentUser || this.props.posts.length === 0) {
+            if (!this.props.user || this.props.posts.length === 0) {
                 return null
             };
 
-            if (!this.props.currentUser.follows) {
+            debugger;
+
+            if (!this.props.user.follows) {
                 return null;
             }
 
-            let follows = this.props.currentUser.follows.map((follow) => {
+            let follows = this.props.user.follows.map((follow) => {
                 return follow.followee_id
             });
 
@@ -109,16 +95,16 @@ class PostIndexItem extends React.Component {
                                         <Link
                                             to={`/edit/${post.post_type}/${post.id}`}
                                             id='edit-post'
-                                            className={post.author_id === currentUser.id ? "reveal" : "hide"}
+                                            className={post.author_id === this.props.user.id ? "reveal" : "hide"}
                                         >Edit</Link>
                                         <button
                                             onClick={this.handleClick.bind(this, post.id)}
                                             id='delete-post'
-                                            className={post.author_id === currentUser.id ? "reveal" : "hide"} 
+                                            className={post.author_id === this.props.user.id ? "reveal" : "hide"} 
                                         >Delete</button>
                                         <button 
                                             onClick={post.liked_by_current_user ? this.handleUnlike.bind(this, post.id) : this.handleLike.bind(this, post.id)} 
-                                            className={`like-btn ${post.author_id === currentUser.id ? "like-hide" : "reveal"}`} 
+                                            className={`like-btn ${post.author_id === this.props.user.id ? "like-hide" : "reveal"}`} 
                                         >{post.liked_by_current_user ? <i className="fa fa-heart"></i> : <i className="fa fa-heart-o"></i>}</button>
                                         <strong>{post.likes} notes</strong>
                                     </div>

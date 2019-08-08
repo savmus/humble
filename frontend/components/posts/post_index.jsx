@@ -1,40 +1,41 @@
 import React from 'react';
 import PostIndexItem from './post_index_item';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 class Post extends React.Component {
     constructor(props) {
         super(props);
-
-        if (window.localStorage) {
-            if (!localStorage.getItem('firstLoad')) {
-                localStorage['firstLoad'] = true;
-                window.location.reload();
-            }
-            else
-                localStorage.removeItem('firstLoad');
-        }
     }
 
     componentDidMount() {
         if (!this.props.posts) {
             this.props.fetchPosts();
-            this.props.fetchUser(currentUser.id);
+            this.props.fetchUser(this.props.currentUser.id);
         }
     }
 
-    shouldComponentUpdate(nextProps, nextState) {
-        if (this.props.blog) {
-            if (this.props.posts !== nextProps.posts) {
-                return false
-            };
-        } else {
-            return true
-        };
-    }
+    // shouldComponentUpdate (nextProps, nextState) {
+    //     if (!this.props.posts) {
+    //         if (this.props.user) {
+    //             if (this.props.user.follows && !nextProps.user.follows) {
+    //                 return false;
+    //             } else {
+    //                 return true
+    //             };
+    //         } else {
+    //             return true
+    //         };
+    //     }
+    // }
 
     render() {
         if (!this.props.posts) {
+            if (this.props.allPosts.length === 0) {
+                return null
+            }
+
+            debugger;
+
             // dashboard
             return (
                 <div className='post-index'>
@@ -61,7 +62,7 @@ class Post extends React.Component {
                         <PostIndexItem 
                             posts={this.props.allPosts} 
                             deletePost={this.props.deletePost} 
-                            currentUser={this.props.currentUser} 
+                            user={this.props.user} 
                             createLike={this.props.createLike} 
                             deleteLike={this.props.deleteLike} 
                         />
@@ -76,7 +77,7 @@ class Post extends React.Component {
                         <PostIndexItem 
                             posts={this.props.posts} 
                             blog={this.props.blog} 
-                            currentUser={this.props.currentUser} 
+                            user={this.props.user} 
                             createFollow={this.props.createFollow} 
                             deleteFollow={this.props.deleteFollow} 
                             deleteUser={this.props.deleteUser} 

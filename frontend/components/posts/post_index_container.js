@@ -5,14 +5,12 @@ import { fetchUsers, fetchUser } from '../../actions/user_actions';
 
 const mapStateToProps = ({ entities, session }) => {
     let postsArr = Object.values(entities.posts);
-    let allUsers = entities.users;
     let currentUser = session.currentUser;
     let user = entities.users[currentUser.id];
     return ({
         allPosts: postsArr,
-        user: currentUser,
-        currentUser: user,
-        allUsers: allUsers
+        user: user,
+        currentUser: currentUser
     })
 };
 

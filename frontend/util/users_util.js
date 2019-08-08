@@ -16,19 +16,13 @@ export const updateUser = user => (
     $.ajax({
         url: `/api/users/${user.id}`,
         method: 'PATCH',
-        data: { user },
-        success: (data) => {
-            location.reload();
-        }
+        data: { user }
     })
 );
 
 export const deleteUser = id => (
     $.ajax({
         url: `/api/users/${id}`,
-        method: 'DELETE',
-        success: (data) => {
-            location.reload();
-        }
+        method: 'DELETE'
     })
 );

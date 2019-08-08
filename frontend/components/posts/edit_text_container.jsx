@@ -28,15 +28,6 @@ class EditTextForm extends React.Component {
             return null;
         }
         
-        if (window.localStorage) {
-            if (!localStorage.getItem('firstLoad')) {
-                localStorage['firstLoad'] = true;
-                window.location.reload();
-            }
-            else
-                localStorage.removeItem('firstLoad');
-        }
-        
         return (
             <TextForm
                 post={post}
