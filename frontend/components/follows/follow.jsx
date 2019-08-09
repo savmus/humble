@@ -4,8 +4,6 @@ class Follow extends React.Component {
     constructor(props) {
         super(props);
 
-        debugger;
-
         if (!this.props.user.followed_by_current_user) {
             this.state = {
                 followed: false
@@ -40,7 +38,6 @@ class Follow extends React.Component {
     }
 
     render() {
-        debugger;
         return (
             <div className='follow'>
                 {(this.props.user.followed_by_current_user) ? (

@@ -29,8 +29,6 @@ class SideBar extends React.Component {
             return null
         };
 
-        // debugger;
-
         let followsArr = [];
         
         this.props.allUsers.map((user) => {
@@ -39,14 +37,11 @@ class SideBar extends React.Component {
             }
         });
 
-        debugger;
-
         return (
             <aside className='sidebar'>
                 <h2>Recommended Blogs</h2>
                 <ul>
                     {followsArr.map((user, idx) => {
-                        debugger;
                         return (
                             <li key={idx}>
                                 <img 
