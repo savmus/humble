@@ -63,7 +63,7 @@ class LinkForm extends React.Component {
                         </label>
 
                         <a
-                            href='#'
+                            href='#/dashboard'
                             onClick={this.props.handleClose}
                         >Close</a>
                         <button disabled={!this.state.url} >Post</button>

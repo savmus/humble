@@ -66,7 +66,7 @@ class PhotoForm extends React.Component {
                             href='#'
                             onClick={this.props.handleClose}
                         >Close</a>
-                        <button disabled={!this.state.url}>Post</button>
+                        <button disabled={!this.state.image_url}>Post</button>
                     </form>
                 </div>
             </div>
