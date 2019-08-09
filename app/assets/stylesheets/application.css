@@ -14,6 +14,29 @@
  *= require_self
  */
 
+ .blog {
+    background: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    overflow: hidden;
+ }
+
+ .blog ul {
+    padding: 0;
+ }
+
+ .blog-post {
+    padding-bottom: 20px;
+    border: 1px solid lightgray;
+ }
+
  .dropbtn {
     border: none;
     background: none;
@@ -49,10 +72,6 @@
     padding-right: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
- }
-
- .dropdown-content button {
-  
  }
 
  .like-btn {
@@ -203,15 +222,15 @@
     text-decoration: none;
     padding: 8px 12px 8px 12px;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 75px;
+    right: 300px;
     border-radius: 3px;
  }
 
  .blog-avatar {
     width: 90px;
     height: 90px;
-    margin-left: 575px;
+    margin-left: 255px;
     border-top-left-radius: 45px;
     border-bottom-left-radius: 45px;
     border-top-right-radius: 45px;
@@ -221,6 +240,7 @@
 
  .blog-title {
     font-family: Arial, Helvetica, sans-serif;
+    color: rgb(58, 54, 54);
     font-size: 50px;
     font-weight: 925;
     display: block;
@@ -231,6 +251,7 @@
 
  .blog-description {
     font-family: Arial, Helvetica, sans-serif;
+    color: rgb(58, 54, 54);
     font-size: 14px;
     display: block;
     text-align: center;

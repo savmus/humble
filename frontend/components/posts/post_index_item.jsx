@@ -126,7 +126,7 @@ class PostIndexItem extends React.Component {
 
                     {this.props.posts.map((post, idx) => {
                         return (
-                            <div key={idx} className='post'>
+                            <div key={idx} className='post blog-post'>
                                 <li>
                                     <h2>{post.title}</h2>
                                     <img 
@@ -138,14 +138,6 @@ class PostIndexItem extends React.Component {
                                     <p className={post.summary ? 'post-source' : 'post-summary'}>{post.summary}</p>
                                     <p className='post-description'>{post.description}</p>
                                 </li>
-                                <div className='post-options'>
-                                    <Like 
-                                        post={post}
-                                        deleteLike={this.props.deleteLike}
-                                        createLike={this.props.createLike}
-                                        user={this.props.user} 
-                                    />
-                                </div>
                             </div>
                         );
                     })}

@@ -216,7 +216,7 @@ class Post extends React.Component {
         } else {
             // blog
             return (
-                <div>
+                <div className='blog'>
                     <ul>
                         <PostIndexItem 
                             posts={this.props.posts} 
