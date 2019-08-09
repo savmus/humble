@@ -37,6 +37,26 @@
     border: 1px solid lightgray;
  }
 
+ .home-link {
+    position: absolute;
+    right: 125px;
+    top: 13px;
+    border: none;
+    background: none;
+    color: gray;
+    font-size: 24px;
+ }
+
+ .explore-link {
+    position: absolute;
+    right: 75px;
+    top: 13px;
+    border: none;
+    background: none;
+    color: gray;
+    font-size: 24px;
+ }
+
  .dropbtn {
     border: none;
     background: none;
@@ -72,6 +92,47 @@
     padding-right: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
+ }
+
+ .dropdown-links a {
+    text-decoration: none;
+    display: block;
+ }
+
+ .dropdown-links {
+    background: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+ }
+
+ .nav-like {
+    color: rgb(56, 56, 56);
+    margin-left: 13px;
+ }
+
+ .nav-follow {
+    color: rgb(56, 56, 56);
+    margin-left: 10px;
+    margin-top: 20px;
+ }
+
+ .nav-like-text {
+    color: rgb(56, 56, 56);
+    margin-left: 16px;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+ }
+
+ .nav-follow-text {
+    color: rgb(56, 56, 56);
+    margin-left: 10px;
+    margin-top: 20px;
+    display: inline-block;
+    position: relative;
+    bottom: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
  }
 
  .like-btn {

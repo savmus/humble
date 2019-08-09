@@ -40,6 +40,12 @@ class NavBar extends React.Component {
                         className='search-bar' 
                     />
 
+                    <Link 
+                        to='/dashboard' 
+                        className='home-link'><i className='fas fa-home'></i></Link>
+                    <Link 
+                        to='/explore' className='explore-link'><i className='far fa-compass'></i></Link>
+
                     <div className="dropdown">
                         <button 
                             className="dropbtn" 
@@ -48,6 +54,16 @@ class NavBar extends React.Component {
                         <div className={`dropdown-content ${this.state.clicked ? "reveal" : "hide"}`}>
                             <div className='dropdown-head'>ACCOUNT
                                 <button onClick={this.props.logout} className='logout-btn'>Logout</button>
+                            </div>
+                            <div className='dropdown-links'>
+                                <Link to='#'>
+                                    <i className="fa fa-heart nav-like"></i>
+                                    <span className='nav-like-text'>Likes</span>
+                                </Link>
+                                <Link to='#'>
+                                    <i className="material-icons nav-follow">add_box</i>
+                                    <span className='nav-follow-text'>Following</span>
+                                </Link>
                             </div>
                         </div>
                     </div>
