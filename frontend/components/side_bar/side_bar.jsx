@@ -39,11 +39,14 @@ class SideBar extends React.Component {
             }
         });
 
+        debugger;
+
         return (
             <aside className='sidebar'>
                 <h2>Recommended Blogs</h2>
                 <ul>
                     {followsArr.map((user, idx) => {
+                        debugger;
                         return (
                             <li key={idx}>
                                 <img 

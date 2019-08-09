@@ -48,13 +48,10 @@ class PostIndexItem extends React.Component {
             let allPosts = [];
 
             for (let i = 0; i < this.props.posts.length; i++) {
-                debugger;
                 if (follows.includes(this.props.posts[i].author_id) && this.props.posts[i].user) {
                     allPosts.push(this.props.posts[i]);
                 };
             };
-
-            debugger;
 
             return (
                 <div>
