@@ -40,30 +40,35 @@ class QuoteForm extends React.Component {
 
     render() {
         return (
-            <div className='post-form'>
-                <form onSubmit={this.handleSubmit}>
-                    <label htmlFor='quote-caption'>
-                        <textarea
-                            id='quote-caption'
-                            onChange={this.update("caption")}
-                            placeholder="Quote"
-                            value={this.state.caption || ""}
-                        />
-                    </label>
+            <div className={this.props.show ? "modal display-block" : "modal display-none"}>
+                <div className='post-form'>
+                    <form onSubmit={this.handleSubmit}>
+                        <label htmlFor='quote-caption'>
+                            <textarea
+                                id='quote-caption'
+                                onChange={this.update("caption")}
+                                placeholder="Quote"
+                                value={this.state.caption || ""}
+                            />
+                        </label>
 
-                    <label htmlFor='quote-summary'>
-                        <input
-                            type="text"
-                            id='quote-summary'
-                            onChange={this.update("summary")}
-                            placeholder="Source"
-                            value={this.state.summary || ""}
-                        />
-                    </label>
+                        <label htmlFor='quote-summary'>
+                            <input
+                                type="text"
+                                id='quote-summary'
+                                onChange={this.update("summary")}
+                                placeholder="Source"
+                                value={this.state.summary || ""}
+                            />
+                        </label>
 
-                    <Link to='/dashboard'>Close</Link>
-                    <button>Post</button>
-                </form>
+                        <a
+                            href='#'
+                            onClick={this.props.handleClose}
+                        >Close</a>
+                        <button disabled={!this.state.caption || !this.state.summary} >Post</button>
+                    </form>
+                </div>
             </div>
         );
     }

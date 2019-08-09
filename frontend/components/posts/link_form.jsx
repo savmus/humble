@@ -40,30 +40,35 @@ class LinkForm extends React.Component {
 
     render() {
         return (
-            <div className='post-form'>
-                <form onSubmit={this.handleSubmit}>
-                    <label htmlFor='link-url'>
-                        <input
-                            type="url"
-                            id='link-url'
-                            onChange={this.update("url")}
-                            placeholder="URL goes here"
-                            value={this.state.url || ""}
-                        />
-                    </label>
+            <div className={this.props.show ? "modal display-block" : "modal display-none"}>
+                <div className='post-form'>
+                    <form onSubmit={this.handleSubmit}>
+                        <label htmlFor='link-url'>
+                            <input
+                                type="url"
+                                id='link-url'
+                                onChange={this.update("url")}
+                                placeholder="URL goes here"
+                                value={this.state.url || ""}
+                            />
+                        </label>
 
-                    <label htmlFor='link-description'>
-                        <textarea
-                            id='link-description'
-                            onChange={this.update("description")}
-                            placeholder="Add a descripton, if you want"
-                            value={this.state.description || ""}
-                        />
-                    </label>
+                        <label htmlFor='link-description'>
+                            <textarea
+                                id='link-description'
+                                onChange={this.update("description")}
+                                placeholder="Add a descripton, if you want"
+                                value={this.state.description || ""}
+                            />
+                        </label>
 
-                    <Link to='/dashboard'>Close</Link>
-                    <button>Post</button>
-                </form>
+                        <a
+                            href='#'
+                            onClick={this.props.handleClose}
+                        >Close</a>
+                        <button disabled={!this.state.url} >Post</button>
+                    </form>
+                </div>
             </div>
         );
     }

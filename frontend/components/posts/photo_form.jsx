@@ -40,30 +40,35 @@ class PhotoForm extends React.Component {
 
     render() {
         return (
-            <div className='post-form'>
-                <form onSubmit={this.handleSubmit}>
-                    <label htmlFor='photo-url'>
-                        <input
-                            type="url"
-                            id='photo-url'
-                            onChange={this.update("image_url")}
-                            placeholder="URL goes here"
-                            value={this.state.image_url || ""}
-                        />
-                    </label>
+            <div className={this.props.show ? "modal display-block" : "modal display-none"}>
+                <div className='post-form'>
+                    <form onSubmit={this.handleSubmit}>
+                        <label htmlFor='photo-url'>
+                            <input
+                                type="url"
+                                id='photo-url'
+                                onChange={this.update("image_url")}
+                                placeholder="URL goes here"
+                                value={this.state.image_url || ""}
+                            />
+                        </label>
 
-                    <label htmlFor='photo-caption'>
-                        <textarea
-                            id='photo-caption'
-                            onChange={this.update("caption")}
-                            placeholder="Add a caption, if you want"
-                            value={this.state.caption || ""}
-                        />
-                    </label>
+                        <label htmlFor='photo-caption'>
+                            <textarea
+                                id='photo-caption'
+                                onChange={this.update("caption")}
+                                placeholder="Add a caption, if you want"
+                                value={this.state.caption || ""}
+                            />
+                        </label>
 
-                    <Link to='/dashboard'>Close</Link>
-                    <button>Post</button>
-                </form>
+                        <a
+                            href='#'
+                            onClick={this.props.handleClose}
+                        >Close</a>
+                        <button disabled={!this.state.url}>Post</button>
+                    </form>
+                </div>
             </div>
         );
     }

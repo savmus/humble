@@ -38,6 +38,9 @@ export const updatePost = post => (
 export const deletePost = id => (
     $.ajax({
         url: `/api/posts/${id}`,
-        method: 'DELETE'
+        method: 'DELETE',
+        success: (data) => {
+            location.reload();
+        }
     })
 );

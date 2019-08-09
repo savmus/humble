@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
+import Like from '../likes/like';
 
 class PostIndexItem extends React.Component {
     constructor(props) {
@@ -8,14 +9,14 @@ class PostIndexItem extends React.Component {
         this.handleClick = this.handleClick.bind(this);
         this.handleFollow = this.handleFollow.bind(this);
         this.handleUnfollow = this.handleUnfollow.bind(this);
-        this.handleLike = this.handleLike.bind(this);
-        this.handleUnlike = this.handleUnlike.bind(this);
     }
 
     handleClick (id, e) {
         e.preventDefault();
 
         this.props.deletePost(id);
+
+        this.props.changeState();
     }
 
     handleFollow (follow, e) {
@@ -30,25 +31,11 @@ class PostIndexItem extends React.Component {
         this.props.deleteFollow(id);
     }
 
-    handleLike (id, e) {
-        e.preventDefault();
-
-        this.props.createLike(id);
-    }
-
-    handleUnlike(id, e) {
-        e.preventDefault();
-
-        this.props.deleteLike(id);
-    }
-
     render() {
         if (!this.props.blog) {
             if (!this.props.user || this.props.posts.length === 0) {
                 return null
             };
-
-            debugger;
 
             if (!this.props.user.follows) {
                 return null;
@@ -65,6 +52,8 @@ class PostIndexItem extends React.Component {
                     allPosts.push(this.props.posts[i]);
                 };
             };
+
+            debugger;
 
             return (
                 <div>
@@ -102,11 +91,12 @@ class PostIndexItem extends React.Component {
                                             id='delete-post'
                                             className={post.author_id === this.props.user.id ? "reveal" : "hide"} 
                                         >Delete</button>
-                                        <button 
-                                            onClick={post.liked_by_current_user ? this.handleUnlike.bind(this, post.id) : this.handleLike.bind(this, post.id)} 
-                                            className={`like-btn ${post.author_id === this.props.user.id ? "like-hide" : "reveal"}`} 
-                                        >{post.liked_by_current_user ? <i className="fa fa-heart"></i> : <i className="fa fa-heart-o"></i>}</button>
-                                        <strong>{post.likes} notes</strong>
+                                        <Like 
+                                            post={post} 
+                                            deleteLike={this.props.deleteLike} 
+                                            createLike={this.props.createLike} 
+                                            user={this.props.user} 
+                                        />
                                     </div>
                                 </div>
                             </div>
@@ -115,7 +105,11 @@ class PostIndexItem extends React.Component {
                 </div>
             );
         } else {
-            let follows = this.props.currentUser.follows.map((follow) => {
+            if (!this.props.user) {
+                return null;
+            }
+
+            let follows = this.props.user.follows.map((follow) => {
                 return follow.followee_id
             });
 
@@ -123,19 +117,8 @@ class PostIndexItem extends React.Component {
                 <div>
                     <Link 
                         to={`/blogs/${this.props.blog.id}/edit`} 
-                        className={`blog-edit ${this.props.blog.id === currentUser.id ? "reveal" : "hide"}`} 
+                        className={`blog-edit ${this.props.blog.id === this.props.user.id ? "reveal" : "hide"}`} 
                     >Edit appearance</Link>
-                    <button 
-                        onClick={this.handleFollow.bind(this, {
-                            user_id: currentUser.id,
-                            followee_id: this.props.blog.id
-                        })} 
-                        className={`blog-follow ${follows.includes(this.props.blog.id) ? "hide" : "reveal"}`}
-                    >Follow</button>
-                    <button
-                        onClick={this.handleUnfollow.bind(this, this.props.blog.id)}
-                        className={`blog-follow ${follows.includes(this.props.blog.id) && this.props.blog.id !== currentUser.id ? "reveal" : "hide"}`}
-                    >Unfollow</button>
                     <img 
                         src={this.props.blog.avatar} 
                         className='blog-avatar' 
@@ -158,11 +141,12 @@ class PostIndexItem extends React.Component {
                                     <p className='post-description'>{post.description}</p>
                                 </li>
                                 <div className='post-options'>
-                                    <button 
-                                        onClick={post.liked_by_current_user ? this.handleUnlike.bind(this, post.id) : this.handleLike.bind(this, post.id)} 
-                                        className={`like-btn ${post.author_id === currentUser.id ? "hide" : "reveal"}`} 
-                                    >{post.liked_by_current_user ? <i className="fa fa-heart"></i> : <i className="fa fa-heart-o"></i>}</button>
-                                    <strong>{post.likes} notes</strong>
+                                    <Like 
+                                        post={post}
+                                        deleteLike={this.props.deleteLike}
+                                        createLike={this.props.createLike}
+                                        user={this.props.user} 
+                                    />
                                 </div>
                             </div>
                         );

@@ -8,7 +8,7 @@ class Blog extends React.Component {
 
     componentDidMount () {
         this.props.fetchUserPosts(this.props.match.params.userId);
-        this.props.fetchUser(this.props.user.id);
+        this.props.fetchUser(this.props.currentUser.id);
         this.props.fetchUser(this.props.match.params.userId);
     }
 
@@ -22,7 +22,7 @@ class Blog extends React.Component {
                 posts={this.props.blog.posts} 
                 blog={this.props.blog} 
                 fetchUserPosts={this.props.fetchUserPosts} 
-                currentUser={this.props.currentUser} 
+                user={this.props.user} 
                 createFollow={this.props.createFollow} 
                 deleteFollow={this.props.deleteFollow} 
                 createLike={this.props.createLike} 

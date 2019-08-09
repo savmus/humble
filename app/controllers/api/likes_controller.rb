@@ -8,7 +8,7 @@ class Api::LikesController < ApplicationController
 
         if @like.save
           @post = @like.liked_post
-          render 'api/posts/show'
+          render 'api/posts/index'
         else
           render json: @like.errors.full_messages, status: 401
         end
@@ -16,9 +16,9 @@ class Api::LikesController < ApplicationController
 
     def destroy
         @like = Like.find_by(user_id: current_user.id, post_id: params[:id])
-        @like.destroy
         @post = @like.liked_post
+        @like.destroy
 
-        render 'api/posts/show'
+        render 'api/posts/index'
     end
 end

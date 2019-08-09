@@ -40,32 +40,39 @@ class TextForm extends React.Component {
 
     render() {
         return (
-            <div className='post-form'>
-                <form 
-                    onSubmit={this.handleSubmit}
-                >
-                    <label htmlFor='text-title'>
-                        <input
-                            type="text"
-                            id='text-title'
-                            onChange={this.update("title")}
-                            placeholder="Title"
-                            value={this.state.title || ""}
-                        />
-                    </label>
+            <div className={this.props.show ? "modal display-block" : "modal display-none"}>
+                <div className='post-form'>
+                    <form 
+                        onSubmit={this.handleSubmit}
+                    >
+                        <label htmlFor='text-title'>
+                            <input
+                                type="text"
+                                id='text-title'
+                                onChange={this.update("title")}
+                                placeholder="Title"
+                                value={this.state.title || ""}
+                            />
+                        </label>
 
-                    <label htmlFor='text-description'>
-                        <textarea
-                            id='text-description'
-                            onChange={this.update("description")}
-                            placeholder="Text goes here"
-                            value={this.state.description || ""}
-                        />
-                    </label>
+                        <label htmlFor='text-description'>
+                            <textarea
+                                id='text-description'
+                                onChange={this.update("description")}
+                                placeholder="Text goes here"
+                                value={this.state.description || ""}
+                            />
+                        </label>
 
-                    <Link to='/dashboard'>Close</Link>
-                    <button>Post</button>
-                </form>
+                        <a 
+                            href='#' 
+                            onClick={this.props.handleClose}
+                        >Close</a>
+                        <button 
+                            disabled={!this.state.title || !this.state.description} 
+                        >Post</button>
+                    </form>
+                </div>
             </div>
         );
     }

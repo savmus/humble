@@ -7,6 +7,12 @@ import PhotoForm from './photo_form';
 class EditPhotoForm extends React.Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            show: true
+        };
+
+        this.hideModal = this.hideModal.bind(this);
     }
 
     componentDidMount() {
@@ -17,6 +23,12 @@ class EditPhotoForm extends React.Component {
         if (prevProps.match.params.postId !== this.props.match.params.postId) {
             this.props.fetchPost(this.props.post.id);
         }
+    }
+
+    hideModal() {
+        this.setState({
+            show: false
+        });
     }
 
     render() {
@@ -32,7 +44,10 @@ class EditPhotoForm extends React.Component {
             <PhotoForm
                 post={post}
                 formType={formType}
-                action={action} />
+                action={action} 
+                show={this.state.show}
+                handleClose={this.hideModal} 
+            />
         );
     }
 }

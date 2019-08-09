@@ -11,8 +11,8 @@ const mapStateToProps = (state, ownProps) => {
 
     return ({
         blog: blog,
-        user: currentUser,
-        currentUser: user
+        user: user,
+        currentUser: currentUser
     })
 };
 
