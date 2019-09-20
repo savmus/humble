@@ -8,27 +8,27 @@ Humble is a single-page web application inspired by the blogging platform, Tumbl
 
 ## Technologies
 
-* Backend
-<br>
+### Backend
 — RESTful structure
-<br>
+
 — Associations (Join tables and foreign keys)
-<br>
+
 — Receives AJAX requests
-  * Ruby on Rails — Framework
-  * PostgreSQL — Database
-  * JBuilder — Generating and rendering JSON objects
-* Frontend
-<br>
+* Ruby on Rails — Framework
+* PostgreSQL — Database
+* JBuilder — Generating and rendering JSON objects
+
+### Frontend
 — Redux cycle
-<br>
+
 — React router
   * JavaScript — Primary language
   * React — Re-rendering without page refreshes
   * jQuery — AJAX requests to backend
   * HTML — DOM structure
   * CSS — Styling
-* Hosting
+
+### Hosting
   * Docker
   * Heroku Container Registry
 
