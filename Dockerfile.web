@@ -1,4 +1,4 @@
-FROM ruby:2.5.5-alpine3.9
+FROM ruby:2.5.1-alpine
 
 RUN apk add --no-cache --update build-base \
   linux-headers \
@@ -15,8 +15,7 @@ WORKDIR /myapp
 COPY Gemfile /myapp/Gemfile
 COPY Gemfile.lock /myapp/Gemfile.lock
 
-RUN gem install bundler \
-  && bundle install
+RUN gem install bundler && bundle install
 
 COPY . /myapp
 COPY entrypoint.sh /usr/bin/
