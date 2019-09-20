@@ -34,7 +34,7 @@ Humble is a single-page web application inspired by the blogging platform, Tumbl
 
 ## Considerations
 
-Tumblr allows users to post multimedia content to their blogs. As I was building my database tables, I had to stop and think about if I would create separate tables for different kinds of posts or a singular post table that can hold dynamic information for all posts. I settled on the latter, effectively DRYing up my backend.
+Tumblr allows users to post multimedia content to their blogs. As I was building my database tables, I had to stop and think about whether I would create separate tables for different kinds of posts or a singular post table that could hold dynamic information for all posts. I settled on the latter, effectively DRYing up my backend.
 ```rb
 create_table "posts", force: :cascade do |t|
     t.integer "author_id", null: false
