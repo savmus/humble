@@ -17,8 +17,7 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  # For details on connection pooling, see Rails configuration guide
-  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  url: <%= ENV['DATABASE_URL'] %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
@@ -80,6 +79,7 @@ test:
 #
 production:
   <<: *default
-  database: humble_production
-  username: humble
-  password: <%= ENV['HUMBLE_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  host: db
+  username: postgres
+  password:
