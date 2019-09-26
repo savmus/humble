@@ -14,6 +14,7 @@ import BlogFormContainer from './users/blog_form_container';
 import SideBarContainer from './side_bar/side_bar_container';
 import ExploreContainer from './posts/explore_container';
 import LikesIndexContainer from './likes/likes_index_container';
+import FollowsIndexContainer from './follows/follows_index_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import { Route } from 'react-router-dom';
 
@@ -38,6 +39,7 @@ const App = () => (
         <ProtectedRoute path='/explore' component={ExploreContainer} />
         <ProtectedRoute path="/likes" component={LikesIndexContainer} />
         <ProtectedRoute path="/likes" component={SideBarContainer} />
+        <ProtectedRoute path="/following" component={FollowsIndexContainer} />
     </div>
 );
 

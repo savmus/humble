@@ -55,7 +55,7 @@ class NavBar extends React.Component {
                                     <i className="fa fa-heart nav-like"></i>
                                     <span className='nav-like-text'>Likes</span>
                                 </Link>
-                                <Link to='#'>
+                                <Link to='/following'>
                                     <i className="material-icons nav-follow">add_box</i>
                                     <span className='nav-follow-text'>Following</span>
                                 </Link>

@@ -194,12 +194,27 @@
    font-family: Arial, Helvetica, sans-serif;
  }
 
+ .user-index {
+    margin: auto;
+    width: 80%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+    border-radius: 10px;
+ }
+
  .sidebar h2 {
    margin-top: 0px;
    color: white;
    font-size: 16px;
    margin-left: 10px;
    margin-bottom: 0px;
+ }
+
+ .user-index h2 {
+    padding-top: 20px;
+    color: #444;
+    font-size: 16px;
+    text-align: center;
  }
 
  .sidebar ul {
@@ -209,11 +224,26 @@
     width: 300px;
  }
 
+ .user-index ul {
+    list-style: none;
+    margin-right: 160px;
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+ }
+
  .sidebar li {
    padding: 10px;
    max-width: 300px;
    border-top: 1px solid gray;
    margin-bottom: 10px;
+ }
+
+ .user-index li {
+    padding: 10px;
+    max-width: 100%;
+    border-top: 1px solid rgb(235, 235, 235);
+    margin-bottom: 10px;
  }
 
  .side-avatar {
@@ -222,6 +252,15 @@
    display: flex;
    float: left;
    margin-right: 10px;
+ }
+
+ .follow-avatar {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    float: left;
+    margin-right: 10px;
+    border-radius: 3px;
  }
 
  .side-username {
@@ -233,11 +272,44 @@
     margin-bottom: 1px;
  }
 
+ .follow-username {
+    text-decoration: none;
+    color: black;
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 1px;
+ }
+
  .side-title {
     text-decoration: none;
     color: gray;
     display: block;
     font-size: 13px;
+ }
+
+ .follow-title {
+    text-decoration: none;
+    color: gray;
+    display: block;
+    font-size: 13px;
+ }
+
+ .blog-unfollow {
+    min-width: 87px;
+    white-space: nowrap;
+    color: rgba(0,0,0,0.6);
+    background: transparent;
+    border-color: #bfbfbf;
+    height: auto;
+    font-size: 13px;
+    line-height: 28px;
+    padding: 0 10px;
+    font-weight: bold;
+    border-width: 1px;
+    border-style: solid;
+    text-decoration: none;
+    border-radius: 2px;
  }
 
  .post-index {
