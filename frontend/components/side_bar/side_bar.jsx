@@ -58,6 +58,7 @@ class SideBar extends React.Component {
                                 >{user.blog_title}</Link>
                                 <Follow 
                                     user={user} 
+                                    idx={idx} 
                                     currentUser={this.props.currentUser} 
                                     createFollow={this.props.createFollow} 
                                     deleteFollow={this.props.deleteFollow} 

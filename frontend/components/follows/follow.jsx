@@ -20,21 +20,16 @@ class Follow extends React.Component {
     handleFollow(e) {
         e.preventDefault();
 
-        if (this.state.followed) {
-            this.props.refetch();
-            this.props.deleteFollow(this.props.user.id).then(() => {
-                this.setState({
-                    followed: false
-                });
+        const button = document.getElementById(`${this.props.idx}`);
+        button.disabled = true;
+
+        this.props.refetch();
+
+        this.props.createFollow(this.props.user.id).then(() => {
+            this.setState({
+                followed: true
             });
-        } else {
-            this.props.refetch();
-            this.props.createFollow(this.props.user.id).then(() => {
-                this.setState({
-                    followed: true
-                });
-            });
-        };
+        });
     }
 
     render() {
@@ -44,6 +39,7 @@ class Follow extends React.Component {
                     <div></div>
                 ) : (
                     <button
+                        id={`${this.props.idx}`} 
                         onClick={this.handleFollow} 
                         className='blog-follow' 
                     ><i className="material-icons follow-icon">add_box</i></button>

@@ -90,6 +90,7 @@ class PostIndexItem extends React.Component {
                                             className={post.author_id === this.props.user.id ? "reveal" : "hide"} 
                                         >Delete</button>
                                         <Like 
+                                            idx={idx} 
                                             post={post} 
                                             deleteLike={this.props.deleteLike} 
                                             createLike={this.props.createLike} 

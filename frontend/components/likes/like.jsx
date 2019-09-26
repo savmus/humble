@@ -20,13 +20,18 @@ class Like extends React.Component {
     handleLike (e) {
         e.preventDefault();
 
+        const likedBtn = document.getElementById(`${this.props.idx}-liked`);
+        const unlikedBtn = document.getElementById(`${this.props.idx}-unliked`);
+
         if (this.state.liked) {
+            likedBtn.disabled = true;
             this.props.deleteLike(this.props.post.id).then(() => {
                 this.setState({
                     liked: false
                 });
             });
         } else {
+            unlikedBtn.disabled = true;
             this.props.createLike(this.props.post.id).then(() => {
                 this.setState({
                     liked: true
@@ -41,6 +46,7 @@ class Like extends React.Component {
                 {(this.state.liked) ? (
                     <div>
                         <button
+                            id={`${this.props.idx}-liked`} 
                             onClick={this.handleLike} 
                             className={`like-btn ${this.props.post.author_id === this.props.user.id ? "like-hide" : "reveal"}`}
                         ><i className="fa fa-heart"></i></button>
@@ -49,6 +55,7 @@ class Like extends React.Component {
                 ) : (
                     <div>
                         <button
+                            id={`${this.props.idx}-unliked`} 
                             onClick={this.handleLike} 
                             className={`like-btn ${this.props.post.author_id === this.props.user.id ? "like-hide" : "reveal"}`}
                         ><i className="fa fa-heart-o"></i></button>
