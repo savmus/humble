@@ -245,6 +245,22 @@
     display: inline-block;
  }
 
+ .explore-index {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+ }
+
+ .col {
+    padding-left: 20px;
+ }
+
  .blog-follow {
     text-decoration: none;
     color: rgb(128, 126, 126);
@@ -350,6 +366,13 @@
     font-family: Arial, Helvetica, sans-serif;
  }
 
+ .explore-post h2 {
+    margin-bottom: 0px;
+    margin-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+ }
+
  .post-description {
     margin-top: 0px;
     font-family: Arial, Helvetica, sans-serif;
@@ -427,6 +450,8 @@
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
     overflow: hidden;
+    margin: auto;
+    margin-top: 10%;
  }
 
  #text-title {
@@ -476,6 +501,7 @@
     margin-left: 20px;
     margin-bottom: 10px;
     resize: none;
+    padding-top: 20px;
  }
 
  #quote-summary {
@@ -683,6 +709,21 @@
     padding-right: 20px;
  }
 
+ .explore-post {
+    background: white;
+    width: 360px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    margin-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    border: 1px solid lightgray;
+ }
+
  .posts {
     padding: 0;
  }
@@ -693,7 +734,17 @@
     right: 20px;
  }
 
+ .explore-pictures {
+    width: 390px;
+    position: relative;
+    right: 15px;
+ }
+
  .post li {
+    list-style: none;
+ }
+
+ .explore-post li {
     list-style: none;
  }
 

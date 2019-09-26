@@ -35,7 +35,6 @@ const App = () => (
         <Route exact path="/blogs/:userId" component={BlogContainer} />
         <ProtectedRoute exact path="/blogs/:userId/edit" component={BlogFormContainer} />
         <ProtectedRoute path='/explore' component={ExploreContainer} />
-        <ProtectedRoute path="/explore" component={SideBarContainer} />
     </div>
 );
 
