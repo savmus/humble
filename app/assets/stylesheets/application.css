@@ -14,6 +14,10 @@
  *= require_self
  */
 
+ button, a {
+   outline: none;
+ }
+
  .blog {
     background: white;
     padding-top: 20px;
@@ -161,7 +165,7 @@
 
  .nav-bar-in {
     border-bottom: 1px solid gray;
-    padding-bottom: 15px;
+    padding-bottom: 40px;
  }
 
  .nav-bar-out {

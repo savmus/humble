@@ -34,11 +34,6 @@ class NavBar extends React.Component {
                         to='/dashboard'
                         className='to-dash'
                     >h</Link>
-                    <input
-                        type='text'
-                        placeholder='Search Humble' 
-                        className='search-bar' 
-                    />
 
                     <Link 
                         to='/dashboard' 
@@ -76,11 +71,6 @@ class NavBar extends React.Component {
                         to='/signup'
                         className='to-dash'
                     >h</Link>
-                    <input 
-                        type='text' 
-                        placeholder='Search Humble' 
-                        className='search-bar' 
-                    />
                 </nav>
             )
         };
