@@ -84,6 +84,7 @@
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
     overflow: hidden;
+    z-index: 100;
  }
 
  .dropdown-head {

@@ -13,6 +13,7 @@ import BlogContainer from './users/blog_container';
 import BlogFormContainer from './users/blog_form_container';
 import SideBarContainer from './side_bar/side_bar_container';
 import ExploreContainer from './posts/explore_container';
+import LikesIndexContainer from './likes/likes_index_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import { Route } from 'react-router-dom';
 
@@ -35,6 +36,8 @@ const App = () => (
         <Route exact path="/blogs/:userId" component={BlogContainer} />
         <ProtectedRoute exact path="/blogs/:userId/edit" component={BlogFormContainer} />
         <ProtectedRoute path='/explore' component={ExploreContainer} />
+        <ProtectedRoute path="/likes" component={LikesIndexContainer} />
+        <ProtectedRoute path="/likes" component={SideBarContainer} />
     </div>
 );
 

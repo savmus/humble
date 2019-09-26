@@ -51,7 +51,7 @@ class NavBar extends React.Component {
                                 <button onClick={this.props.logout} className='logout-btn'>Logout</button>
                             </div>
                             <div className='dropdown-links'>
-                                <Link to='#'>
+                                <Link to='/likes'>
                                     <i className="fa fa-heart nav-like"></i>
                                     <span className='nav-like-text'>Likes</span>
                                 </Link>
