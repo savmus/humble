@@ -32,34 +32,14 @@ Humble is a single-page web application inspired by the blogging platform, Tumbl
   * Docker
   * Heroku Container Registry
 
-## Considerations
-
-Tumblr allows users to post multimedia content to their blogs. As I was building my database tables, I had to stop and think about whether I would create separate tables for different kinds of posts or a singular post table that could hold dynamic information for all posts. I settled on the latter, effectively DRYing up my backend.
-```rb
-create_table "posts", force: :cascade do |t|
-    t.integer "author_id", null: false
-    t.string "title"
-    t.string "url"
-    t.string "caption"
-    t.text "summary"
-    t.text "description"
-    t.string "post_status", null: false
-    t.string "post_type", null: false
-    t.datetime "publish_date"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "image_url"
-    t.index ["author_id"], name: "index_posts_on_author_id"
-end
-```
-
 ## Features
 
 * Sign up, login, or demo the site.
-![Humble](./screenshots/session.png)
+![Humble](./screenshots/sign_up.png)
 * Create multimedia blog posts.
-![Humble](./screenshots/post.png)
+![Humble](./screenshots/multimedia.png)
 * Follow and unfollow other blogs.
+![Humble](./screenshots/following.png)
 * Like and unlike blog posts.
 ![Humble](./screenshots/likes.png)
 * Individual blogs for each user.
@@ -70,4 +50,5 @@ end
 ## Future Features
 
  * Reblog other user's posts to your blog.
+ * Comment on blog posts.
  * Search for blogs.
