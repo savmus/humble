@@ -29,7 +29,7 @@ class TextForm extends React.Component {
             description: ""
         })
 
-        this.props.history.push('/dashboard');
+        document.getElementById('close-text').click();
     }
 
     handleClick(e) {
@@ -65,6 +65,7 @@ class TextForm extends React.Component {
                         </label>
 
                         <a 
+                            id='close-text' 
                             href='#' 
                             onClick={this.props.handleClose}
                         >Close</a>

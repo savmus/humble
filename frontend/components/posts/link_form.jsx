@@ -29,7 +29,10 @@ class LinkForm extends React.Component {
             description: ""
         });
 
-        this.props.history.push('/dashboard');
+        // let close = document.getElementById('close-link');
+        // close.click();
+
+        document.getElementById('close-link').click();
     }
 
     handleClick(e) {
@@ -63,6 +66,7 @@ class LinkForm extends React.Component {
                         </label>
 
                         <a
+                            id='close-link' 
                             href='#/dashboard'
                             onClick={this.props.handleClose}
                         >Close</a>

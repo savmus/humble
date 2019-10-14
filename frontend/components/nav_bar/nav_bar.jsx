@@ -35,6 +35,16 @@ class NavBar extends React.Component {
                         className='to-dash'
                     >h</Link>
 
+                    <div class='my-nav-links'>
+                        <a href='https://github.com/savmus'><i class="fab fa-github"></i></a>
+                        <a href='https://www.linkedin.com/in/savannah-musladin-525948193/'><i class="fab fa-linkedin-in"></i></a>
+                        <a href='https://angel.co/savmus'><i class="fab fa-angellist"></i></a>
+                        <div class='portfolio'>
+                            <a href='https://savmus.github.io/portfolio/'>Savannah</a>
+                            <a href='https://savmus.github.io/portfolio/'>Musladin</a>
+                        </div>
+                    </div>
+
                     <Link 
                         to='/dashboard' 
                         className='home-link'><i className='fas fa-home'></i></Link>

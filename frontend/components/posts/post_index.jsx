@@ -204,7 +204,7 @@ class Post extends React.Component {
                     
                     <ul className='posts'>
                         <PostIndexItem 
-                            posts={this.props.allPosts} 
+                            posts={this.props.allPosts.reverse()} 
                             deletePost={this.props.deletePost} 
                             user={this.props.user} 
                             createLike={this.props.createLike} 

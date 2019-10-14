@@ -29,7 +29,7 @@ class QuoteForm extends React.Component {
             caption: ""
         });
 
-        this.props.history.push('/dashboard');
+        document.getElementById('close-quote').click();
     }
 
     handleClick(e) {
@@ -63,6 +63,7 @@ class QuoteForm extends React.Component {
                         </label>
 
                         <a
+                            id='close-quote'
                             href='#'
                             onClick={this.props.handleClose}
                         >Close</a>

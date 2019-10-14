@@ -29,7 +29,7 @@ class PhotoForm extends React.Component {
             caption: ""
         });
 
-        this.props.history.push('/dashboard');
+        document.getElementById('close-photo').click();
     }
 
     handleClick(e) {
@@ -63,6 +63,7 @@ class PhotoForm extends React.Component {
                         </label>
 
                         <a
+                            id='close-photo'
                             href='#'
                             onClick={this.props.handleClose}
                         >Close</a>

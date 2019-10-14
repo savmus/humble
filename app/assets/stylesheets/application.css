@@ -14,6 +14,30 @@
  *= require_self
  */
 
+ .my-nav-links {
+   position: absolute;
+   left: 64%;
+   width: 70%;
+   top: 13px;
+ }
+
+ .my-nav-links a {
+   color: white;
+   padding-right: 3%;
+   font-size: 24px;
+ }
+
+ .portfolio a {
+   font-size: 12px;
+   text-decoration: none;
+ }
+
+ .portfolio {
+   display: inline-grid;
+   position: relative;
+   bottom: 13px;
+ }
+
  button, a {
    outline: none;
  }
