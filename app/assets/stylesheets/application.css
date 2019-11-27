@@ -15,9 +15,11 @@
  */
 
  .my-nav-links {
-   position: absolute;
-   width: 40%;
-   bottom: 1px;
+   position: fixed;
+   width: 30%;
+   bottom: 1%;
+   right: 1%;
+   text-align: right;
  }
 
  .my-nav-links a {
