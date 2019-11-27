@@ -18,6 +18,19 @@ Humble is a single-page web application inspired by the blogging platform, Tumbl
 * PostgreSQL — Database
 * JBuilder — Generating and rendering JSON objects
 
+```rb
+def create
+  @post = Post.new(post_params)
+  @post.author_id = current_user.id
+
+  if @post.save
+    render 'api/posts/index'
+  else
+    render json: @post.errors.full_messages, status: 401
+  end
+end
+```
+
 ### Frontend
 — Redux cycle
 
@@ -27,6 +40,22 @@ Humble is a single-page web application inspired by the blogging platform, Tumbl
   * jQuery — AJAX requests to backend
   * HTML — DOM structure
   * CSS — Styling
+
+```js
+handleSubmit(e) {
+  e.preventDefault();
+
+  let post = Object.assign({}, this.state);
+  this.props.action(post);
+
+  this.setState({
+      title: "",
+      description: ""
+  });
+  
+  document.getElementById('close-text').click();
+}
+```
 
 ### Hosting
   * Docker
