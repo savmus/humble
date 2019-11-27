@@ -16,9 +16,8 @@
 
  .my-nav-links {
    position: absolute;
-   left: 64%;
-   width: 70%;
-   top: 13px;
+   width: 40%;
+   bottom: 1px;
  }
 
  .my-nav-links a {
@@ -68,7 +67,7 @@
  .home-link {
     position: absolute;
     right: 125px;
-    top: 13px;
+    top: 15px;
     border: none;
     background: none;
     color: gray;
@@ -78,7 +77,7 @@
  .explore-link {
     position: absolute;
     right: 75px;
-    top: 13px;
+    top: 15px;
     border: none;
     background: none;
     color: gray;
@@ -95,7 +94,7 @@
  .dropdown {
     position: absolute;
     right: 20px;
-    top: 10px;
+    top: 13px;
  }
 
  .dropdown-content {
@@ -190,7 +189,7 @@
 
  .nav-bar-in {
     border-bottom: 1px solid gray;
-    padding-bottom: 40px;
+    padding-bottom: 45px;
  }
 
  .nav-bar-out {
@@ -381,7 +380,7 @@
     color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 1000;
-    font-size: 45px;
+    font-size: 50px;
     margin-left: 15px;
     position: absolute;
     top: 0;
@@ -1020,7 +1019,7 @@
     margin: 5px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 1000;
-    font-size: 60px;
+    font-size: 65px;
     color: white;
     margin-top: 115px;
  }
