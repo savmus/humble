@@ -53,6 +53,8 @@ class PostIndexItem extends React.Component {
                 };
             };
 
+            allPosts.reverse();
+
             return (
                 <ul className='posts'>
                     {allPosts.map((post, idx) => {

@@ -217,7 +217,7 @@ class Post extends React.Component {
                     <div className='post-index-container'>
                         <div className='post-index'>
                             <PostIndexItem
-                                posts={this.props.allPosts.reverse()}
+                                posts={this.props.allPosts}
                                 deletePost={this.props.deletePost}
                                 user={this.props.user} 
                                 createLike={this.props.createLike}
