@@ -132,7 +132,7 @@ class Post extends React.Component {
 
     render() {
         if (!this.props.posts) {
-            if (this.props.allPosts.length === 0) {
+            if (this.props.allPosts.length === 0 || !this.props.user) {
                 return null
             }
 
