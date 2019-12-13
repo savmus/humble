@@ -54,14 +54,16 @@ class PostIndexItem extends React.Component {
             };
 
             return (
-                <div>
+                <ul className='posts'>
                     {allPosts.map((post, idx) => {
                         return (
-                            <div key={idx}>
-                                <img
-                                    src={post.user.avatar}
-                                    className='dash-avatar'
-                                />
+                            <div key={idx} className='post-container'>
+                                <div className='dash-avatar-container'>
+                                    <img
+                                        src={post.user.avatar}
+                                        className='dash-avatar'
+                                    />
+                                </div>
                                 <div className='post'>
                                     <li>
                                         <a
@@ -101,7 +103,7 @@ class PostIndexItem extends React.Component {
                             </div>
                         );
                     })}
-                </div>
+                </ul>
             );
         } else {
             if (!this.props.user) {
@@ -113,36 +115,38 @@ class PostIndexItem extends React.Component {
             });
 
             return (
-                <div>
-                    <Link 
-                        to={`/blogs/${this.props.blog.id}/edit`} 
-                        className={`blog-edit ${this.props.blog.id === this.props.user.id ? "reveal" : "hide"}`} 
-                    >Edit appearance</Link>
-                    <img 
-                        src={this.props.blog.avatar} 
-                        className='blog-avatar' 
-                    />
-                    <h1 className='blog-title'>{this.props.blog.blog_title}</h1>
-                    <span className='blog-description'>{this.props.blog.blog_description}</span>
+                <ul className='posts'>
+                    <div>
+                        <Link
+                            to={`/blogs/${this.props.blog.id}/edit`}
+                            className={`blog-edit ${this.props.blog.id === this.props.user.id ? "reveal" : "hide"}`}
+                        >Edit appearance</Link>
+                        <img
+                            src={this.props.blog.avatar}
+                            className='blog-avatar'
+                        />
+                        <h1 className='blog-title'>{this.props.blog.blog_title}</h1>
+                        <span className='blog-description'>{this.props.blog.blog_description}</span>
 
-                    {this.props.posts.map((post, idx) => {
-                        return (
-                            <div key={idx} className='post blog-post'>
-                                <li>
-                                    <h2>{post.title}</h2>
-                                    <img 
-                                        src={post.image_url} 
-                                        className='pictures'
-                                    />
-                                    <a href={post.url}>{post.url}</a>
-                                    <p className={post.post_type === 'quote' ? 'post-quote' : 'post-caption'}>{post.caption}</p>
-                                    <p className={post.summary ? 'post-source' : 'post-summary'}>{post.summary}</p>
-                                    <p className='post-description'>{post.description}</p>
-                                </li>
-                            </div>
-                        );
-                    })}
-                </div>
+                        {this.props.posts.map((post, idx) => {
+                            return (
+                                <div key={idx} className='post blog-post'>
+                                    <li>
+                                        <h2>{post.title}</h2>
+                                        <img
+                                            src={post.image_url}
+                                            className='pictures'
+                                        />
+                                        <a href={post.url}>{post.url}</a>
+                                        <p className={post.post_type === 'quote' ? 'post-quote' : 'post-caption'}>{post.caption}</p>
+                                        <p className={post.summary ? 'post-source' : 'post-summary'}>{post.summary}</p>
+                                        <p className='post-description'>{post.description}</p>
+                                    </li>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </ul>
             );
         }
     }

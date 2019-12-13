@@ -138,79 +138,93 @@ class Post extends React.Component {
 
             // dashboard
             return (
-                <div className='post-index'>
-                    <ul className='post-links'>
-                        <li>
-                            <a 
-                                href='#' 
-                                onClick={this.showTextModal} 
-                            ><i className="material-icons post-icons text">text_fields</i></a>
-                            <a 
-                                href='#' 
-                                onClick={this.showTextModal} 
-                                className='text-link' 
-                            >Text</a>
-                            <NewTextContainer 
-                                show={this.state.textShow} 
-                                handleClose={this.hideTextModal} 
+                <div className='feed'>
+                    <div className='post-links-container'>
+                        <div className='post-avatar-container'>
+                            <img
+                                src={this.props.user.avatar} 
+                                className='post-avatar' 
                             />
-                        </li>
-                        <li>
-                            <a 
-                                href='#' 
-                                onClick={this.showPhotoModal} 
-                            ><i className="material-icons post-icons photo">photo_camera</i></a>
-                            <a 
-                                href='#' 
-                                onClick={this.showPhotoModal} 
-                                className='text-link'
-                            >Photo</a>
-                            <NewPhotoContainer 
-                                show={this.state.photoShow} 
-                                handleClose={this.hidePhotoModal} 
-                            />
-                        </li>
-                        <li>
-                            <a 
-                                href='#' 
-                                onClick={this.showQuoteModal} 
-                            ><i className="material-icons post-icons quote">format_quote</i></a>
-                            <a 
-                                href='#' 
-                                onClick={this.showQuoteModal} 
-                                className='text-link'
-                            >Quote</a>
-                            <NewQuoteContainer
-                                show={this.state.quoteShow}
-                                handleClose={this.hideQuoteModal}
-                            />
-                        </li>
-                        <li>
-                            <a 
-                                href='#' 
-                                onClick={this.showLinkModal} 
-                            ><i className="material-icons post-icons link">insert_link</i></a>
-                            <a 
-                                href='#' 
-                                onClick={this.showLinkModal} 
-                                className='text-link'
-                            >Link</a>
-                            <NewLinkContainer
-                                show={this.state.linkShow}
-                                handleClose={this.hideLinkModal}
-                            />
-                        </li>
-                    </ul>
+                        </div>
+                        <ul className='post-links'>
+                            <li className='text-li'>
+                                <a
+                                    href='#'
+                                    onClick={this.showTextModal}
+                                    className="text-icon"
+                                ><i className="material-icons post-icons text">text_fields</i></a>
+                                <a
+                                    href='#'
+                                    onClick={this.showTextModal}
+                                    className='text-link'
+                                >Text</a>
+                                <NewTextContainer
+                                    show={this.state.textShow}
+                                    handleClose={this.hideTextModal}
+                                />
+                            </li>
+                            <li className='photo-li'>
+                                <a
+                                    href='#'
+                                    onClick={this.showPhotoModal}
+                                    className='photo-icon'
+                                ><i className="material-icons post-icons photo">photo_camera</i></a>
+                                <a
+                                    href='#'
+                                    onClick={this.showPhotoModal}
+                                    className='text-link'
+                                >Photo</a>
+                                <NewPhotoContainer
+                                    show={this.state.photoShow}
+                                    handleClose={this.hidePhotoModal}
+                                />
+                            </li>
+                            <li className='quote-li'>
+                                <a
+                                    href='#'
+                                    onClick={this.showQuoteModal}
+                                    className='quote-icon'
+                                ><i className="material-icons post-icons quote">format_quote</i></a>
+                                <a
+                                    href='#'
+                                    onClick={this.showQuoteModal}
+                                    className='text-link'
+                                >Quote</a>
+                                <NewQuoteContainer
+                                    show={this.state.quoteShow}
+                                    handleClose={this.hideQuoteModal}
+                                />
+                            </li>
+                            <li className='link-li'>
+                                <a
+                                    href='#'
+                                    onClick={this.showLinkModal}
+                                    className='link-icon'
+                                ><i className="material-icons post-icons link">insert_link</i></a>
+                                <a
+                                    href='#'
+                                    onClick={this.showLinkModal}
+                                    className='text-link'
+                                >Link</a>
+                                <NewLinkContainer
+                                    show={this.state.linkShow}
+                                    handleClose={this.hideLinkModal}
+                                />
+                            </li>
+                        </ul>
+                    </div>
                     
-                    <ul className='posts'>
-                        <PostIndexItem 
-                            posts={this.props.allPosts.reverse()} 
-                            deletePost={this.props.deletePost} 
-                            user={this.props.user} 
-                            createLike={this.props.createLike} 
-                            deleteLike={this.props.deleteLike} 
-                        />
-                    </ul>
+                    <div className='post-index-container'>
+                        <div className='post-index'>
+                            <PostIndexItem
+                                posts={this.props.allPosts.reverse()}
+                                deletePost={this.props.deletePost}
+                                user={this.props.user} 
+                                createLike={this.props.createLike}
+                                deleteLike={this.props.deleteLike}
+                            />
+                        </div>
+                    </div>
                 </div>
             )
         } else {
