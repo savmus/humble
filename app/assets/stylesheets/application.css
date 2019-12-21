@@ -107,8 +107,8 @@
 
  .blog {
     background: white;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 2%;
+    padding-bottom: 2%;
     width: 600px;
     margin: 0 auto;
     margin-top: 20px;
@@ -124,14 +124,14 @@
  }
 
  .blog-post {
-    padding-bottom: 20px;
+    padding-bottom: 2%;
     border: 1px solid lightgray;
  }
 
  .home-link {
     position: absolute;
-    right: 125px;
-    top: 15px;
+    right: 10%;
+    top: 3%;
     border: none;
     background: none;
     color: gray;
@@ -140,8 +140,8 @@
 
  .explore-link {
     position: absolute;
-    right: 75px;
-    top: 15px;
+    right: 6%;
+    top: 3%;
     border: none;
     background: none;
     color: gray;
@@ -157,15 +157,15 @@
 
  .dropdown {
     position: absolute;
-    right: 20px;
-    top: 13px;
+    right: 1.6%;
+    top: 2.5%;
  }
 
  .dropdown-content {
     position: absolute;
-    right: 5px;
-    top: 40px;
-    min-width: 225px;
+    right: 20%;
+    top: 135%;
+    min-width: 775%;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
     border-top-right-radius: 3px;
@@ -180,10 +180,10 @@
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
     font-size: 11px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
  }
 
  .dropdown-links a {
@@ -193,24 +193,24 @@
 
  .dropdown-links {
     background: white;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5%;
+    padding-bottom: 5%;
  }
 
  .nav-like {
     color: rgb(56, 56, 56);
-    margin-left: 13px;
+    margin-left: 6%;
  }
 
  .nav-follow {
     color: rgb(56, 56, 56);
-    margin-left: 10px;
-    margin-top: 20px;
+    margin-left: 4.5%;
+    margin-top: 8.5%;
  }
 
  .nav-like-text {
     color: rgb(56, 56, 56);
-    margin-left: 16px;
+    margin-left: 7%;
     display: inline-block;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
@@ -218,8 +218,7 @@
 
  .nav-follow-text {
     color: rgb(56, 56, 56);
-    margin-left: 10px;
-    margin-top: 20px;
+    margin-left: 4.5%;
     display: inline-block;
     position: relative;
     bottom: 4px;
@@ -240,7 +239,7 @@
  .like-hide {
     visibility: hidden;
     position: absolute;
-    left: 15px;
+    left: 1%;
  }
 
  .post strong {
@@ -253,31 +252,16 @@
 
  .nav-bar-in {
     border-bottom: 1px solid gray;
-    padding-bottom: 45px;
+    padding-bottom: 3.5%;
  }
 
  .nav-bar-out {
-    padding-bottom: 15px;
- }
-
- .search-bar {
-    margin-left: 60px;
-    height: 25px;
-    padding: 5px;
-    width: 470px;
-    color: white;
-    background: hsla(0, 0%, 100%, .25);
-    border: none;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-    overflow: hidden;
+    padding-bottom: 1%;
  }
 
  .sidebar {
    float: right;
-   margin-top: 60px;
+   margin-top: 5%;
    font-family: Arial, Helvetica, sans-serif;
    position: absolute;
    top: 5%;
@@ -293,15 +277,15 @@
  }
 
  .sidebar h2 {
-   margin-top: 0px;
+   margin-top: 0%;
    color: white;
    font-size: 16px;
-   margin-left: 10px;
-   margin-bottom: 0px;
+   margin-left: 3%;
+   margin-bottom: 0%;
  }
 
  .user-index h2 {
-    padding-top: 20px;
+    padding-top: 2%;
     color: #444;
     font-size: 16px;
     text-align: center;
@@ -309,46 +293,44 @@
 
  .sidebar ul {
     list-style: none;
-    padding: 0px;
+    padding: 0%;
     width: 300px;
  }
 
  .user-index ul {
     list-style: none;
-    margin-right: 160px;
-    padding: 20px;
+    padding: 2%;
     width: 50%;
     margin: auto;
  }
 
  .sidebar li {
-   padding: 10px;
-   max-width: 300px;
+   padding: 3.5%;
    border-top: 1px solid gray;
-   margin-bottom: 10px;
+   margin-bottom: 3%;
  }
 
  .user-index li {
-    padding: 10px;
+    padding: 2%;
     max-width: 100%;
     border-top: 1px solid rgb(235, 235, 235);
-    margin-bottom: 10px;
+    margin-bottom: 2%;
  }
 
  .side-avatar {
-   width: 40px;
-   height: 40px;
+   width: 15%;
+   height: 15%;
    display: flex;
    float: left;
-   margin-right: 10px;
+   margin-right: 4%;
  }
 
  .follow-avatar {
-    width: 40px;
-    height: 40px;
+    width: 9%;
+    height: 9%;
     display: flex;
     float: left;
-    margin-right: 10px;
+    margin-right: 2%;
     border-radius: 3px;
  }
 
@@ -358,7 +340,7 @@
     display: block;
     font-weight: 700;
     font-size: 14px;
-    margin-bottom: 1px;
+    margin-bottom: 0.5%;
  }
 
  .follow-username {
@@ -414,7 +396,7 @@
  }
 
  .col {
-    padding-left: 20px;
+    padding-left: 1.5%;
  }
 
  .blog-follow {
@@ -441,7 +423,7 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 1000;
     font-size: 50px;
-    margin-left: 15px;
+    margin-left: 1%;
     position: absolute;
     top: 0;
     left: 0;
@@ -461,20 +443,20 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
     background-color: white;
-    margin-top: 10px;
-    margin-right: 55px;
+    margin-top: 0.7%;
+    margin-right: 4.5%;
     text-decoration: none;
     padding: 8px 12px 8px 12px;
     position: absolute;
-    top: 75px;
-    right: 300px;
+    top: 17%;
+    right: 23.5%;
     border-radius: 3px;
  }
 
  .blog-avatar {
-    width: 90px;
-    height: 90px;
-    margin-left: 255px;
+    width: 15%;
+    height: 15%;
+    margin-left: 42.5%;
     border-top-left-radius: 45px;
     border-bottom-left-radius: 45px;
     border-top-right-radius: 45px;
@@ -489,8 +471,8 @@
     font-weight: 925;
     display: block;
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 15px;
+    margin-top: 2%;
+    margin-bottom: 3%;
  }
 
  .blog-description {
@@ -499,7 +481,7 @@
     font-size: 14px;
     display: block;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 3%;
  }
 
  .post-index-container {
@@ -521,33 +503,33 @@
     border-radius: 3px;
     position: sticky;
     position: -webkit-sticky;
-    top: 20px;
-    margin-bottom: 20px;
+    top: 4.5%;
+    margin-bottom: 28%;
  }
 
  .dash-avatar-container {
-    margin-right: 20px;
+    margin-right: 4%;
  }
 
  .post-links-container {
     display: flex;
     justify-content: flex-end;
     width: 58%;
-    margin-top: 30px;
+    margin-top: 2.5%;
     max-height: 100px;
  }
 
  .post-avatar {
     position: sticky;
-    top: 20px;
+    top: 4.5%;
     width: 70px;
     height: 70px;
     border-radius: 3px;
-    margin-bottom: 10px;
+    margin-bottom: 14%;
  }
 
  .post-avatar-container {
-    margin-right: 20px;
+    margin-right: 2.9%;
  }
 
  .username {
@@ -559,20 +541,18 @@
  }
 
  .post h2 {
-    margin-bottom: 0px;
-    margin-top: 20px;
+    margin-bottom: 0%;
     font-family: Arial, Helvetica, sans-serif;
  }
 
  .explore-post h2 {
-    margin-bottom: 0px;
-    margin-top: 15px;
+    margin-bottom: 0%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
  }
 
  .post-description {
-    margin-top: 0px;
+    margin-top: 0%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
  }
@@ -580,13 +560,13 @@
  .post-caption {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
-    margin-bottom: 0px;
+    margin-bottom: 0%;
  }
 
  .post-quote {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 24px;
-    margin: 0px;
+    margin: 0%;
  }
 
  .post-quote:before {
@@ -609,7 +589,6 @@
  .post-form {
     position: fixed;
     background: white;
-    width: 500px;
     height: auto;
     top: 50%;
     left: 50%;
@@ -642,7 +621,7 @@
 
  .blog-form {
     background: white;
-    width: 500px;
+    width: 39%;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
     border-top-right-radius: 3px;
@@ -655,18 +634,18 @@
  #text-title {
     display: block;
     border: none;
-    width: 460px;
+    width: 90%;
     height: 40px;
-    padding-left: 20px;
-    margin-bottom: 10px;
+    padding-left: 4%;
+    margin-bottom: 2%;
  }
 
  #text-description {
     display: block;
     border: none;
-    width: 460px;
+    width: 90%;
     height: 50px;
-    padding-left: 20px;
+    padding-left: 4%;
     resize: none;
  }
 
@@ -676,17 +655,17 @@
     border-right: none;
     border-top: 3px dashed lightgray;
     border-bottom: 3px dashed lightgray;
-    width: 480px;
+    width: 100%;
     height: 200px;
-    padding-left: 20px;
-    margin-bottom: 10px;
+    padding-left: 4%;
+    margin-bottom: 2%;
  }
 
  #photo-caption {
     display: block;
-    width: 480px;
+    width: 100%;
     height: 100px;
-    margin-left: 20px;
+    margin-left: 4%;
     border: none;
     resize: none;
  }
@@ -694,19 +673,19 @@
  #quote-caption {
     display: block;
     border: none;
-    width: 460px;
+    width: 90%;
     height: 40px;
-    margin-left: 20px;
-    margin-bottom: 10px;
+    margin-left: 4%;
+    margin-bottom: 2%;
     resize: none;
-    padding-top: 20px;
+    padding-top: 4%;
  }
 
  #quote-summary {
     display: block;
     border: none;
-    width: 460px;
-    margin-left: 20px;
+    width: 90%;
+    margin-left: 4%;
  }
 
  #link-url {
@@ -715,17 +694,17 @@
     border-right: none;
     border-top: 3px dashed lightgray;
     border-bottom: 3px dashed lightgray;
-    width: 480px;
+    width: 100%;
     height: 125px;
-    padding-left: 20px;
-    margin-bottom: 10px;
+    padding-left: 4%;
+    margin-bottom: 2%;
  }
 
  #link-description {
     display: block;
-    width: 480px;
+    width: 100%;
     height: 100px;
-    margin-left: 20px;
+    margin-left: 4%;
     border: none;
     resize: none;
  }
@@ -736,10 +715,10 @@
     border-right: none;
     border-top: none;
     border-bottom: 3px dashed lightgray;
-    width: 480px;
+    width: 100%;
     height: 40px;
-    padding-left: 20px;
-    margin-bottom: 10px;
+    padding-left: 4%;
+    margin-bottom: 2%;
  }
 
  #blog-title {
@@ -748,17 +727,17 @@
     border-right: none;
     border-top: none;
     border-bottom: 3px dashed lightgray;
-    width: 480px;
+    width: 100%;
     height: 40px;
-    padding-left: 20px;
-    margin-bottom: 10px;
+    padding-left: 4%;
+    margin-bottom: 2%;
  }
 
  #blog-description {
     display: block;
-    width: 480px;
+    width: 100%;
     height: 40px;
-    margin-left: 20px;
+    margin-left: 4%;
     border: none;
     resize: none;
  }
@@ -769,11 +748,11 @@
    color: white;
    font-family: Arial, Helvetica, sans-serif;
    font-weight: 700;
-   margin-left: 330px;
-   padding-right: 10px;
-   padding-left: 10px;
-   padding-top: 5px;
-   padding-bottom: 5px;
+   margin-left: 66%;
+   padding-right: 2%;
+   padding-left: 2%;
+   padding-top: 1%;
+   padding-bottom: 1%;
    border-top-left-radius: 3px;
    border-bottom-left-radius: 3px;
    border-top-right-radius: 3px;
@@ -788,11 +767,11 @@
    font-family: Arial, Helvetica, sans-serif;
    font-weight: 600;
    font-size: 13px;
-   padding-right: 10px;
-   padding-left: 10px;
-   padding-top: 5px;
-   padding-bottom: 5px;
-   margin: 20px;
+   padding-right: 2%;
+   padding-left: 2%;
+   padding-top: 1%;
+   padding-bottom: 1%;
+   margin: 4%;
    border-top-left-radius: 3px;
    border-bottom-left-radius: 3px;
    border-top-right-radius: 3px;
@@ -810,8 +789,8 @@
    margin-left: 335px;
    padding-right: 10px;
    padding-left: 10px;
-   padding-top: 5px;
-   padding-bottom: 5px;
+   padding-top: 1%;
+   padding-bottom: 1%;
    border-top-left-radius: 3px;
    border-bottom-left-radius: 3px;
    border-top-right-radius: 3px;
@@ -828,8 +807,8 @@
    font-size: 13px;
    padding-right: 10px;
    padding-left: 10px;
-   padding-top: 5px;
-   padding-bottom: 5px;
+   padding-top: 1%;
+   padding-bottom: 1%;
    margin: 20px;
    border-top-left-radius: 3px;
    border-bottom-left-radius: 3px;
@@ -839,12 +818,12 @@
 
  .post-links {
     padding: 0;
-    margin: 0 0 30px 0;
+    margin: 0 0 10% 0;
     display: flex;
     flex-direction: row;
     background-color: white;
     border-radius: 5px;
-    min-width: 520px;
+    min-width: 70.5%;
     height: 90px;
     justify-content: space-evenly;
     align-items: center;
@@ -992,7 +971,7 @@
     display: block;
     padding: 0;
     margin-right: 0;
-    margin-left: 438px;
+    margin-left: 91%;
     font-size: 14px;
  }
 
@@ -1002,7 +981,7 @@
    display: block;
    text-align: end;
    font-size: 14px;
-   margin-right: 3px;
+   margin-right: 0.6%;
  }
 
  .post-options {
@@ -1013,7 +992,7 @@
     border: none;
     background: none;
     color: gray;
-    margin-left: 90px;
+    margin-left: 44%;
  }
 
  .signup a {
@@ -1021,7 +1000,7 @@
     font-weight: 700;
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgba(0, 0, 0, .0941176);
-    margin: 10px;
+    margin: 1%;
     text-decoration: none;
     padding: 4px 8px 4px 8px;
     position: absolute;
@@ -1036,7 +1015,7 @@
  }
 
  .slogan {
-    margin-bottom: 15px;
+    margin-bottom: 1.4%;
  }
 
  html {
@@ -1074,13 +1053,13 @@
  .hide-signup {
     visibility: hidden;
     position: absolute;
-    left: 5px;
+    left: 1%;
  }
 
  .signup input {
-    width: 270px;
+    width: 21.3%;
     height: 37px;
-    padding: 5px;
+    padding: 0.5%;
     display: block;
     border: 1px solid #ccc;
     border-radius: 3px;
@@ -1093,10 +1072,10 @@
     list-style: none;
     padding: 0;
     display: block;
-    width: 190px;
+    width: 24%;
     margin: 0 auto;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 0.3%;
+    padding-bottom: 0.3%;
  }
 
  .login a {
@@ -1105,8 +1084,8 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     background-color: white;
-    margin-top: 10px;
-    margin-right: 20px;
+    margin-top: 0.8%;
+    margin-right: 1.6%;
     text-decoration: none;
     padding: 8px 12px 8px 12px;
     position: absolute;
@@ -1145,9 +1124,9 @@
  }
 
  .login input {
-    width: 270px;
+    width: 21.3%;
     height: 37px;
-    padding: 5px;
+    padding: 0.5%;
     display: block;
     border: 1px solid #ccc;
     border-radius: 3px;
