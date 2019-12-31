@@ -487,14 +487,23 @@
  .post-index-container {
     display: flex;
     justify-content: flex-end;
-    width: 62%;
+    width: 58%;
+ }
+
+ .post-index {
+    width: 83.3%;
+ }
+
+ .posts {
+    width: 100%;
+    padding: 0;
  }
 
  .post-container {
     position: relative;
     display: flex;
     justify-content: flex-end;
-    width: 91.5%;
+    width: 100%;
  }
 
  .dash-avatar {
@@ -505,6 +514,7 @@
     position: -webkit-sticky;
     top: 4.5%;
     margin-bottom: 28%;
+    margin-left: 4%;
  }
 
  .dash-avatar-container {
@@ -917,7 +927,7 @@
 
  .post {
     background: white;
-    width: 480px;
+    width: 100%;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
     border-top-right-radius: 3px;
@@ -945,7 +955,7 @@
  }
 
  .pictures {
-    width: 520px;
+    width: 108%;
     position: relative;
     right: 20px;
  }
@@ -1038,7 +1048,9 @@
     font-size: 16px;
     margin-top: 5px;
     border: none;
-    padding: 11px 105px 11px 105px;
+    width: 21.3%;
+    padding-top: 11px;
+    padding-bottom: 11px;
     border-radius: 3px;
  }
 
@@ -1102,9 +1114,10 @@
     font-size: 16px;
     margin-top: 5px;
     border: none;
-    padding: 11px 105px 11px 105px;
+    width: 21.3%;
+    padding-top: 11px;
+    padding-bottom: 11px;
     border-radius: 3px;
-    width: 270px;
  }
 
  .demo {
@@ -1115,7 +1128,9 @@
     font-size: 16px;
     margin-top: 5px;
     border: none;
-    padding: 11px 89px 11px 89px;
+    width: 21.3%;
+    padding-top: 11px;
+    padding-bottom: 11px;
     border-radius: 3px;
  }
 
@@ -1161,9 +1176,61 @@
      font-size: 24px;
   }
 
+  .signup a {
+     font-size: 18px;
+     padding: 8px 24px 8px 24px;
+  }
+
+  .login a {
+     font-size: 18px;
+     padding: 8px 24px 8px 24px;
+  }
+
   .signup-btn {
      font-size: 20px;
-     padding: 15px 155px 15px 155px;
+     width: 31%;
+     padding-top: 15px;
+     padding-bottom: 15px;
+  }
+
+  .login form button {
+     font-size: 20px;
+     width: 31%;
+     padding-top: 15px;
+     padding-bottom: 15px;
+  }
+
+  .signup input {
+     width: 31%;
+     height: 47px;
+  }
+
+  .login input {
+     width: 31%;
+     height: 47px;
+  }
+
+  .demo {
+     width: 31%;
+     padding-top: 15px;
+     padding-bottom: 15px;
+     font-size: 20px;
+  }
+
+  .errors {
+     width: 25%;
+  }
+
+  .to-dash {
+     font-size: 71px;
+  }
+
+  .my-nav-links a {
+     font-size: 28px;
+  }
+
+  .portfolio a {
+     font-size: 16px;
   }
 }
 
