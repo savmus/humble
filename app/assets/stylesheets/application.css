@@ -1246,25 +1246,632 @@
  /* Screen sizes */
 
 @media only screen and (max-width: 1280px) {
-  
+   .home-link {
+      top: 2%;
+   }
+
+  .explore-link {
+      top: 2%;
+  }
+
+  .dropdown {
+      top: 1.9%;
+  }
+
+  .blog-edit {
+     top: 8%;
+  }
 }
 
 @media only screen and (min-width: 1600px) {
-  
+   .sidebar {
+      right: 19%;
+   }
+
+  .sidebar ul {
+     width: 152%;
+  }
+
+  .side-avatar {
+     width: 14%;
+  }
+
+  .pictures {
+     right: 25px;
+  }
+
+  .post-avatar {
+     height: 81%;
+  }
+
+  .dash-avatar {
+     height: 83px;
+  }
+
+  .dropdown {
+     top: 2.7%;
+  }
+
+  .explore-link {
+     right: 4.7%;
+  }
+
+  .home-link {
+     right: 7.8%;
+  }
+
+  .post-links li {
+     padding-right: 56px;
+  }
+
+  .like-post img {
+     width: 115.2%;
+     right: 43px;
+  }
+
+  .blog-avatar {
+     border-top-left-radius: 75px;
+    border-bottom-left-radius: 75px;
+    border-top-right-radius: 75px;
+    border-bottom-right-radius: 75px;
+  }
+
+  .blog-post img {
+     right: 24px;
+  }
 }
 
 @media only screen and (min-width: 1920px) {
-  
+  .to-dash {
+     top: 1%;
+     font-size: 52px;
+  }
+
+  .post-links {
+     height: 100px;
+  }
+
+  .post-avatar {
+     height: 90%;
+     width: 96%;
+  }
+
+  .dash-avatar {
+     width: 95%;
+     height: 90px;
+  }
+
+  .pictures {
+     right: 31px;
+  }
+
+  .sidebar h2 {
+     font-size: 18px;
+  }
+
+  .sidebar ul {
+     width: 199%;
+  }
+
+  .side-avatar {
+     width: 12%;
+  }
+
+  .sidebar {
+     right: 23%;
+  }
+
+  .dash-avatar-container {
+     max-width: 11.4%;
+  }
+
+  .username {
+     font-size: 14px;
+  }
+
+  .post-caption {
+     font-size: 16px;
+  }
+
+  .text-link {
+     font-size: 16px;
+  }
+
+  .side-username {
+     font-size: 16px;
+  }
+
+  .side-title {
+     font-size: 15px;
+  }
+
+  .follow-icon {
+    font-size: 36px !important;
+   }
+
+   .home-link {
+      font-size: 26px;
+   }
+
+   .explore-link {
+      font-size: 26px;
+   }
+
+   .dropbtn {
+      font-size: 26px;
+   }
+
+   .post strong {
+      font-size: 14px;
+   }
+
+   .like-btn {
+      font-size: 20px;
+   }
+
+   .post-icons {
+      font-size: 50px !important;
+   }
+
+   .post-caption {
+      font-size: 18px;
+   }
+
+   .post-description {
+      font-size: 16px;
+   }
+
+   #edit-post {
+      font-size: 16px;
+      margin-right: 2.6%;
+   }
+
+   #delete-post {
+      font-size: 16px;
+   }
+
+   .my-nav-links a {
+      font-size: 26px;
+   }
+
+   .portfolio a {
+      font-size: 14px;
+   }
+
+   .dropdown-head {
+      font-size: 13px;
+   }
+
+   .nav-like-text {
+      font-size: 16px;
+   }
+
+   .nav-follow-text {
+      font-size: 16px;
+   }
+
+   .follow-username {
+      font-size: 16px;
+   }
+
+   .follow-title {
+      font-size: 15px;
+   }
+
+   .blog-unfollow {
+      font-size: 15px;
+   }
+
+   .user-index h2 {
+      font-size: 18px;
+   }
+
+   .like-post img {
+      right: 52px;
+   }
+
+   .blog-edit {
+      top: 11%;
+      font-size: 15px;
+   }
+
+   .blog-title {
+      font-size: 52px;
+   }
+
+   .blog-description {
+      font-size: 16px;
+   }
+
+   .blog-post img {
+      right: 30px;
+   }
+
+   .title {
+      font-size: 67px;
+   }
+
+   .signup-btn {
+      font-size: 18px;
+   }
+
+   .signup p {
+      font-size: 18px;
+   }
+
+   .signup a {
+      font-size: 18px;
+   }
+
+   .signup input {
+      font-size: 15px;
+   }
+
+   .demo {
+      font-size: 18px;
+   }
+
+   .login input {
+      font-size: 15px;
+   }
+
+   .login form button {
+      font-size: 18px;
+   }
+
+   .login a {
+      font-size: 16px;
+   }
 }
 
 @media only screen and (min-width: 2560px) {
-  
+  .signup input {
+     height: 55px;
+  }
+
+  .login input {
+     height: 55px;
+  }
+
+  .dropdown {
+     top: 2.8%;
+  }
+
+  .post-links {
+     height: 120px;
+  }
+
+  .post-index-container {
+     margin-top: 1.5%;
+  }
+
+  .post-links li {
+     padding-right: 102px;
+     padding-left: 102px;
+  }
+
+  .sidebar ul {
+     width: 252%;
+  }
+
+  .sidebar {
+     right: 26%;
+     top: 4%;
+  }
+
+  .side-avatar {
+     width: 11%;
+  }
+
+  .post-avatar {
+     height: 105%;
+     width: 90%;
+  }
+
+  .dash-avatar {
+     height: 105px;
+     width: 87%;
+  }
+
+  .pictures {
+     right: 40px;
+  }
+
+  .like-post img {
+     right: 70px;
+  }
+
+  .explore-post {
+     width: 500px;
+  }
+
+  .explore-pictures {
+     width: 529px;
+  }
+
+  .blog-post img {
+     right: 40px;
+  }
+
+  .blog-avatar {
+    border-top-left-radius: 90px;
+    border-bottom-left-radius: 90px;
+    border-top-right-radius: 90px;
+    border-bottom-right-radius: 90px;
+   }
 }
 
 @media only screen and (min-width: 3440px) {
-  
+  .to-dash {
+     font-size: 54px;
+  }
+
+  .sidebar h2 {
+     font-size: 20px;
+  }
+
+  .username {
+     font-size: 16px;
+  }
+
+  .post-caption {
+     font-size: 18px;
+  }
+
+  .text-link {
+     font-size: 18px;
+  }
+
+  .side-username {
+     font-size: 18px;
+  }
+
+  .side-title {
+     font-size: 17px;
+  }
+
+  .follow-icon {
+    font-size: 38px !important;
+   }
+
+   .home-link {
+      font-size: 28px;
+   }
+
+   .explore-link {
+      font-size: 28px;
+   }
+
+   .dropbtn {
+      font-size: 28px;
+   }
+
+   .post strong {
+      font-size: 16px;
+   }
+
+   .like-btn {
+      font-size: 22px;
+   }
+
+   .post-icons {
+      font-size: 52px !important;
+   }
+
+   .post-caption {
+      font-size: 20px;
+   }
+
+   .post-description {
+      font-size: 18px;
+   }
+
+   #edit-post {
+      font-size: 18px;
+   }
+
+   #delete-post {
+      font-size: 18px;
+   }
+
+   .my-nav-links a {
+      font-size: 28px;
+   }
+
+   .portfolio a {
+      font-size: 16px;
+   }
+
+   .dropdown-head {
+      font-size: 15px;
+   }
+
+   .nav-like-text {
+      font-size: 18px;
+   }
+
+   .nav-follow-text {
+      font-size: 18px;
+   }
+
+   .follow-username {
+      font-size: 18px;
+   }
+
+   .follow-title {
+      font-size: 17px;
+   }
+
+   .blog-unfollow {
+      font-size: 17px;
+   }
+
+   .user-index h2 {
+      font-size: 20px;
+   }
+
+   .like-post img {
+      right: 54px;
+   }
+
+   .blog-edit {
+      font-size: 17px;
+   }
+
+   .blog-title {
+      font-size: 54px;
+   }
+
+   .blog-description {
+      font-size: 18px;
+   }
+
+   .blog-post img {
+      right: 32px;
+   }
+
+   .title {
+      font-size: 69px;
+   }
+
+   .signup-btn {
+      font-size: 20px;
+   }
+
+   .signup p {
+      font-size: 20px;
+   }
+
+   .signup a {
+      font-size: 20px;
+   }
+
+   .signup input {
+      font-size: 17px;
+   }
+
+   .demo {
+      font-size: 20px;
+   }
+
+   .login input {
+      font-size: 17px;
+   }
+
+   .login form button {
+      font-size: 20px;
+   }
+
+   .login a {
+      font-size: 18px;
+   }
+
+   .nav-bar-in {
+      padding-bottom: 2.5%;
+   }
+
+   .post-links {
+      height: 156px;
+   }
+
+   .post-index-container {
+      margin-top: 2.5%;
+   }
+
+   .post-index {
+      width: 81.8%;
+   }
+
+   .post-avatar {
+      width: 78%;
+      height: 120%;
+   }
+
+   .post-avatar-container {
+      margin-right: 1.5%;
+   }
+
+   .dash-avatar {
+      height: 123px;
+      width: 90%;
+   }
+
+   .pictures {
+      right: 54px;
+   }
+
+   .post-links li {
+    padding-right: 137px;
+    padding-left: 137px;
+   }
+
+   .sidebar ul {
+      width: 313%;
+   }
+
+   .sidebar {
+      right: 29%;
+      top: 3%;
+   }
+
+   .side-avatar {
+      width: 10%;
+   }
+
+   #edit-post {
+      margin-left: 98%;
+   }
+
+   #delete-post {
+      margin-left: 97.9%;
+   }
+
+   .dropdown-content {
+      min-width: 881%;
+   }
+
+   .like-post img {
+      right: 92px;
+   }
+
+   .explore-post {
+      width: 650px;
+   }
+
+   .explore-pictures {
+      width: 679px;
+   }
+
+   .blog-avatar {
+    border-top-left-radius: 120px;
+    border-bottom-left-radius: 120px;
+    border-top-right-radius: 120px;
+    border-bottom-right-radius: 120px;
+   }
+
+   .blog-post img {
+      right: 56px;
+   }
 }
 
 @media only screen and (min-width: 3840px) {
-  
+  .signup input {
+     height: 82px;
+  }
+
+  .login input {
+     height: 82px;
+  }
+
+  .home-link {
+     top: 2.5%;
+  }
+
+  .explore-link {
+     top: 2.5%;
+  }
+
+  .dropdown {
+     top: 2.4%;
+  }
 }
