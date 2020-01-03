@@ -38,6 +38,7 @@ const App = () => (
         <ProtectedRoute exact path="/blogs/:userId/edit" component={BlogFormContainer} />
         <ProtectedRoute path='/explore' component={ExploreContainer} />
         <ProtectedRoute path="/likes" component={LikesIndexContainer} />
+        <ProtectedRoute path="/likes" component={SideBarContainer} />
         <ProtectedRoute path="/following" component={FollowsIndexContainer} />
     </div>
 );

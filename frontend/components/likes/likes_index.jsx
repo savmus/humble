@@ -28,12 +28,11 @@ class LikesIndex extends React.Component {
                 <ul className='posts'>
                     {likedPosts.map((post, idx) => {
                         return (
-                            <div key={idx} className='post blog-post'>
+                            <div key={idx} className='like-post'>
                                 <li>
                                     <h2>{post.title}</h2>
                                     <img
-                                        src={post.image_url}
-                                        className='pictures'
+                                        src={post.image_url} 
                                     />
                                     <a href={post.url}>{post.url}</a>
                                     <p className={post.post_type === 'quote' ? 'post-quote' : 'post-caption'}>{post.caption}</p>
