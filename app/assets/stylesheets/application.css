@@ -70,17 +70,17 @@
 
  .my-nav-links {
    position: fixed;
-   width: 30%;
-   bottom: 1%;
-   right: 1%;
+   width: 35vw;
+   bottom: 1vh;
+   right: 0vw;
    text-align: right;
    z-index: 1000;
  }
 
  .my-nav-links a {
    color: white;
-   padding-right: 3%;
-   font-size: 24px;
+   padding-right: 1vw;
+   font-size: 2vw;
  }
 
  .my-nav-links a:hover {
@@ -88,17 +88,6 @@
    -ms-animation: rainbow 1s ease infinite;
    -o-animation: rainbow 1s ease infinite;
    animation: rainbow 1s ease infinite;
- }
-
- .portfolio a {
-   font-size: 12px;
-   text-decoration: none;
- }
-
- .portfolio {
-   display: inline-grid;
-   position: relative;
-   bottom: 13px;
  }
 
  button, a {
@@ -145,10 +134,10 @@
 
  .like-post strong {
    font-family: Arial, Helvetica, sans-serif;
-   font-size: 12px;
+   font-size: 1vw;
    color: rgb(58, 54, 54);
    position: relative;
-   bottom: 17px;
+   bottom: 2.5vh;
  }
 
  .like-post h2 {
@@ -167,24 +156,23 @@
  }
 
  .blog-post {
-    padding-bottom: 2%;
+    padding-bottom: 1.4vh;
     border: 1px solid lightgray;
     background: white;
-    width: 60%;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
+    width: 28vw;
+    border-top-left-radius: 0.19vw;
+    border-bottom-left-radius: 0.19vw;
+    border-top-right-radius: 0.19vw;
+    border-bottom-right-radius: 0.19vw;
     margin: 0 auto;
-    margin-bottom: 3.3%;
-    padding-top: 3.3%;
-    padding-left: 3.3%;
-    padding-right: 3.3%;
+    padding-top: 2.3vh;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
  }
 
  .blog-post strong {
    font-family: Arial, Helvetica, sans-serif;
-   font-size: 12px;
+   font-size: 1vw;
    color: rgb(58, 54, 54);
    position: relative;
    bottom: 17px;
@@ -193,6 +181,7 @@
  .blog-post h2 {
    margin-bottom: 0%;
    font-family: Arial, Helvetica, sans-serif;
+   font-size: 2vw;
  }
 
  .blog-post li {
@@ -200,53 +189,53 @@
  }
 
  .blog-post img {
-    width: 111%;
+    width: 31vw;
     position: relative;
-    right: 20px;
+    right: 1.5vw;
  }
 
  .home-link {
     position: absolute;
-    right: 10%;
-    top: 3%;
+    right: 10vw;
+    top: 3vh;
     border: none;
     background: none;
     color: gray;
-    font-size: 24px;
+    font-size: 2vw;
  }
 
  .explore-link {
     position: absolute;
-    right: 6%;
-    top: 3%;
+    right: 6vw;
+    top: 3vh;
     border: none;
     background: none;
     color: gray;
-    font-size: 24px;
+    font-size: 2vw;
  }
 
  .dropbtn {
     border: none;
     background: none;
     color: gray;
-    font-size: 24px;
+    font-size: 2vw;
  }
 
  .dropdown {
     position: absolute;
-    right: 1.6%;
-    top: 2.5%;
+    right: 1.6vw;
+    top: 2.7vh;
  }
 
  .dropdown-content {
     position: absolute;
-    right: 20%;
-    top: 135%;
-    min-width: 775%;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
+    right: 0.5vw;
+    top: 6.2vh;
+    min-width: 18.3vw;
+    border-top-left-radius: 0.19vw;
+    border-bottom-left-radius: 0.19vw;
+    border-top-right-radius: 0.19vw;
+    border-bottom-right-radius: 0.19vw;
     overflow: hidden;
     z-index: 100;
  }
@@ -256,61 +245,63 @@
     color: rgb(68, 67, 67);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
-    font-size: 11px;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 2.5%;
-    padding-bottom: 2.5%;
+    font-size: 1vw;
+    padding-left: 0.9vw;
+    padding-right: 0.9vw;
+    padding-top: 0.8vh;
+    padding-bottom: 0.8vh;
  }
 
  .dropdown-links a {
     text-decoration: none;
     display: block;
+    font-size: 1vw;
  }
 
  .dropdown-links {
     background: white;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 1.4vh;
+    padding-bottom: 1.4vh;
  }
 
  .nav-like {
     color: rgb(56, 56, 56);
-    margin-left: 6%;
+    margin-left: 1.1vw;
  }
 
  .nav-follow {
     color: rgb(56, 56, 56);
-    margin-left: 4.5%;
-    margin-top: 8.5%;
+    margin-left: 1.1vw;
+    margin-top: 2.3vh;
+    font-size: 1vw !important;
  }
 
  .nav-like-text {
     color: rgb(56, 56, 56);
-    margin-left: 7%;
+    margin-left: 1.3vw;
     display: inline-block;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 1vw;
  }
 
  .nav-follow-text {
     color: rgb(56, 56, 56);
-    margin-left: 4.5%;
+    margin-left: 1.3vw;
     display: inline-block;
     position: relative;
-    bottom: 4px;
+    bottom: 0.5vh;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 1vw;
  }
 
  .like-btn {
     border: none;
     background: white;
-    font-size: 18px;
+    font-size: 2vw;
     color: red;
     float: right;
     position: relative;
-    bottom: 20px;
+    bottom: 3vh;
  }
 
  .like-hide {
@@ -321,7 +312,7 @@
 
  .post strong {
    font-family: Arial, Helvetica, sans-serif;
-   font-size: 12px;
+   font-size: 1vw;
    color: rgb(58, 54, 54);
    position: relative;
    bottom: 17px;
@@ -329,7 +320,7 @@
 
  .nav-bar-in {
     border-bottom: 1px solid gray;
-    padding-bottom: 3.5%;
+    padding-bottom: 7.5vh;
  }
 
  .nav-bar-out {
@@ -338,11 +329,11 @@
 
  .sidebar {
    float: right;
-   margin-top: 5%;
+   margin-top: 7.5vh;
    font-family: Arial, Helvetica, sans-serif;
    position: absolute;
-   top: 5%;
-   right: 18%;
+   top: 5vh;
+   right: 14vw;
  }
 
  .user-index {
@@ -350,28 +341,28 @@
     width: 80%;
     font-family: Arial, Helvetica, sans-serif;
     background: white;
-    border-radius: 10px;
+    border-radius: 0.63vw;
  }
 
  .sidebar h2 {
    margin-top: 0%;
    color: white;
-   font-size: 16px;
-   margin-left: 3%;
+   font-size: 1vw;
+   margin-left: 0.6vw;
    margin-bottom: 0%;
  }
 
  .user-index h2 {
     padding-top: 2%;
     color: #444;
-    font-size: 16px;
+    font-size: 1vw;
     text-align: center;
  }
 
  .sidebar ul {
     list-style: none;
     padding: 0%;
-    width: 117%;
+    width: 22.5vw;
  }
 
  .user-index ul {
@@ -384,7 +375,7 @@
  .sidebar li {
    padding: 3.5%;
    border-top: 1px solid gray;
-   margin-bottom: 3%;
+   margin-bottom: 1vh;
  }
 
  .user-index li {
@@ -395,11 +386,10 @@
  }
 
  .side-avatar {
-   width: 15%;
-   height: 15%;
+   width: 3.1vw;
    display: flex;
    float: left;
-   margin-right: 4%;
+   margin-right: 0.9vw;
  }
 
  .follow-avatar {
@@ -408,7 +398,7 @@
     display: flex;
     float: left;
     margin-right: 2%;
-    border-radius: 3px;
+    border-radius: 0.19vw;
  }
 
  .side-username {
@@ -416,8 +406,8 @@
     color: white;
     display: block;
     font-weight: 700;
-    font-size: 14px;
-    margin-bottom: 0.5%;
+    font-size: 1vw;
+    margin-bottom: 0.4vh;
  }
 
  .follow-username {
@@ -425,7 +415,7 @@
     color: black;
     display: block;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 1vw;
     margin-bottom: 0.2%;
  }
 
@@ -433,14 +423,14 @@
     text-decoration: none;
     color: gray;
     display: block;
-    font-size: 13px;
+    font-size: 1vw;
  }
 
  .follow-title {
     text-decoration: none;
     color: gray;
     display: block;
-    font-size: 13px;
+    font-size: 1vw;
  }
 
  .blog-unfollow {
@@ -450,14 +440,14 @@
     background: transparent;
     border-color: #bfbfbf;
     height: auto;
-    font-size: 13px;
+    font-size: 1vw;
     line-height: 219%;
     padding: 0 10px;
     font-weight: bold;
     border-width: 1px;
     border-style: solid;
     text-decoration: none;
-    border-radius: 2px;
+    border-radius: 0.13vw;
  }
 
  .explore-index {
@@ -466,7 +456,6 @@
     justify-content: center;
     padding: 0;
     border: 0;
-    font-size: 100%;
     font: inherit;
     vertical-align: baseline;
     text-decoration: none;
@@ -484,15 +473,15 @@
  }
 
  .follow-icon {
-    font-size: 34px !important;
+    font-size: 3vw !important;
  }
 
  .follow {
     display: flex;
     float: right;
     position: relative;
-    bottom: 33px;
-    right: 3%;
+    bottom: 5vh;
+    right: 0.7vw;
  }
 
  .to-dash {
@@ -500,8 +489,8 @@
     color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 1000;
-    font-size: 50px;
-    margin-left: 1%;
+    font-size: 4vw;
+    margin-left: 1vw;
     position: absolute;
     top: 0;
     left: 0;
@@ -519,7 +508,7 @@
     color: rgb(70, 70, 70);
     font-weight: 700;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
+    font-size: 1vw;
     background-color: white;
     margin-right: 4.5%;
     text-decoration: none;
@@ -527,7 +516,7 @@
     position: absolute;
     top: 12%;
     right: 23%;
-    border-radius: 3px;
+    border-radius: 0.19vw;
  }
 
  .blog-avatar {
@@ -544,7 +533,7 @@
  .blog-title {
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(58, 54, 54);
-    font-size: 50px;
+    font-size: 4vw;
     font-weight: 925;
     display: block;
     text-align: center;
@@ -555,7 +544,7 @@
  .blog-description {
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(58, 54, 54);
-    font-size: 14px;
+    font-size: 1vw;
     display: block;
     text-align: center;
     margin-bottom: 3%;
@@ -564,15 +553,14 @@
  .post-index-container {
     display: flex;
     justify-content: flex-end;
-    width: 58%;
+    width: 56.6vw;
  }
 
  .post-index {
-    width: 83.3%;
+    width: 48.5vw;
  }
 
  .posts {
-    width: 100%;
     padding: 0;
  }
 
@@ -580,81 +568,81 @@
     position: relative;
     display: flex;
     justify-content: flex-end;
-    width: 100%;
  }
 
  .dash-avatar {
-    width: 103%;
-    height: 70px;
-    border-radius: 3px;
+    width: 5.2vw;
+    height: 9.5vh;
+    border-radius: 0.19vw;
     position: sticky;
     position: -webkit-sticky;
-    top: 4.5%;
-    margin-bottom: 28%;
-    margin-left: 4%;
+    top: 5vh;
+    margin-bottom: 2.5vh;
+    margin-left: 1.6vw;
  }
 
  .dash-avatar-container {
-    margin-right: 4%;
-    max-width: 11%;
+    margin-right: 2vw;
+    max-width: 6.5vw;
  }
 
  .post-links-container {
     display: flex;
     justify-content: flex-end;
-    width: 58%;
-    margin-top: 2.5%;
-    max-height: 100px;
+    width: 56.6vw;
+    margin-top: 4vh;
+    max-height: 13.5vh;
  }
 
  .post-avatar {
     position: sticky;
-    top: 4.5%;
-    width: 99%;
-    height: 70%;
-    border-radius: 3px;
-    margin-bottom: 14%;
+    top: 5vh;
+    width: 5.2vw;
+    height: 9.5vh;
+    border-radius: 0.19vw;
+    margin-bottom: 0.3vh;
  }
 
  .post-avatar-container {
-    margin-right: 2.9%;
-    width: 9.5%;
+    margin-right: 1.6vw;
+    width: 5.3vw;
  }
 
  .username {
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 1vw;
     color: black;
  }
 
  .post h2 {
     margin-bottom: 0%;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 2vw;
  }
 
  .explore-post h2 {
     margin-bottom: 0%;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
+    font-size: 2vw;
  }
 
  .post-description {
     margin-top: 0%;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 1vw;
  }
 
  .post-caption {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 1vw;
     margin-bottom: 0%;
  }
 
  .post-quote {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 24px;
+    font-size: 2vw;
     margin: 0%;
  }
 
@@ -672,21 +660,21 @@
 
  .post-source {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 1vw;
  }
 
  .post-form {
     position: fixed;
     background: white;
     height: auto;
-    top: 50%;
-    left: 50%;
+    top: 50vh;
+    left: 49.4vw;
     z-index: 999;
     transform: translate(-50%, -50%);
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
+    border-top-left-radius: 0.19vw;
+    border-bottom-left-radius: 0.19vw;
+    border-top-right-radius: 0.19vw;
+    border-bottom-right-radius: 0.19vw;
     overflow: hidden;
  }
 
@@ -710,32 +698,34 @@
 
  .blog-form {
     background: white;
-    width: 39%;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
+    width: 37.5vw;
+    border-top-left-radius: 0.19vw;
+    border-bottom-left-radius: 0.19vw;
+    border-top-right-radius: 0.19vw;
+    border-bottom-right-radius: 0.19vw;
     overflow: hidden;
     margin: auto;
-    margin-top: 10%;
+    margin-top: 13.9vh;
  }
 
  #text-title {
     display: block;
     border: none;
     width: 90%;
-    height: 40px;
-    padding-left: 4%;
-    margin-bottom: 2%;
+    height: 6vh;
+    padding-left: 1.5vw;
+    margin-bottom: 1vh;
+    font-size: 1vw;
  }
 
  #text-description {
     display: block;
     border: none;
     width: 90%;
-    height: 50px;
-    padding-left: 4%;
+    height: 7.3vh;
+    padding-left: 1.5vw;
     resize: none;
+    font-size: 1vw;
  }
 
  #photo-url {
@@ -805,9 +795,10 @@
     border-top: none;
     border-bottom: 3px dashed lightgray;
     width: 100%;
-    height: 40px;
-    padding-left: 4%;
-    margin-bottom: 2%;
+    height: 6vh;
+    padding-left: 1.5vw;
+    margin-bottom: 1vh;
+    font-size: 1vw;
  }
 
  #blog-title {
@@ -817,18 +808,20 @@
     border-top: none;
     border-bottom: 3px dashed lightgray;
     width: 100%;
-    height: 40px;
-    padding-left: 4%;
-    margin-bottom: 2%;
+    height: 6vh;
+    padding-left: 1.5vw;
+    margin-bottom: 1vw;
+    font-size: 1vw;
  }
 
  #blog-description {
     display: block;
     width: 100%;
-    height: 40px;
-    margin-left: 4%;
+    height: 6vh;
+    margin-left: 1.5vw;
     border: none;
     resize: none;
+    font-size: 1vw;
  }
 
  .blog-form form button {
@@ -837,15 +830,16 @@
    color: white;
    font-family: Arial, Helvetica, sans-serif;
    font-weight: 700;
-   margin-left: 66%;
-   padding-right: 2%;
-   padding-left: 2%;
-   padding-top: 1%;
-   padding-bottom: 1%;
-   border-top-left-radius: 3px;
-   border-bottom-left-radius: 3px;
-   border-top-right-radius: 3px;
-   border-bottom-right-radius: 3px;
+   margin-left: 24.8vw;
+   padding-right: 0.7vw;
+   padding-left: 0.7vw;
+   padding-top: 0.5vh;
+   padding-bottom: 0.5vh;
+   border-top-left-radius: 0.19vw;
+   border-bottom-left-radius: 0.19vw;
+   border-top-right-radius: 0.19vw;
+   border-bottom-right-radius: 0.19vw;
+   font-size: 1vw;
  }
 
  .blog-form form a {
@@ -855,16 +849,16 @@
    color: white;
    font-family: Arial, Helvetica, sans-serif;
    font-weight: 600;
-   font-size: 13px;
-   padding-right: 2%;
-   padding-left: 2%;
-   padding-top: 1%;
-   padding-bottom: 1%;
-   margin: 4%;
-   border-top-left-radius: 3px;
-   border-bottom-left-radius: 3px;
-   border-top-right-radius: 3px;
-   border-bottom-right-radius: 3px;
+   font-size: 1vw;
+   padding-right: 0.7vw;
+   padding-left: 0.7vw;
+   padding-top: 0.5vh;
+   padding-bottom: 0.5vh;
+   margin: 1.5vw;
+   border-top-left-radius: 0.19vw;
+   border-bottom-left-radius: 0.19vw;
+   border-top-right-radius: 0.19vw;
+   border-bottom-right-radius: 0.19vw;
  }
 
  .post-form form button {
@@ -874,16 +868,17 @@
    font-family: Arial, Helvetica, sans-serif;
    font-weight: 700;
    display: inline-block;
-   margin-right: 20px;
-   margin-left: 335px;
-   padding-right: 10px;
-   padding-left: 10px;
-   padding-top: 1%;
-   padding-bottom: 1%;
-   border-top-left-radius: 3px;
-   border-bottom-left-radius: 3px;
-   border-top-right-radius: 3px;
-   border-bottom-right-radius: 3px;
+   margin-right: 1.5vw;
+   margin-left: 25.6vw;
+   padding-right: 0.7vw;
+   padding-left: 0.7vw;
+   padding-top: 0.5vh;
+   padding-bottom: 0.5vh;
+   border-top-left-radius: 0.19vw;
+   border-bottom-left-radius: 0.19vw;
+   border-top-right-radius: 0.19vw;
+   border-bottom-right-radius: 0.19vw;
+   font-size: 1vw;
  }
 
  .post-form form a {
@@ -893,35 +888,35 @@
    color: white;
    font-family: Arial, Helvetica, sans-serif;
    font-weight: 600;
-   font-size: 13px;
-   padding-right: 10px;
-   padding-left: 10px;
-   padding-top: 1%;
-   padding-bottom: 1%;
-   margin: 20px;
-   border-top-left-radius: 3px;
-   border-bottom-left-radius: 3px;
-   border-top-right-radius: 3px;
-   border-bottom-right-radius: 3px;
+   font-size: 1vw;
+   padding-right: 0.7vw;
+   padding-left: 0.7vw;
+   padding-top: 0.5vh;
+   padding-bottom: 0.5vh;
+   margin: 1.5vw;
+   border-top-left-radius: 0.19vw;
+   border-bottom-left-radius: 0.19vw;
+   border-top-right-radius: 0.19vw;
+   border-bottom-right-radius: 0.19vw;
  }
 
  .post-links {
     padding: 0;
-    margin: 0 0 10% 0;
+    margin-top: 0;
     display: flex;
     flex-direction: row;
     background-color: white;
-    border-radius: 5px;
-    min-width: 70.5%;
-    height: 90px;
+    border-radius: 0.31vw;
+    min-width: 40vw;
+    height: 13vh;
     justify-content: space-evenly;
     align-items: center;
  }
 
  .post-links li {
     list-style: none;
-    padding-right: 38px;
-    padding-left: 38px;
+    padding-right: 3.4vw;
+    padding-left: 3.4vw;
     display: inline-block;
     border-right: 1px solid lightgray;
  }
@@ -980,12 +975,12 @@
     color: grey;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 1vw;
  }
 
  .post-icons {
     display: block;
-    font-size: 48px !important;
+    font-size: 3vw !important;
  }
 
  .text {
@@ -1007,15 +1002,15 @@
  .post {
     background: white;
     width: 100%;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
+    border-top-left-radius: 0.19vw;
+    border-bottom-left-radius: 0.19vw;
+    border-top-right-radius: 0.19vw;
+    border-bottom-right-radius: 0.19vw;
     margin: 0 auto;
-    margin-bottom: 3.3%;
-    padding-top: 3.3%;
-    padding-left: 3.3%;
-    padding-right: 3.3%;
+    margin-bottom: 2.5vh;
+    padding-top: 2.5vh;
+    padding-left: 1.6vw;
+    padding-right: 1.6vw;
  }
 
  .explore-post {
@@ -1034,9 +1029,9 @@
  }
 
  .pictures {
-    width: 108.3%;
+    width: 108.6%;
     position: relative;
-    right: 20px;
+    right: 1.6vw;
  }
 
  .explore-pictures {
@@ -1061,7 +1056,7 @@
     padding: 0;
     margin-right: 0;
     margin-left: 91%;
-    font-size: 14px;
+    font-size: 1vw;
  }
 
  #edit-post {
@@ -1069,8 +1064,8 @@
    color: rgb(75, 75, 75);
    display: block;
    text-align: end;
-   font-size: 14px;
-   margin-right: 0.6%;
+   font-size: 1vw;
+   margin-right: 0.5vw;
  }
 
  .post-options {
@@ -1081,7 +1076,8 @@
     border: none;
     background: none;
     color: gray;
-    margin-left: 44%;
+    margin-left: 7.4vw;
+    font-size: 1vw;
  }
 
  .signup a {
@@ -1095,12 +1091,14 @@
     position: absolute;
     top: 0;
     right: 0;
+    font-size: 1vw;
  }
 
  .signup p {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0 auto;
+    font-size: 1vw;
  }
 
  .slogan {
@@ -1124,13 +1122,13 @@
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
-    font-size: 16px;
-    margin-top: 0.4%;
+    font-size: 1vw;
+    margin-top: 0.5vh;
     border: none;
-    width: 21.3%;
-    padding-top: 0.8%;
-    padding-bottom: 0.8%;
-    border-radius: 3px;
+    width: 21vw;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    border-radius: 0.19vw;
  }
 
  button:hover {
@@ -1148,14 +1146,16 @@
  }
 
  .signup input {
-    width: 21.3%;
-    height: 37px;
+    width: 21vw;
+    height: 5vh;
     padding: 0.5%;
     display: block;
     border: 1px solid #ccc;
-    border-radius: 3px;
+    border-radius: 0.19vw;
     box-sizing: border-box;
     margin: 0 auto;
+    font-size: 1vw;
+    outline: none;
  }
 
  .errors {
@@ -1167,13 +1167,14 @@
     margin: 0 auto;
     padding-top: 0.3%;
     padding-bottom: 0.3%;
+    font-size: 1vw;
  }
 
  .login a {
     color: rgb(70, 70, 70);
     font-weight: 700;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 1vw;
     background-color: white;
     margin-top: 0.8%;
     margin-right: 1.6%;
@@ -1182,7 +1183,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    border-radius: 3px;
+    border-radius: 0.19vw;
  }
 
  .login form button {
@@ -1190,13 +1191,13 @@
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
-    font-size: 16px;
-    margin-top: 0.4%;
+    font-size: 1vw;
+    margin-top: 0.5vh;
     border: none;
-    width: 21.3%;
-    padding-top: 0.9%;
-    padding-bottom: 0.9%;
-    border-radius: 3px;
+    width: 21vw;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    border-radius: 0.19vw;
  }
 
  .demo {
@@ -1204,13 +1205,13 @@
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
-    font-size: 16px;
-    margin-top: 5px;
+    font-size: 1vw;
+    margin-top: 0.5vh;
     border: none;
-    width: 21.3%;
-    padding-top: 0.8%;
-    padding-bottom: 0.8%;
-    border-radius: 3px;
+    width: 21vw;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    border-radius: 0.19vw;
  }
 
  .login {
@@ -1218,14 +1219,16 @@
  }
 
  .login input {
-    width: 21.3%;
-    height: 37px;
+    width: 21vw;
+    height: 5vh;
     padding: 0.5%;
     display: block;
     border: 1px solid #ccc;
-    border-radius: 3px;
+    border-radius: 0.19vw;
     box-sizing: border-box;
     margin: 0 auto;
+    font-size: 1vw;
+    outline: none;
  }
 
  .title {
@@ -1233,7 +1236,7 @@
     margin: auto;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 1000;
-    font-size: 65px;
+    font-size: 5vw;
     color: white;
     margin-top: 9.2%;
     width: fit-content;
@@ -1242,636 +1245,3 @@
  .title:hover {
    animation: rainbow 1s ease infinite;
  }
-
- /* Screen sizes */
-
-@media only screen and (max-width: 1280px) {
-   .home-link {
-      top: 2%;
-   }
-
-  .explore-link {
-      top: 2%;
-  }
-
-  .dropdown {
-      top: 1.9%;
-  }
-
-  .blog-edit {
-     top: 8%;
-  }
-}
-
-@media only screen and (min-width: 1600px) {
-   .sidebar {
-      right: 19%;
-   }
-
-  .sidebar ul {
-     width: 152%;
-  }
-
-  .side-avatar {
-     width: 14%;
-  }
-
-  .pictures {
-     right: 25px;
-  }
-
-  .post-avatar {
-     height: 81%;
-  }
-
-  .dash-avatar {
-     height: 83px;
-  }
-
-  .dropdown {
-     top: 2.7%;
-  }
-
-  .explore-link {
-     right: 4.7%;
-  }
-
-  .home-link {
-     right: 7.8%;
-  }
-
-  .post-links li {
-     padding-right: 56px;
-  }
-
-  .like-post img {
-     width: 115.2%;
-     right: 43px;
-  }
-
-  .blog-avatar {
-     border-top-left-radius: 75px;
-    border-bottom-left-radius: 75px;
-    border-top-right-radius: 75px;
-    border-bottom-right-radius: 75px;
-  }
-
-  .blog-post img {
-     right: 24px;
-  }
-}
-
-@media only screen and (min-width: 1920px) {
-  .to-dash {
-     top: 1%;
-     font-size: 52px;
-  }
-
-  .post-links {
-     height: 100px;
-  }
-
-  .post-avatar {
-     height: 90%;
-     width: 96%;
-  }
-
-  .dash-avatar {
-     width: 95%;
-     height: 90px;
-  }
-
-  .pictures {
-     right: 31px;
-  }
-
-  .sidebar h2 {
-     font-size: 18px;
-  }
-
-  .sidebar ul {
-     width: 199%;
-  }
-
-  .side-avatar {
-     width: 12%;
-  }
-
-  .sidebar {
-     right: 23%;
-  }
-
-  .dash-avatar-container {
-     max-width: 11.4%;
-  }
-
-  .username {
-     font-size: 14px;
-  }
-
-  .post-caption {
-     font-size: 16px;
-  }
-
-  .text-link {
-     font-size: 16px;
-  }
-
-  .side-username {
-     font-size: 16px;
-  }
-
-  .side-title {
-     font-size: 15px;
-  }
-
-  .follow-icon {
-    font-size: 36px !important;
-   }
-
-   .home-link {
-      font-size: 26px;
-   }
-
-   .explore-link {
-      font-size: 26px;
-   }
-
-   .dropbtn {
-      font-size: 26px;
-   }
-
-   .post strong {
-      font-size: 14px;
-   }
-
-   .like-btn {
-      font-size: 20px;
-   }
-
-   .post-icons {
-      font-size: 50px !important;
-   }
-
-   .post-caption {
-      font-size: 18px;
-   }
-
-   .post-description {
-      font-size: 16px;
-   }
-
-   #edit-post {
-      font-size: 16px;
-      margin-right: 2.6%;
-   }
-
-   #delete-post {
-      font-size: 16px;
-   }
-
-   .my-nav-links a {
-      font-size: 26px;
-   }
-
-   .portfolio a {
-      font-size: 14px;
-   }
-
-   .dropdown-head {
-      font-size: 13px;
-   }
-
-   .nav-like-text {
-      font-size: 16px;
-   }
-
-   .nav-follow-text {
-      font-size: 16px;
-   }
-
-   .follow-username {
-      font-size: 16px;
-   }
-
-   .follow-title {
-      font-size: 15px;
-   }
-
-   .blog-unfollow {
-      font-size: 15px;
-   }
-
-   .user-index h2 {
-      font-size: 18px;
-   }
-
-   .like-post img {
-      right: 52px;
-   }
-
-   .blog-edit {
-      top: 11%;
-      font-size: 15px;
-   }
-
-   .blog-title {
-      font-size: 52px;
-   }
-
-   .blog-description {
-      font-size: 16px;
-   }
-
-   .blog-post img {
-      right: 30px;
-   }
-
-   .title {
-      font-size: 67px;
-   }
-
-   .signup-btn {
-      font-size: 18px;
-   }
-
-   .signup p {
-      font-size: 18px;
-   }
-
-   .signup a {
-      font-size: 18px;
-   }
-
-   .signup input {
-      font-size: 15px;
-   }
-
-   .demo {
-      font-size: 18px;
-   }
-
-   .login input {
-      font-size: 15px;
-   }
-
-   .login form button {
-      font-size: 18px;
-   }
-
-   .login a {
-      font-size: 16px;
-   }
-}
-
-@media only screen and (min-width: 2560px) {
-  .signup input {
-     height: 55px;
-  }
-
-  .login input {
-     height: 55px;
-  }
-
-  .dropdown {
-     top: 2.8%;
-  }
-
-  .post-links {
-     height: 120px;
-  }
-
-  .post-index-container {
-     margin-top: 1.5%;
-  }
-
-  .post-links li {
-     padding-right: 102px;
-     padding-left: 102px;
-  }
-
-  .sidebar ul {
-     width: 252%;
-  }
-
-  .sidebar {
-     right: 26%;
-     top: 4%;
-  }
-
-  .side-avatar {
-     width: 11%;
-  }
-
-  .post-avatar {
-     height: 105%;
-     width: 90%;
-  }
-
-  .dash-avatar {
-     height: 105px;
-     width: 87%;
-  }
-
-  .pictures {
-     right: 40px;
-  }
-
-  .like-post img {
-     right: 70px;
-  }
-
-  .explore-post {
-     width: 500px;
-  }
-
-  .explore-pictures {
-     width: 529px;
-  }
-
-  .blog-post img {
-     right: 40px;
-  }
-
-  .blog-avatar {
-    border-top-left-radius: 90px;
-    border-bottom-left-radius: 90px;
-    border-top-right-radius: 90px;
-    border-bottom-right-radius: 90px;
-   }
-}
-
-@media only screen and (min-width: 3440px) {
-  .to-dash {
-     font-size: 54px;
-  }
-
-  .sidebar h2 {
-     font-size: 20px;
-  }
-
-  .username {
-     font-size: 16px;
-  }
-
-  .post-caption {
-     font-size: 18px;
-  }
-
-  .text-link {
-     font-size: 18px;
-  }
-
-  .side-username {
-     font-size: 18px;
-  }
-
-  .side-title {
-     font-size: 17px;
-  }
-
-  .follow-icon {
-    font-size: 38px !important;
-   }
-
-   .home-link {
-      font-size: 28px;
-   }
-
-   .explore-link {
-      font-size: 28px;
-   }
-
-   .dropbtn {
-      font-size: 28px;
-   }
-
-   .post strong {
-      font-size: 16px;
-   }
-
-   .like-btn {
-      font-size: 22px;
-   }
-
-   .post-icons {
-      font-size: 52px !important;
-   }
-
-   .post-caption {
-      font-size: 20px;
-   }
-
-   .post-description {
-      font-size: 18px;
-   }
-
-   #edit-post {
-      font-size: 18px;
-   }
-
-   #delete-post {
-      font-size: 18px;
-   }
-
-   .my-nav-links a {
-      font-size: 28px;
-   }
-
-   .portfolio a {
-      font-size: 16px;
-   }
-
-   .dropdown-head {
-      font-size: 15px;
-   }
-
-   .nav-like-text {
-      font-size: 18px;
-   }
-
-   .nav-follow-text {
-      font-size: 18px;
-   }
-
-   .follow-username {
-      font-size: 18px;
-   }
-
-   .follow-title {
-      font-size: 17px;
-   }
-
-   .blog-unfollow {
-      font-size: 17px;
-   }
-
-   .user-index h2 {
-      font-size: 20px;
-   }
-
-   .like-post img {
-      right: 54px;
-   }
-
-   .blog-edit {
-      font-size: 17px;
-   }
-
-   .blog-title {
-      font-size: 54px;
-   }
-
-   .blog-description {
-      font-size: 18px;
-   }
-
-   .blog-post img {
-      right: 32px;
-   }
-
-   .title {
-      font-size: 69px;
-   }
-
-   .signup-btn {
-      font-size: 20px;
-   }
-
-   .signup p {
-      font-size: 20px;
-   }
-
-   .signup a {
-      font-size: 20px;
-   }
-
-   .signup input {
-      font-size: 17px;
-   }
-
-   .demo {
-      font-size: 20px;
-   }
-
-   .login input {
-      font-size: 17px;
-   }
-
-   .login form button {
-      font-size: 20px;
-   }
-
-   .login a {
-      font-size: 18px;
-   }
-
-   .nav-bar-in {
-      padding-bottom: 2.5%;
-   }
-
-   .post-links {
-      height: 156px;
-   }
-
-   .post-index-container {
-      margin-top: 2.5%;
-   }
-
-   .post-index {
-      width: 81.8%;
-   }
-
-   .post-avatar {
-      width: 78%;
-      height: 120%;
-   }
-
-   .post-avatar-container {
-      margin-right: 1.5%;
-   }
-
-   .dash-avatar {
-      height: 123px;
-      width: 90%;
-   }
-
-   .pictures {
-      right: 54px;
-   }
-
-   .post-links li {
-    padding-right: 137px;
-    padding-left: 137px;
-   }
-
-   .sidebar ul {
-      width: 313%;
-   }
-
-   .sidebar {
-      right: 29%;
-      top: 3%;
-   }
-
-   .side-avatar {
-      width: 10%;
-   }
-
-   #edit-post {
-      margin-left: 98%;
-   }
-
-   #delete-post {
-      margin-left: 97.9%;
-   }
-
-   .dropdown-content {
-      min-width: 881%;
-   }
-
-   .like-post img {
-      right: 92px;
-   }
-
-   .explore-post {
-      width: 650px;
-   }
-
-   .explore-pictures {
-      width: 679px;
-   }
-
-   .blog-avatar {
-    border-top-left-radius: 120px;
-    border-bottom-left-radius: 120px;
-    border-top-right-radius: 120px;
-    border-bottom-right-radius: 120px;
-   }
-
-   .blog-post img {
-      right: 56px;
-   }
-}
-
-@media only screen and (min-width: 3840px) {
-  .signup input {
-     height: 82px;
-  }
-
-  .login input {
-     height: 82px;
-  }
-
-  .home-link {
-     top: 2.5%;
-  }
-
-  .explore-link {
-     top: 2.5%;
-  }
-
-  .dropdown {
-     top: 2.4%;
-  }
-}
