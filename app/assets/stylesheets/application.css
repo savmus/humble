@@ -113,19 +113,19 @@
  }
 
  .like-post {
-    padding-bottom: 2%;
+    padding-bottom: 1vh;
     border: 1px solid lightgray;
     background: white;
-    width: 43%;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-    margin-left: 20%;
-    margin-bottom: 2.3%;
-    padding-top: 3.3%;
-    padding-left: 3.3%;
-    padding-right: 3.3%;
+    width: 36.6vw;
+    border-top-left-radius: 0.19vw;
+    border-bottom-left-radius: 0.19vw;
+    border-top-right-radius: 0.19vw;
+    border-bottom-right-radius: 0.19vw;
+    margin-left: 16.6vw;
+    margin-bottom: 1.7vh;
+    padding-top: 1vh;
+    padding-left: 1.6vw;
+    padding-right: 1.6vw;
  }
 
  .like-post:first-of-type {
@@ -143,6 +143,7 @@
  .like-post h2 {
    margin-bottom: 0%;
    font-family: Arial, Helvetica, sans-serif;
+   font-size: 2vw;
  }
 
  .like-post li {
@@ -150,9 +151,9 @@
  }
 
  .like-post img {
-    width: 115.4%;
+    width: 39.95vw;
     position: relative;
-    right: 35px;
+    right: 1.65vw;
  }
 
  .blog-post {
@@ -462,7 +463,7 @@
  }
 
  .col {
-    padding-left: 1.5%;
+    padding-left: 1.5vw;
  }
 
  .blog-follow {
@@ -735,36 +736,38 @@
     border-top: 3px dashed lightgray;
     border-bottom: 3px dashed lightgray;
     width: 100%;
-    height: 200px;
-    padding-left: 4%;
-    margin-bottom: 2%;
+    height: 29.5vh;
+    padding-left: 1.5vw;
+    margin-bottom: 1vh;
+    font-size: 1vw;
  }
 
  #photo-caption {
     display: block;
     width: 100%;
-    height: 100px;
-    margin-left: 4%;
+    height: 15vh;
+    margin-left: 1.5vw;
     border: none;
     resize: none;
+    font-size: 1vw;
  }
 
  #quote-caption {
     display: block;
     border: none;
-    width: 90%;
-    height: 40px;
-    margin-left: 4%;
-    margin-bottom: 2%;
+    height: 6vh;
+    margin-left: 1.5vw;
+    margin-bottom: 1vh;
     resize: none;
-    padding-top: 4%;
+    padding-top: 2vh;
+    font-size: 1vw;
  }
 
  #quote-summary {
     display: block;
     border: none;
-    width: 90%;
-    margin-left: 4%;
+    margin-left: 1.5vw;
+    font-size: 1vw;
  }
 
  #link-url {
@@ -774,18 +777,20 @@
     border-top: 3px dashed lightgray;
     border-bottom: 3px dashed lightgray;
     width: 100%;
-    height: 125px;
-    padding-left: 4%;
-    margin-bottom: 2%;
+    height: 18.5vh;
+    padding-left: 1.5vw;
+    margin-bottom: 1vh;
+    font-size: 1vw;
  }
 
  #link-description {
     display: block;
     width: 100%;
-    height: 100px;
-    margin-left: 4%;
+    height: 15vh;
+    margin-left: 1.5vw;
     border: none;
     resize: none;
+    font-size: 1vw;
  }
 
  #user-avatar {
@@ -1015,16 +1020,16 @@
 
  .explore-post {
     background: white;
-    width: 360px;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-    margin-bottom: 3.7%;
-    padding-top: 3.7%;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 3.7%;
+    width: 27.7vw;
+    border-top-left-radius: 0.19vw;
+    border-bottom-left-radius: 0.19vw;
+    border-top-right-radius: 0.19vw;
+    border-bottom-right-radius: 0.19vw;
+    margin-bottom: 1.6vh;
+    padding-top: 1.6vh;
+    padding-left: 1.1vw;
+    padding-right: 1.1vw;
+    padding-bottom: 1.6vh;
     border: 1px solid lightgray;
  }
 
@@ -1035,9 +1040,9 @@
  }
 
  .explore-pictures {
-    width: 390px;
+    width: 30vw;
     position: relative;
-    right: 15px;
+    right: 1.15vw;
  }
 
  .post li {
@@ -1046,6 +1051,10 @@
 
  .explore-post li {
     list-style: none;
+ }
+
+ .explore-post a {
+    font-size: 1vw;
  }
 
  #delete-post {
