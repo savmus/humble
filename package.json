@@ -34,7 +34,7 @@
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
     "webpack": "^4.36.1",
-    "webpack-cli": "^3.3.6"
+    "webpack-cli": "^3.3.12"
   },
   "devDependencies": {
     "redux-logger": "^3.0.6"
